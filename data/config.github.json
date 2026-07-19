@@ -9,8 +9,7 @@
     "max_tokens": 8192,
     "throttle_sec": 1,
     "languages": [
-      "zh",
-      "en"
+      "zh"
     ],
     "analysis_concurrency": 5,
     "enrichment_concurrency": 5
@@ -66,14 +65,14 @@
         "category": "semiconductors"
       },
       {
-        "name": "LWN.net",
-        "url": "https://lwn.net/headlines/full_text?key=${LWN_KEY}",
+        "name": "Krebs on Security",
+        "url": "https://krebsonsecurity.com/feed/",
         "enabled": true,
-        "category": "linux-kernel"
+        "category": "security-risk"
       }
     ],
     "reddit": {
-      "enabled": true,
+      "enabled": false,
       "subreddits": [
         {
           "subreddit": "MachineLearning",
@@ -108,10 +107,11 @@
   },
   "filtering": {
     "ai_score_threshold": 8.0,
-    "time_window_hours": 24
+    "time_window_hours": 24,
+    "max_items": 15
   },
   "webhook": {
-    "enabled": true,
+    "enabled": false,
     "url_env": "HORIZON_WEBHOOK_URL",
     "delivery": "summary_and_items",
     "overview_position": "last",
