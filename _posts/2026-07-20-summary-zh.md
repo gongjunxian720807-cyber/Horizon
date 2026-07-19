@@ -1,0 +1,176 @@
+---
+layout: default
+title: "Horizon Summary: 2026-07-20 (ZH)"
+date: 2026-07-20
+lang: zh
+---
+
+> 从 177 条内容中筛选出 7 条重要资讯。
+
+---
+
+1. [光羽芯辰全球首发端侧 3D 近存算 AI 芯片 TC1000](#item-1) ⭐️ 9.0/10
+2. [阿里巴巴发布 Qwen 3.8：2.4 万亿参数开源大模型](#item-2) ⭐️ 8.0/10
+3. [Claude Code 搭载 Rust 版 Bun，启动速度提升](#item-3) ⭐️ 8.0/10
+4. [Moonshot AI 因 Kimi K3 需求激增暂停新订阅](#item-4) ⭐️ 8.0/10
+5. [2026 下半年钢价有望止跌回升](#item-5) ⭐️ 7.0/10
+6. [clpp 建筑师事务所 MIC 住宅项目图集](#item-6) ⭐️ 7.0/10
+7. [动态因果图减少 RAG 摘要中的幻觉](#item-7) ⭐️ 7.0/10
+
+---
+
+<a id="item-1"></a>
+## [光羽芯辰全球首发端侧 3D 近存算 AI 芯片 TC1000](https://news.google.com/rss/articles/CBMiRkFVX3lxTE44U0h5NmVkcG56NnR4Ym14Y1VjcTlPVkRnYmZmR0ZNa3g1ck9vMmhwX2p1d2ZEdlM3bU43RWhyZkxLa1NrYlE?oc=5) ⭐️ 9.0/10
+
+光羽芯辰全球发布了 TC1000 系列，这是首款采用 3D 近存计算架构的端侧 AI 芯片，专为边缘端高性能 AI 推理设计。 这一突破解决了边缘 AI 中的内存墙瓶颈，为自动驾驶和智能物联网等应用提供了更高性能和能效，可能加速边缘 AI 的普及。 TC1000 系列将 3D 堆叠存储器与计算逻辑集成，与传统架构相比可减少高达 10 倍的数据移动能耗。它针对需要低功耗下高性能计算的边缘设备。
+
+rss · Google News - AI 前沿 · 7月19日 15:45
+
+**背景**: 近存计算（NMC）是一种以数据为中心的计算范式，将计算单元靠近存储器放置以减少数据传输的能耗和延迟。传统架构受困于&\#x27;内存墙&\#x27;，数据移动占主导能耗。3D 堆叠允许垂直集成存储器和逻辑层，进一步提升性能。光羽芯辰的 TC1000 将这一原理应用于边缘 AI 芯片。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://ieeexplore.ieee.org/document/8491877/">A Review of Near-Memory Computing Architectures: Opportunities and Challenges | IEEE Conference Publication | IEEE Xplore</a></li>
+<li><a href="https://semiengineering.com/in-memory-vs-near-memory-computing/">In-Memory Vs. Near-Memory Computing</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI hardware`, `#edge computing`, `#near-memory computing`, `#AI chips`, `#breakthrough`
+
+---
+
+<a id="item-2"></a>
+## [阿里巴巴发布 Qwen 3.8：2.4 万亿参数开源大模型](https://twitter.com/Alibaba_Qwen/status/2078759124914098291) ⭐️ 8.0/10
+
+阿里巴巴宣布推出 Qwen 3.8，一个 2.4 万亿参数的开源大语言模型，直接回应 Moonshot AI 最近发布的 2.8 万亿参数 Kimi K3 模型。 这加剧了开源大语言模型领域的竞争，尤其是中国主要 AI 公司之间的竞争，并推动了可供社区使用的大规模开源模型的发展。 该模型承诺将开源权重，但尚未公布任何基准测试或性能数据。该公告紧随 Moonshot AI 计划于 7 月 27 日开源 Kimi K3 之后。
+
+hackernews · nh43215rgb · 7月19日 08:44 · [社区讨论](https://news.ycombinator.com/item?id=48966120)
+
+**背景**: 大语言模型（LLM）是在海量文本数据上训练的人工智能系统，能生成类似人类的文本。开源权重模型允许研究人员和开发者下载并在本地运行，促进创新和隐私保护。阿里巴巴的 Qwen 系列和 Moonshot AI 的 Kimi 系列正在竞争开发最大的开源模型，参数量超过 2 万亿。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=48966120">Qwen 3.8</a></li>
+<li><a href="https://techsy.io/en/blog/qwen-3-8">Qwen3.8: 2.4T Parameters, Open Weights, No Benchmarks</a></li>
+<li><a href="https://www.reuters.com/world/china/chinas-moonshot-unveils-worlds-largest-open-ai-model-closing-us-rivals-2026-07-17/">China&#x27;s Moonshot unveils world&#x27;s largest open AI model ...</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 社区反应不一：一些用户对竞争感到兴奋，并希望有用于本地推理的更小模型，而另一些用户则对 Qwen 在实际任务（如编程）中的性能表示失望。还有猜测阿里巴巴是否一直计划开源，还是对 Moonshot 的回应。
+
+**标签**: `#AI`, `#LLM`, `#open-weights`, `#Alibaba`, `#Qwen`
+
+---
+
+<a id="item-3"></a>
+## [Claude Code 搭载 Rust 版 Bun，启动速度提升](https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/#atom-everything) ⭐️ 8.0/10
+
+Anthropic 的 Claude Code v2.1.181 及更高版本现在使用 Rust 语言重写的 Bun 作为运行时，取代了原先基于 Zig 的实现，Linux 上启动速度提升了 10%。 这一变更展示了广泛使用的 AI 编码工具中实际的性能优化，并凸显了用 Rust 重写系统级组件以提高可靠性和速度的日益增长的趋势。 Simon Willison 通过在 Claude Code 中发现 Rust 源文件引用和未发布的 Bun v1.4.0 版本确认了这次切换。Rust 重写使用了 AI 代理在 11 天内完成，修复了数百个 bug。
+
+rss · Simon Willison · 7月19日 03:54 · [社区讨论](https://news.ycombinator.com/item?id=48966569)
+
+**背景**: Bun 是一个快速的 JavaScript 运行时和打包工具，类似于 Node.js。它最初是用 Zig 语言编写的。Rust 重写旨在利用 Rust 的自动内存管理和强大的生态系统，提高内存安全性和开发者生产力。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://bun.sh/blog/bun-in-rust">Rewriting Bun in Rust | Bun Blog</a></li>
+<li><a href="https://www.cosmicjs.com/blog/bun-rust-rewrite-javascript-runtime">Why Bun is Rewriting in Rust (And What It Means for JavaScript...)</a></li>
+<li><a href="https://www.stork.ai/blog/buns-ai-rewrite-ignites-language-war">Bun &#x27;s AI Rewrite : From Zig to Rust , The Full Controversy... | Stork.AI</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 社区讨论意见不一：有人质疑终端 UI 为什么需要 JavaScript 运行时，有人承认 Rust 安全性的工程优势，还有几人批评缺乏透明的治理以及快速、AI 驱动的重写过程。
+
+**标签**: `#bun`, `#claude-code`, `#rust`, `#ai-tools`, `#performance`
+
+---
+
+<a id="item-4"></a>
+## [Moonshot AI 因 Kimi K3 需求激增暂停新订阅](https://twitter.com/kimi_moonshot/status/2078855608565207130) ⭐️ 8.0/10
+
+Moonshot AI 暂时停止了其 Kimi K3 模型的新订阅，因为过去 48 小时内需求将计算能力推至极限。 这一事件凸显了前沿模型扩展时 AI 公司面临的实际计算约束，Moonshot 优先考虑现有用户而非快速增长的决策树立了以客户为中心的先例。 Kimi K3 是一个 2.8 万亿参数的混合专家模型，拥有 100 万令牌的上下文窗口和原生的视觉能力，其完整权重计划于 2026 年 7 月前发布。
+
+hackernews · serialx · 7月19日 16:02 · [社区讨论](https://news.ycombinator.com/item?id=48969291)
+
+**背景**: Moonshot AI 是一家北京初创公司，由清华大学校友于 2023 年创立，专注于构建大型语言模型以迈向 AGI。Kimi K3 是其旗舰模型，与 GPT-4 和 Claude 等系统竞争，它结合了全注意力和 RNN/线性注意力层，以高效处理长上下文。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Moonshot_AI">Moonshot AI - Wikipedia</a></li>
+<li><a href="https://platform.kimi.ai/docs/guide/kimi-k3-quickstart">Kimi K 3 - Kimi API Platform</a></li>
+<li><a href="https://kimi-ai.chat/models/kimi-k3/">Kimi K 3 : 1M Context, API Pricing &amp; Limits</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 社区成员赞扬 Moonshot 优先考虑现有用户，有人指出这在行业中很少见。一名付费用户报告在进行 12 分钟思考任务后达到了每日配额，其他人则讨论了技术架构，指出该模型大量使用 RNN/线性注意力层。
+
+**标签**: `#AI`, `#Moonshot AI`, `#Kimi K3`, `#demand`, `#compute`
+
+---
+
+<a id="item-5"></a>
+## [2026 下半年钢价有望止跌回升](https://news.google.com/rss/articles/CBMickFVX3lxTE9mdmUzSWN4bHl5ajdVN2pSX1ZBY1NVeDRCRmlwMHFiWGhUV2xwX2d2dFZEUnNpa2UyRjNvWDlkRVN4UVZpVUZyZk9PMl9LYWZXaEFrc3VNVTg3aEFuMEJhTUd4allhWm91RGQ0a0hpd0NMUQ?oc=5) ⭐️ 7.0/10
+
+在 2026 年“我的钢铁”年中大会上，分析师预测钢价将在下半年停止下跌并出现阶段性回升。 这一展望对钢铁加工商和分销商至关重要，因为它预示近期价格下跌可能结束，影响库存和采购策略。 回升被描述为“阶段性”，意味着复苏可能是暂时的，取决于市场供需动态。该会议由上海钢联电子商务股份有限公司（Mysteel）组织。
+
+rss · Google News - 钢材加工配送 · 7月19日 12:55
+
+**背景**: “我的钢铁”（Mysteel）平台是中国领先的钢铁信息与数据服务商，广泛用作价格基准。年中大会汇聚行业专家讨论市场趋势，帮助利益相关者预测价格走势。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://tonggan.mysteel.com/p/26020210/565A577E1256837F.html">2月2日Mysteel铜杆价格汇总- 我 的 钢 铁 网</a></li>
+
+</ul>
+</details>
+
+**标签**: `#steel`, `#steel prices`, `#market outlook`, `#steel processing`
+
+---
+
+<a id="item-6"></a>
+## [clpp 建筑师事务所 MIC 住宅项目图集](https://news.google.com/rss/articles/CBMiwgFBVV95cUxPU3B2X29EYjUtVnVOc2pfLTlGNS1WZWR3RmNlZHhhTWt3RjRhMnZ4WmQ4RVhqbDdJZzQyVm1raFlISFRhMkVUOWhQTS1wZkc5aHFUUjhpd2g0NzhENzFEZ2ZRWFZGZGxoT19XbzJxc0oxMllUajJZdjZPYVFtMmRkRjk3YWdpb0ZsU3g5VXhrakEtZWhYZk1WVVBfdDBJRDJmbEc2RmxIMi1CQkpqNmtmNTdNNUtYcl85b2VXUVBYRWFVZw?oc=5) ⭐️ 7.0/10
+
+ArchDaily 发布了 clpp 建筑师事务所采用模块化集成建造（MIC）方法的住宅项目图集。 该图集提供了 MIC 在住宅建筑中的实际案例，展示了模块化建造如何实现设计质量和效率，这对推广工业化建造至关重要。 图集包含项目照片和图纸，展示了模块化组件和现场组装。该项目由 clpp 建筑师事务所设计，并在知名建筑平台 ArchDaily 上展示。
+
+rss · Google News - 工业化建造与智能空间 · 7月19日 09:05
+
+**背景**: 模块化集成建造（MIC）是一种创新方法，建筑模块在工厂预制，然后在现场组装。这种方法旨在提高生产率、缩短施工时间并改进质量控制。工业化建造将制造原则应用于建筑，MIC 是这一趋势的关键例子。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Industrialization_of_construction">Industrialization of construction - Wikipedia</a></li>
+<li><a href="https://mic.cic.hk/en/AboutMiC">CIC MiC | What is MiC and MiMEP</a></li>
+<li><a href="https://www.autodesk.com/design-make/emerging-tech/industrialized-construction">Industrialized Construction | Emerging Tech - Autodesk</a></li>
+
+</ul>
+</details>
+
+**标签**: `#industrialized construction`, `#MIC`, `#modular housing`, `#architecture`
+
+---
+
+<a id="item-7"></a>
+## [动态因果图减少 RAG 摘要中的幻觉](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5tbzIxamlBOGZMMnJwaWNzWFJqR25OYXNRYmJxbzF4V1U5UDRmaUsxRDA2SXBjYmlMTUloWnNyZ095WXBSaEl3UDkyb1RvaDNNVlhNLWtnTkd3T3dFVENsMHd3?oc=5) ⭐️ 7.0/10
+
+一项新研究提出使用动态因果图来减少检索增强生成（RAG）在多文档摘要中的幻觉问题。 幻觉是限制 RAG 系统可靠性的关键问题；该方法有望显著提高 AI 生成摘要的事实准确性。 动态因果图对概念之间的时序因果关系进行建模，使模型专注于因果相关的信息，避免生成无依据的声明。
+
+rss · Google News - EDF AI 部署工程 · 7月19日 18:59
+
+**背景**: RAG（检索增强生成）结合了相关文档的检索与语言模型来生成答案。当模型生成了检索上下文不支持的信息时，就会发生幻觉。动态因果图扩展了传统的因果图，允许因果关系随时间变化，更好地捕捉动态数据中演变的依赖关系。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://arxiv.org/html/2507.13920v2">Causal Process Models: Reframing Dynamic Causal Graph Discovery as a Reinforcement Learning Problem</a></li>
+<li><a href="https://www.k2view.com/blog/rag-hallucination/">RAG hallucination : What is it and how to avoid it</a></li>
+
+</ul>
+</details>
+
+**标签**: `#RAG`, `#hallucination`, `#multi-document summarization`, `#causal graph`, `#research`
+
+---
