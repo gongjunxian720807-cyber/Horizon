@@ -86,7 +86,10 @@ class GitHubPilotConfigTest(unittest.TestCase):
             encoding="utf-8"
         )
 
-        self.assertIn("D:\\Obsidian\\老板行业日报", script)
+        self.assertTrue(script.isascii())
+        for codepoint in ("0x8001", "0x677F", "0x884C", "0x4E1A", "0x65E5", "0x62A5"):
+            self.assertIn(codepoint, script)
+        self.assertIn("Join-Path 'D:\\Obsidian' $digestName", script)
         self.assertIn("gongjunxian720807-cyber/Horizon", script)
         self.assertNotIn("Remove-Item", script)
         self.assertNotIn("git clean", script)
