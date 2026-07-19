@@ -51,24 +51,66 @@ class ContentAnalyzer:
         concurrency = getattr(config, "analysis_concurrency", 1)
         return max(concurrency, 1)
 
+    @staticmethod
+    def _format_analysis_error(error: Exception) -> str:
+        """Return useful provider diagnostics without including raw error text."""
+
+        def _safe_value(value: object) -> Optional[str]:
+            if value is None:
+                return None
+            cleaned = re.sub(r"[^A-Za-z0-9_.:-]", "?", str(value))
+            return cleaned[:80] or None
+
+        status = getattr(error, "status_code", None)
+        if status is None:
+            status = getattr(getattr(error, "response", None), "status_code", None)
+
+        code = getattr(error, "code", None)
+        error_type = getattr(error, "type", None)
+        body = getattr(error, "body", None)
+        if isinstance(body, dict):
+            details = body.get("error", body)
+            if isinstance(details, dict):
+                code = code or details.get("code")
+                error_type = error_type or details.get("type")
+
+        fields = []
+        for label, value in (
+            ("status", status),
+            ("code", code),
+            ("type", error_type),
+        ):
+            safe_value = _safe_value(value)
+            if safe_value:
+                fields.append(f"{label}={safe_value}")
+
+        name = type(error).__name__
+        return f"{name} ({', '.join(fields)})" if fields else name
+
     async def analyze_batch(self, items: List[ContentItem]) -> List[ContentItem]:
         throttle_sec = self._get_throttle_sec()
         concurrency = self._get_concurrency()
         semaphore = asyncio.Semaphore(concurrency)
 
-        async def _process(item: ContentItem, index: int, progress_task) -> ContentItem:
+        async def _process(
+            item: ContentItem, index: int, progress_task
+        ) -> tuple[ContentItem, bool, Optional[str]]:
+            failed = False
+            diagnostic = None
             async with semaphore:
                 try:
                     await self._analyze_item(item)
                 except Exception as e:
-                    print(f"Error analyzing item {item.id}: {e}")
+                    failed = True
+                    diagnostic = self._format_analysis_error(e)
+                    print(f"Error analyzing item {item.id}: {diagnostic}")
                     item.ai_score = 0.0
                     item.ai_reason = "Analysis failed"
                     item.ai_summary = item.title
                 if throttle_sec > 0 and index < len(items) - 1:
                     await asyncio.sleep(throttle_sec)
             progress.advance(progress_task)
-            return item
+            return item, failed, diagnostic
 
         with Progress(
             SpinnerColumn(),
@@ -81,13 +123,21 @@ class ContentAnalyzer:
             coros = [
                 _process(item, i, task) for i, item in enumerate(items)
             ]
-            analyzed_items = await asyncio.gather(*coros)
+            results = await asyncio.gather(*coros)
 
-        return analyzed_items
+        if items and all(failed for _, failed, _ in results):
+            last_diagnostic = results[-1][2] or "unknown error"
+            raise RuntimeError(
+                f"AI analysis failed for all {len(items)} items. "
+                f"Last error: {last_diagnostic}"
+            )
+
+        return [item for item, _, _ in results]
 
     @retry(
         stop=stop_after_attempt(3),
-        wait=wait_exponential(min=2, max=10)
+        wait=wait_exponential(min=2, max=10),
+        reraise=True,
     )
     async def _analyze_item(self, item: ContentItem) -> None:
         """Analyze a single content item.

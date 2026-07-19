@@ -98,6 +98,68 @@ def test_analyze_batch_concurrent_preserves_order(monkeypatch):
     assert [item.id for item in result] == [item.id for item in items]
 
 
+def test_analyze_batch_raises_when_every_item_request_fails(monkeypatch):
+    analyzer = ContentAnalyzer(SimpleNamespace())
+    items = [_make_item("rss:test:1"), _make_item("rss:test:2")]
+
+    async def fail_analyze_item(item):
+        raise RuntimeError("provider unavailable")
+
+    monkeypatch.setattr(analyzer, "_analyze_item", fail_analyze_item)
+
+    with pytest.raises(RuntimeError, match="AI analysis failed for all 2 items"):
+        asyncio.run(analyzer.analyze_batch(items))
+
+
+def test_analyze_batch_preserves_partial_success(monkeypatch):
+    analyzer = ContentAnalyzer(SimpleNamespace())
+    items = [_make_item("rss:test:1"), _make_item("rss:test:2")]
+
+    async def analyze_item(item):
+        if item.id.endswith(":1"):
+            item.ai_score = 8.0
+            return
+        raise RuntimeError("provider unavailable")
+
+    monkeypatch.setattr(analyzer, "_analyze_item", analyze_item)
+
+    result = asyncio.run(analyzer.analyze_batch(items))
+
+    assert result == items
+    assert result[0].ai_score == 8.0
+    assert result[1].ai_score == 0.0
+    assert result[1].ai_reason == "Analysis failed"
+
+
+def test_analyze_batch_empty_input_remains_valid():
+    analyzer = ContentAnalyzer(SimpleNamespace())
+
+    assert asyncio.run(analyzer.analyze_batch([])) == []
+
+
+def test_analysis_error_diagnostics_are_allowlisted_and_redacted():
+    class ProviderError(Exception):
+        status_code = 402
+        code = "insufficient_balance"
+        type = "payment_required"
+
+    secret = "sk-super-secret-value"
+    error = ProviderError(f"request failed with api_key={secret}")
+
+    diagnostic = ContentAnalyzer._format_analysis_error(error)
+
+    assert diagnostic == (
+        "ProviderError (status=402, code=insufficient_balance, "
+        "type=payment_required)"
+    )
+    assert secret not in diagnostic
+    assert str(error) not in diagnostic
+
+
+def test_analyze_item_retry_reraises_original_exception():
+    assert ContentAnalyzer._analyze_item.retry.reraise is True
+
+
 def test_analyze_item_accepts_valid_result():
     result = {
         "score": 8.5,
