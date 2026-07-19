@@ -7,6 +7,10 @@ on:
     - cron: '0 23 * * *'
   workflow_dispatch:      # Allow manual trigger
 
+concurrency:
+  group: daily-horizon-summary
+  cancel-in-progress: false
+
 jobs:
   daily-summary:
     runs-on: ubuntu-latest
@@ -39,8 +43,24 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: uv run horizon --hours 24
 
-      - name: Set current date as environment variable
-        run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+      - name: Set Beijing report date
+        run: echo "DATE=$(TZ=Asia/Shanghai date +'%Y-%m-%d')" >> "$GITHUB_ENV"
+
+      - name: Archive boss industry digest
+        shell: bash
+        run: |
+          archive_dir="老板行业日报/$(date -d "$DATE" +'%Y')/$(date -d "$DATE" +'%m')"
+          mkdir -p "$archive_dir"
+          cp "data/summaries/horizon-$DATE-zh.md" "$archive_dir/$DATE.md"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- 老板行业日报/
+          if git diff --cached --quiet; then
+            echo "Archive already up to date."
+          else
+            git commit -m "日报: $DATE"
+            git push
+          fi
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

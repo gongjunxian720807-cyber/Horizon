@@ -50,6 +50,14 @@ Score content on a 0-10 scale based on importance and relevance:
 - Off-topic content
 - Trivial updates
 
+For this fork, treat these four business themes as first-class relevance domains:
+- Steel processing and distribution
+- Industrialized construction, smart spaces, and MiC/MiMEP
+- The AI frontier, including models, agents, and compute
+- AI deployment engineering, including RAG, MLOps/LLMOps, inference optimization, evaluation, observability, security, reliability, and cost
+
+Give additional value to decision-useful executive signals such as demand, price and margin movement, supply chain shifts, policy changes, competitor actions, and concrete opportunities or risks.
+
 Consider:
 - Technical depth and novelty
 - Potential impact on the field
