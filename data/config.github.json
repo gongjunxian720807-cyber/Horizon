@@ -69,6 +69,30 @@
         "url": "https://krebsonsecurity.com/feed/",
         "enabled": true,
         "category": "security-risk"
+      },
+      {
+        "name": "Google News - 钢材加工配送",
+        "url": "https://news.google.com/rss/search?q=%28%E9%92%A2%E6%9D%90%E5%8A%A0%E5%B7%A5+OR+%E9%92%A2%E6%9D%90%E9%85%8D%E9%80%81+OR+%E9%92%A2%E4%BB%B7+OR+%E9%92%A2%E9%93%81%E7%89%A9%E6%B5%81%29+when%3A1d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+        "enabled": true,
+        "category": "steel"
+      },
+      {
+        "name": "Google News - 工业化建造与智能空间",
+        "url": "https://news.google.com/rss/search?q=%28%E5%B7%A5%E4%B8%9A%E5%8C%96%E5%BB%BA%E9%80%A0+OR+%E8%A3%85%E9%85%8D%E5%BC%8F%E5%BB%BA%E7%AD%91+OR+MiC+OR+MiMEP+OR+%E6%99%BA%E8%83%BD%E7%A9%BA%E9%97%B4%29+when%3A1d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+        "enabled": true,
+        "category": "construction"
+      },
+      {
+        "name": "Google News - AI 前沿",
+        "url": "https://news.google.com/rss/search?q=%28%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%A4%A7%E6%A8%A1%E5%9E%8B+OR+AI+Agent+OR+%E7%AE%97%E5%8A%9B+OR+AI%E5%89%8D%E6%B2%BF%29+when%3A1d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+        "enabled": true,
+        "category": "ai"
+      },
+      {
+        "name": "Google News - EDF AI 部署工程",
+        "url": "https://news.google.com/rss/search?q=%28%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2+OR+RAG+OR+MLOps+OR+LLMOps+OR+%E6%8E%A8%E7%90%86%E4%BC%98%E5%8C%96+OR+%E6%A8%A1%E5%9E%8B%E8%AF%84%E6%B5%8B+OR+AI%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7+OR+AI%E5%AE%89%E5%85%A8+OR+%E9%83%A8%E7%BD%B2%E6%88%90%E6%9C%AC%29+when%3A1d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+        "enabled": true,
+        "category": "edf"
       }
     ],
     "reddit": {
@@ -106,9 +130,33 @@
     }
   },
   "filtering": {
-    "ai_score_threshold": 8.0,
+    "ai_score_threshold": 7.0,
     "time_window_hours": 24,
-    "max_items": 15
+    "max_items": 15,
+    "category_groups": {
+      "steel": {
+        "name": "钢材加工配送",
+        "limit": 4,
+        "categories": ["steel"]
+      },
+      "construction": {
+        "name": "工业化建造与智能空间",
+        "limit": 4,
+        "categories": ["construction"]
+      },
+      "ai": {
+        "name": "AI 前沿",
+        "limit": 4,
+        "categories": ["ai", "ai-tools", "github-trending", "semiconductors"]
+      },
+      "edf": {
+        "name": "EDF AI 前沿部署工程",
+        "limit": 3,
+        "categories": ["edf", "security-risk"]
+      }
+    },
+    "default_group": "ai",
+    "default_group_limit": 4
   },
   "webhook": {
     "enabled": false,

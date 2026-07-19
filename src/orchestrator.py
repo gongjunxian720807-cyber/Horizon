@@ -46,6 +46,16 @@ _TRACKING_QUERY_PARAMETERS = {
     "vero_id",
 }
 
+_BEIJING_TIMEZONE = timezone(timedelta(hours=8))
+
+
+def _report_date(now: Optional[datetime] = None) -> str:
+    """Return the calendar date used by the Beijing-based daily digest."""
+    instant = now or datetime.now(timezone.utc)
+    if instant.tzinfo is None:
+        instant = instant.replace(tzinfo=timezone.utc)
+    return instant.astimezone(_BEIJING_TIMEZONE).strftime("%Y-%m-%d")
+
 
 def _deduplication_url_key(url: str) -> tuple[str, str, str, str, Optional[int], str, str]:
     """Return a conservative URL identity key for cross-source deduplication."""
@@ -254,7 +264,7 @@ class HorizonOrchestrator:
             await self._enrich_important_items(important_items)
 
             # 7. Generate and save daily summaries for each configured language
-            today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+            today = _report_date()
             for lang in self.config.ai.languages:
                 summarizer = DailySummarizer()
                 summary = await summarizer.generate_summary(important_items, today, len(all_items), language=lang)
@@ -338,7 +348,7 @@ class HorizonOrchestrator:
             # Send webhook failure notification if configured
             if self.webhook_notifier:
                 await self.webhook_notifier.send_failure(
-                    date=datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+                    date=_report_date(),
                     error_message=str(e),
                 )
 

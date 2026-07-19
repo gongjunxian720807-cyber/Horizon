@@ -357,6 +357,8 @@ Horizon can publish or deliver the generated briefing in several ways:
 
 For setup details, see the [Configuration Guide](docs/configuration.md). For MCP tool references and client setup, see [`src/mcp/README.md`](src/mcp/README.md) and [`src/mcp/integration.md`](src/mcp/integration.md).
 
+This fork also keeps a Beijing-time Chinese executive archive in `老板行业日报/YYYY/MM/`. See the [老板行业日报 setup guide](docs/BOSS_DIGEST_SETUP_ZH.md) for its four business themes and safe Windows local-sync instructions.
+
 ## Supported By
 
 Horizon is an open-source project maintained in spare time. If you'd like to support the project or be listed here, feel free to [open an issue](https://github.com/Thysrael/Horizon/issues/new) or [email me](mailto:thysrael@163.com).
