@@ -58,6 +58,8 @@ For this fork, treat these four business themes as first-class relevance domains
 
 Give additional value to decision-useful executive signals such as demand, price and margin movement, supply chain shifts, policy changes, competitor actions, and concrete opportunities or risks.
 
+Credible and directly relevant steel processing or distribution, or industrialized construction or smart-space developments with concrete demand, price, supply chain, policy, customer, or technology implications should score at least 7. Do not apply this floor to vague, purely promotional, or off-topic items.
+
 Consider:
 - Technical depth and novelty
 - Potential impact on the field
