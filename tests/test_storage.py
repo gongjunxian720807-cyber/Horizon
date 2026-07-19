@@ -150,6 +150,24 @@ def test_save_daily_summary_defensively_rejects_path_escape(tmp_path):
     assert not (tmp_path / "outside.md").exists()
 
 
+def test_save_daily_html_uses_matching_safe_filename(tmp_path):
+    storage = StorageManager(data_dir=str(tmp_path / "data"))
+
+    destination = storage.save_daily_html(
+        "2026-07-19", "<!doctype html><title>日报</title>", language="zh"
+    )
+
+    assert destination.name == "horizon-2026-07-19-zh.html"
+    assert destination.read_text(encoding="utf-8").startswith("<!doctype html>")
+
+
+def test_save_daily_html_defensively_rejects_path_escape(tmp_path):
+    storage = StorageManager(data_dir=str(tmp_path / "data"))
+    with pytest.raises(ValueError, match="escapes intended root"):
+        storage.save_daily_html("2026-07-19", "secret", language="../../../../outside")
+    assert not (tmp_path / "outside.html").exists()
+
+
 def test_safe_output_path_rejects_escape_from_other_output_roots(tmp_path):
     with pytest.raises(ValueError, match="escapes intended root"):
         safe_output_path(tmp_path / "docs" / "_posts", "../../../outside.md")

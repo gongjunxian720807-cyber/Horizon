@@ -127,6 +127,15 @@ class StorageManager:
 
         return filepath
 
+    def save_daily_html(self, date: str, document: str, language: str = "en") -> Path:
+        """Save a standalone daily HTML document beside the Markdown summary."""
+        filename = f"horizon-{date}-{language}.html"
+        filepath = safe_output_path(self.summaries_dir, filename)
+
+        _atomic_write_text(filepath, document)
+
+        return filepath
+
     def load_subscribers(self) -> list:
         """Loads the list of email subscribers."""
         subscribers_path = self.data_dir / "subscribers.json"

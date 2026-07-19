@@ -4,6 +4,7 @@ import asyncio
 from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 from typing import Dict, List, Literal, Optional
 from urllib.parse import unquote_plus, urlsplit
 import httpx
@@ -273,10 +274,26 @@ class HorizonOrchestrator:
                 summary_path = self.storage.save_daily_summary(today, summary, language=lang)
                 self.console.print(f"💾 Saved {lang.upper()} summary to: {summary_path}\n")
 
+                if lang == "zh":
+                    from .ai.html_digest import BossDigestHtmlRenderer
+
+                    html_document = BossDigestHtmlRenderer().render(
+                        important_items,
+                        date=today,
+                        total_fetched=len(all_items),
+                        category_groups=self.config.filtering.category_groups,
+                        default_group=self.config.filtering.default_group,
+                        hero_path=Path("docs/assets/boss-digest-hero.jpg"),
+                    )
+                    html_path = self.storage.save_daily_html(
+                        today, html_document, language=lang
+                    )
+                    self.console.print(
+                        f"📰 Saved {lang.upper()} standalone digest to: {html_path}\n"
+                    )
+
                 # Copy to docs/ for GitHub Pages
                 try:
-                    from pathlib import Path
-
                     post_filename = f"{today}-summary-{lang}.md"
                     posts_dir = Path("docs/_posts")
                     posts_dir.mkdir(parents=True, exist_ok=True)

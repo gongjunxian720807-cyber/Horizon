@@ -52,6 +52,10 @@ jobs:
           archive_dir="老板行业日报/$(date -d "$DATE" +'%Y')/$(date -d "$DATE" +'%m')"
           mkdir -p "$archive_dir"
           cp "data/summaries/horizon-$DATE-zh.md" "$archive_dir/$DATE.md"
+          cp "data/summaries/horizon-$DATE-zh.html" "$archive_dir/$DATE.html"
+          pages_dir="docs/boss-digest/$(date -d "$DATE" +'%Y')/$(date -d "$DATE" +'%m')"
+          mkdir -p "$pages_dir"
+          cp "data/summaries/horizon-$DATE-zh.html" "$pages_dir/$DATE.html"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- 老板行业日报/

@@ -78,6 +78,9 @@ class GitHubPilotConfigTest(unittest.TestCase):
 
         self.assertIn("concurrency:", workflow)
         self.assertIn("老板行业日报", workflow)
+        self.assertIn('horizon-$DATE-zh.html', workflow)
+        self.assertIn('"$archive_dir/$DATE.html"', workflow)
+        self.assertIn('docs/boss-digest', workflow)
         self.assertIn("git add -- 老板行业日报/", workflow)
         self.assertNotIn("git add .", workflow)
 
