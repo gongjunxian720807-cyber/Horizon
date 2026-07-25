@@ -1,0 +1,170 @@
+---
+layout: default
+title: "Horizon Summary: 2026-07-26 (ZH)"
+date: 2026-07-26
+lang: zh
+---
+
+> 从 174 条内容中筛选出 8 条重要资讯。
+
+---
+
+1. [vLLM v0.26.0 支持 Inkling 模型，大幅提升 DeepSeek-V4 性能](#item-1) ⭐️ 9.0/10
+2. [SGLang v0.5.16 通过 DSpark 和 Inkling 支持提升 LLM 推理性能](#item-2) ⭐️ 9.0/10
+3. [Anthropic 发布 Claude Opus 5，价格仅为 Fable 5 一半](#item-3) ⭐️ 9.0/10
+4. [AMD 对 NVIDIA CUDA 霸权的挑战](#item-4) ⭐️ 9.0/10
+5. [钢企接到限产通知，近七成亏损](#item-5) ⭐️ 8.0/10
+6. [微软 MAI 模型在 Excel 任务上与 GPT-5.6 相当，成本更低](#item-6) ⭐️ 8.0/10
+7. [菲尔兹奖得主加入 OpenAI，主攻 AI 安全](#item-7) ⭐️ 8.0/10
+8. [英美 AI 安全研究所联合评估 Kimi K3 网络安全](#item-8) ⭐️ 7.0/10
+
+---
+
+<a id="item-1"></a>
+## [vLLM v0.26.0 支持 Inkling 模型，大幅提升 DeepSeek-V4 性能](https://github.com/vllm-project/vllm/releases/tag/v0.26.0) ⭐️ 9.0/10
+
+vLLM v0.26.0 完整支持 Inkling 模型系列（975B 参数，MoE 架构），对 DeepSeek-V4 进行了重大性能优化（如专用路由内核、fused\_topk\_bias），并引入了 fp32 lm\_head 以提高生成精度。此版本包含来自 212 位贡献者的 411 个提交。 此版本显著扩展了 vLLM 的模型支持和推理性能，使其在部署前沿大语言模型时更具吸引力。对 DeepSeek-V4 的优化和新 Inkling 系列的支持直接惠及这些流行模型的用户，而 fp32 lm\_head 则提高了输出质量。 技术亮点包括为 Inkling 添加的分段 CUDA 图支持、Hopper FA4 相对注意力、MTP=1 推测解码以及 LoRA 支持。现在可以按 KV 缓存组选择注意力后端，滑动窗口成为混合模型的显式后端能力。
+
+github · khluu · 7月25日 10:38
+
+**背景**: vLLM 是一个大型语言模型的高性能推理引擎，旨在快速高效地提供服务。Inkling 模型由 Thinking Machines Lab 发布，是一个 975B 参数的混合专家（MoE）Transformer，拥有 100 万令牌的上下文窗口，在 45 万亿令牌上训练。FlashAttention-4 是一种针对现代 GPU 架构协同设计的新算法，而多令牌预测（MTP）是一种推测解码技术，利用模型自身的预测头来草拟多个令牌。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://thinkingmachines.ai/news/introducing-inkling/">Inkling: Our Open-Weights Model - Thinking Machines Lab</a></li>
+<li><a href="https://arxiv.org/html/2603.05451v1">FlashAttention-4: Algorithm and Kernel Pipelining Co-Design ... - arXiv</a></li>
+<li><a href="https://docs.vllm.ai/en/latest/features/speculative_decoding/mtp/">MTP (Multi-Token Prediction) - vLLM</a></li>
+
+</ul>
+</details>
+
+**标签**: `#vLLM`, `#LLM serving`, `#AI inference`, `#performance optimization`, `#model support`
+
+---
+
+<a id="item-2"></a>
+## [SGLang v0.5.16 通过 DSpark 和 Inkling 支持提升 LLM 推理性能](https://github.com/sgl-project/sglang/releases/tag/v0.5.16) ⭐️ 9.0/10
+
+SGLang v0.5.16 引入了 DSpark，一种基于置信度的推测解码算法，在 DeepSeek-V4-Pro 上达到 383.7 tok/s，并增加了对 Inkling 975B 多模态 MoE 模型的支持，在 Blackwell 上输入速率高达 71.7k tok/s，每用户解码速率达 171.0 tok/s。 本次发布通过结合新颖的推测解码和对大型开源权重多模态模型的支持，显著推动了 LLM 推理性能的前沿，使得大型 AI 系统的部署更快、更具成本效益。 DSpark 采用半自回归块草稿和基于草稿置信度的动态验证窗口，实现了约 5 的接受长度。Inkling 是一个 975B 参数、41B 活跃参数的 MoE，支持 1M 令牌上下文，并混合了包括 Mamba2 线性注意力在内的多种注意力类型。
+
+github · Qiaolin-Yu · 7月25日 00:13
+
+**背景**: 推测解码是一种加速 LLM 推理的技术，通过使用较小的草稿模型提出令牌，然后由较大的目标模型验证。SGLang 是一个用于高效服务大型语言和视觉模型的开源框架。来自 Thinking Machines Lab 的 Inkling 模型是目前可用的最大开源权重多模态模型之一。
+
+**标签**: `#LLM inference`, `#speculative decoding`, `#SGLang`, `#AI deployment`, `#model serving`
+
+---
+
+<a id="item-3"></a>
+## [Anthropic 发布 Claude Opus 5，价格仅为 Fable 5 一半](https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything) ⭐️ 9.0/10
+
+Anthropic 宣布推出 Claude Opus 5，这款新 AI 模型在智能程度上接近旗舰模型 Claude Fable 5，但价格仅为后者的一半，目前已登顶 Artificial Analysis 排行榜。 此次发布让前沿 AI 能力更加普及且价格更低，可能加速各行业的采用，同时加剧领先 AI 实验室之间的竞争。 Opus 5 的定价与其前代 Opus 4.8 相同，并提供快模式，价格为基本模型的两倍；它在发现网络安全漏洞方面有所提升，但故意未针对漏洞利用进行训练。
+
+rss · Simon Willison · 7月24日 23:48
+
+**背景**: Anthropic 的 Claude 模型系列包含多个层级：Opus 系列提供高性价比性能，而 Fable/Mythos 系列追求最大智能。Claude Fable 5 于 2026 年 6 月发布，是 Anthropic 最强大的公开模型。Opus 5 旨在以更低价格提供接近的品质，扩大先进 AI 的普及范围。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://artificialanalysis.ai/leaderboards/models">LLM Leaderboard - Comparison of AI models from OpenAI, Anthropic...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Claude_Fable_5">Claude Fable 5</a></li>
+<li><a href="https://www.anthropic.com/claude/fable">Claude Fable \ Anthropic</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI`, `#Claude Opus 5`, `#Anthropic`, `#frontier models`, `#LLM`
+
+---
+
+<a id="item-4"></a>
+## [AMD 对 NVIDIA CUDA 霸权的挑战](https://newsletter.semianalysis.com/p/can-amd-break-the-cuda-moat-amd-advancing) ⭐️ 9.0/10
+
+AMD 正在加大 Helios 机架的生产，该机架配备 72 个 MI455X GPU，但面临严重的内部集群不稳定和软件质量问题，财务工程部门甚至提供高达 105%的折扣来推动采用。 如果 AMD 能够打破 NVIDIA 的 CUDA 护城河，将为 AI 加速器市场带来真正的竞争，可能降低整个 AI 行业的成本并减少供应商锁定。 Helios 将于 2026 年下半年出货，包含 72 个 MI455X GPU 和 18 个 Venice CPU，提供 2.9 exaflops 算力。每个 MI455X 配备 432GB HBM4 内存。AMD 正在投资代理内核生成（如 CUDA Agent、KernelAgent）来自动优化软件，但内部开发集群仍不稳定。
+
+rss · Semianalysis · 7月25日 00:33
+
+**背景**: NVIDIA 的 CUDA 平台通过将开发者锁定在其生态系统中，形成了强大的护城河，使 AMD 等竞争对手难以获得市场 traction。AMD 的 ROCm 软件栈在成熟度和易用性上历来落后。代理内核生成利用大型语言模型自动编写和优化 GPU 内核，如果成功集成到生产工作流中，有可能缩小软件差距。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://cuda-agent.github.io/">CUDA Agent | Large-Scale Agentic RL for CUDA Kernel Generation</a></li>
+<li><a href="https://www.servethehome.com/amds-epyc-venice-instinct-mi455x-helios-hardware-on-display-for-first-time-at-ces-2026/">AMD’s EPYC Venice, Instinct MI 455 X , &amp; Helios ... - ServeTheHome</a></li>
+<li><a href="https://weightythoughts.com/p/cuda-is-still-a-giant-moat-for-nvidia">CUDA is Still a Giant Moat for NVIDIA - by James Wang</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AMD`, `#CUDA`, `#AI chips`, `#GPU competition`, `#software ecosystem`
+
+---
+
+<a id="item-5"></a>
+## [钢企接到限产通知，近七成亏损](https://news.google.com/rss/articles/CBMijgFBVV95cUxNQWw4QTBUWjQtMkkxcUhnMFBxU0d3N3JjRDllcGNHbkxUVXJqQUZVSE9jaFhfcUNIWEpjTVo3aWhVLXhJWWYwbFhkSjU3NmhXT0pMNlE2MFU5LVFwYlUzMVEtVjhiOXlJdWZBR3lYOFVrYzdsdGREa3pFOVZ4YUd2VnlQZEcxVE5lUk1Mc0N3?oc=5) ⭐️ 8.0/10
+
+中国钢铁企业已收到限产通知，近七成企业出现亏损，市场对下周钢价走势充满不确定性。 这一政策直接影响钢铁供应和价格，波及下游行业及整体经济。高亏损比例表明行业困境，下周价格走向对采购和库存策略至关重要。 限产令可能是持续环保和产能调控措施的一部分。报道显示近七成钢企处于亏损状态，分析师对钢价是反弹还是继续下跌存在分歧。
+
+rss · Google News - 钢材加工配送 · 7月25日 07:58
+
+**背景**: 中国经常对钢厂实施限产以实现环保目标和调控产能过剩。钢铁行业具有周期性，对政策变化敏感，近期需求疲软和原材料成本高企导致大面积亏损。
+
+**标签**: `#steel`, `#production restriction`, `#steel prices`, `#industry policy`
+
+---
+
+<a id="item-6"></a>
+## [微软 MAI 模型在 Excel 任务上与 GPT-5.6 相当，成本更低](https://news.google.com/rss/articles/CBMiV0FVX3lxTFBBSzg1TDJOMzBQNm9ZQWNLS1BQZFFHeEM3RklVaGR5Z2lpamROY0I4QlltTXRINmpwRWl6OERQWmdNTGN0UlBMY0FUVjNiQlRMaFlJcE5sVQ?oc=5) ⭐️ 8.0/10
+
+微软首席执行官萨提亚·纳德拉宣布，公司自研的 MAI 模型在 Excel 任务上表现与 OpenAI 的 GPT-5.6 相当，且部署成本更低。 这标志着微软在减少对外部 AI 模型的依赖，并优化企业生产力工具的成本效益，可能重塑 AI 模型市场的竞争格局。 MAI 模型已于 2026 年 4 月整合到微软核心生态系统，包括 Copilot 和 Azure AI Foundry。GPT-5.6 是 OpenAI 于 2026 年 7 月发布的模型系列，包含 Luna、Terra 和 Sol 三个变体。
+
+rss · Google News - EDF AI 部署工程 · 7月25日 07:48
+
+**背景**: 大型语言模型（LLM），如 GPT-5.6 和 MAI，是在海量文本数据上训练的人工智能系统，能够生成类似人类的回复。微软一直在开发自己的 MAI 基础模型以驱动其产品。GPT-5.6 是 OpenAI 最新的前沿模型，以在编程、科学和网络安全方面的先进能力著称。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://medium.com/@shuai.wang.us/mai-microsoft-ai-recalibrating-the-in-house-model-strategy-f746a33b031a">MAI ( Microsoft AI): Recalibrating the In-House Model Strategy | Medium</a></li>
+<li><a href="https://en.wikipedia.org/wiki/GPT-5.6">GPT-5.6</a></li>
+<li><a href="https://openai.com/index/previewing-gpt-5-6-sol/">Previewing GPT-5.6 Sol: a next-generation model | OpenAI</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI models`, `#Microsoft`, `#LLM`, `#cost efficiency`, `#Excel`
+
+---
+
+<a id="item-7"></a>
+## [菲尔兹奖得主加入 OpenAI，主攻 AI 安全](https://news.google.com/rss/articles/CBMiSEFVX3lxTE4zVWNQV3o0TTlZN2Y2bFFsbnkzTnhlbUxYSzl2bUdvLXluODhrUC1CTlZBN3M0SVh4Q3FZU044WElGdVVUMmtvZQ?oc=5) ⭐️ 8.0/10
+
+新晋菲尔兹奖得主亚历山大·齐默尔曼已加入 OpenAI，专注于 AI 安全研究。 这一动向凸显了顶级数学人才向 AI 领域迁移的趋势，反映了 AI 领域日益增长的重要性以及行业资源的吸引力。 齐默尔曼将专注于 AI 安全，这是确保人工智能负责任发展的关键领域。他于 2022 年因纯数学贡献获得菲尔兹奖。
+
+rss · Google News - EDF AI 部署工程 · 7月25日 11:00
+
+**背景**: 菲尔兹奖通常被视为数学界的诺贝尔奖，每四年颁发给 40 岁以下的数学家。OpenAI 是领先的人工智能研究机构，以 GPT-4 等模型闻名。此次招募菲尔兹奖得主，凸显了高等数学与 AI 研究（尤其是安全与对齐领域）的融合趋势。
+
+**标签**: `#OpenAI`, `#Fields Medal`, `#Talent`, `#AI`, `#Research`
+
+---
+
+<a id="item-8"></a>
+## [英美 AI 安全研究所联合评估 Kimi K3 网络安全](https://news.google.com/rss/articles/CBMiV0FVX3lxTFB3VUtjOE9jemRJa2pTTE5jRDRPaUNOVjBTeE1zUWJYMVd4VmJrUkhjMXZWYnBOeUt4RzlXQ3BTZWlmTTg0WFRiaHo3M1psY3B4QlMwWklvYw?oc=5) ⭐️ 7.0/10
+
+英国和美国的人工智能安全研究所联合发布了针对月之暗面 Kimi K3 模型的预部署评估，专门评估其网络安全能力和潜在的滥用风险。 这标志着 AI 安全领域国际合作的重要一步，为前沿模型的安全状况提供了权威评估，可能影响未来大语言模型的监管和部署实践。 Kimi K3 是一个 2.8 万亿参数的多模态推理模型，具有 100 万 token 的上下文窗口，基于月之暗面自有的 Kimi Delta Attention 架构构建。联合评估重点关注滥用可能性和网络安全鲁棒性。
+
+rss · Google News - EDF AI 部署工程 · 7月25日 00:50
+
+**背景**: 英国和美国的 AI 安全研究所（AISIs）是受政府支持的机构，致力于理解和减轻先进 AI 的风险。他们对前沿模型进行预部署评估，以评估能力和潜在危害，并经常进行国际合作。此次联合评估继对 OpenAI 的 o1 模型进行类似评估之后进行。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.kimi.com/blog/kimi-k3">Kimi K 3 Tech Blog: Open Frontier Intelligence</a></li>
+<li><a href="https://www.aisi.gov.uk/">The AI Security Institute (AISI)</a></li>
+<li><a href="https://www.longtermwiki.com/wiki/E13">AI Safety Institutes (AISIs) | Longterm Wiki</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI safety`, `#cybersecurity`, `#LLM security`, `#Kimi K3`, `#AI regulation`
+
+---
