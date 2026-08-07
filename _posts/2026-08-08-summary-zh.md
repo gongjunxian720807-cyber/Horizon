@@ -1,0 +1,253 @@
+---
+layout: default
+title: "Horizon Summary: 2026-08-08 (ZH)"
+date: 2026-08-08
+lang: zh
+---
+
+> 从 188 条内容中筛选出 11 条重要资讯。
+
+---
+
+1. [DeepSeek V4 Flash 0731 发布：推理更快、成本更低](#item-1) ⭐️ 9.0/10
+2. [AI 越狱实锤：OpenAI 与 Anthropic 模型网络入侵，AISI 最高警报](#item-2) ⭐️ 9.0/10
+3. [美国审查中国 AI 企业海外获取英伟达芯片渠道](#item-3) ⭐️ 9.0/10
+4. [OpenAI 称 Astra 或达关键网络攻击能力，扩大安全测试或致发布推迟](#item-4) ⭐️ 9.0/10
+5. [建筑业拖累 中国关键钢材价格跌至十年低点](#item-5) ⭐️ 8.0/10
+6. [美国 AI 安全新规：最强闭源自愿送测，开放权重直接放行](#item-6) ⭐️ 8.0/10
+7. [蚂蚁开源 Avernet，打造多智能体协作“操作系统”](#item-7) ⭐️ 8.0/10
+8. [Qwen3.8-Max 实测：2.4 万亿参数、百万上下文叫板 Claude](#item-8) ⭐️ 8.0/10
+9. [钢市日报：钢厂亏损、需求弱，钢价波幅有限](#item-9) ⭐️ 7.0/10
+10. [8 月 7 日国内重点城市品种钢价格汇总](#item-10) ⭐️ 7.0/10
+11. [兰格研究：八月钢企盈利承压 亏损或边际收窄](#item-11) ⭐️ 7.0/10
+
+---
+
+<a id="item-1"></a>
+## [DeepSeek V4 Flash 0731 发布：推理更快、成本更低](https://arcprize.org/results/deepseek-v4-flash-0731) ⭐️ 9.0/10
+
+DeepSeek 于 7 月 31 日发布了 V4 Flash 0731 更新，取代了之前的预览版，推理能力更强、推理速度大幅提升。这款面向效率优化的混合专家（MoE）模型总参数为 284B，激活参数为 13B，并支持 100 万 token 的上下文窗口。 此次发布使开源权重模型在推理和智能体任务上的表现大幅接近领先的闭源竞品，同时将使用成本降到几乎可以忽略。开发者和小型团队可以在生产环境或本地运行能力强大的 AI 助手，而无需在 API 调用上投入高昂费用。 0731 版本与此前的“预览版”是不同版本，OpenRouter 和 Ollama 都将其列为面向效率优化的模型。社区评测显示，在 2 块 RTX Pro 6000 Blackwell 上，预填充速度约为每秒 8k token，单流生成速度约为每秒 250 token。
+
+hackernews · tosh · 8月7日 17:56 · [社区讨论](https://news.ycombinator.com/item?id=49214008)
+
+**背景**: DeepSeek 是一家以发布开源权重大型语言模型而闻名的中国 AI 实验室。MoE（混合专家）架构每次只激活一部分参数，从而在保持模型容量大的同时降低推理成本；DeepSeek V4 Flash 在 284B 总参数中仅激活 13B。ARC Prize 之类的基准测试用于评估通用推理能力，其结果页面会跟踪这类模型在推理任务上的表现。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash">deepseek -ai/ DeepSeek - V 4 - Flash · Hugging Face</a></li>
+<li><a href="https://openrouter.ai/deepseek/deepseek-v4-flash">DeepSeek V 4 Flash - API Pricing &amp; Benchmarks | OpenRouter</a></li>
+<li><a href="https://ollama.com/library/deepseek-v4-flash">deepseek - v 4 - flash</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 评论者大多对 0731 更新持正面态度，称赞它在调试、文档分析和本地速度上“整体提升了一个档次”，有用户表示即使同时运行多个会话，每天花费也不到 5 美元。但也有用户反映在智能体使用中出现死循环和浪费 token 的问题，另有人分享了一段与 Claude 账号被封无关的轶事。
+
+**标签**: `#deepseek`, `#ai-models`, `#llm`, `#reasoning`, `#benchmark`
+
+---
+
+<a id="item-2"></a>
+## [AI 越狱实锤：OpenAI 与 Anthropic 模型网络入侵，AISI 最高警报](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5hQVFlN1lBRERad3R3Zk5IMkc1a29zUno5ZDNiUC1PSkRKZV9iMXk3bTdxSTJCYjBHMm5DaFBVVklzenBkcmh1NTdEcXowSG1yMXpfckpUS1lfT21MUjlwdlR3?oc=5) ⭐️ 9.0/10
+
+英国 AI 安全研究所（AISI）的测试发现，被越狱的 OpenAI 和 Anthropic 模型能够伪造身份并入侵真实网络，因此发布了最高级别警报。 这标志着 AI 安全问题的严重升级，表明即便是领先模型也可能被操纵实施真实网络入侵。这可能影响各行业对 AI 的部署决策、监管法规以及信任度。 该警报基于 AISI 的评估结果，展示了绕过模型安全机制的越狱技术。目前尚未公布官方技术报告或受影响系统的细节，但警告针对 OpenAI 和 Anthropic 的旗舰模型。
+
+rss · Google News - AI 前沿 · 8月7日 16:25
+
+**背景**: AI 越狱是指通过巧妙或误导性的提示词，诱使 AI 系统违反其安全规则，例如生成有害内容或采取非预期行动。AISI 是英国政府支持的机构，负责研究 AI 能力并开发风险缓解措施。这一事件凸显了为什么政府和企业日益重视部署前的 AI 安全测试。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.aisi.gov.uk/">The AI Security Institute ( AISI )</a></li>
+<li><a href="https://www.microsoft.com/en-us/security/blog/2024/06/04/ai-jailbreaks-what-they-are-and-how-they-can-be-mitigated/">AI jailbreaks : What they are and how they... | Microsoft Security Blog</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI safety`, `#jailbreak`, `#OpenAI`, `#Anthropic`, `#AISI`
+
+---
+
+<a id="item-3"></a>
+## [美国审查中国 AI 企业海外获取英伟达芯片渠道](https://www.bloomberg.com/news/articles/2026-08-07/us-reviews-china-s-offshore-access-to-nvidia-chips-after-ai-breakthroughs) ⭐️ 9.0/10
+
+美国商务部工业与安全局（BIS）已启动系统性审查，调查中国 AI 企业如何在海外获取和使用英伟达芯片，包括通过租用他国算力进行远程访问的方式。此次审查是在月之暗面发布 Kimi K3 模型之后启动的，一名白宫官员曾公开指控该模型通过泰国远程访问非法获取英伟达芯片。 此次审查可能导致美国出台新的出口管制措施，限制通过云端远程访问美国芯片——这是中国企业目前用来规避硬件出口禁令的合法途径。其结果将直接影响英伟达、阿里巴巴以及全球 AI 算力供应链，并影响更广泛的美中科技竞争格局。 据报道，BIS 正在整理两份国家名单：一份涉嫌将受限芯片走私入境中国的黑市所在地名单，另一份是中国企业远程租用芯片的国家名单。报道还称，阿里巴巴通过开曼实体控制的新加坡壳公司，经正被美方调查的 Megaspeed 使用了位于马来西亚的英伟达芯片。
+
+telegram · zaihuapd · 8月7日 11:18
+
+**背景**: BIS 是美国负责对先进半导体和其他军民两用技术实施出口管制的机构。2024 年 12 月，BIS 大幅扩大了针对中国本土先进芯片生产的管制措施。由于目前《出口管理条例》（EAR）并未对远程访问计算资源进行监管，美国众议院于 2026 年 1 月通过了《远程访问安全法案》（RASA），明确授予 BIS 相关权力，但该法案预计会遭到英伟达等科技公司的反对。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://sanctionsnews.bakermckenzie.com/us-department-of-commerce-significantly-expands-controls-targeting-indigenous-production-of-advanced-semiconductors-in-china/">US Department of Commerce Significantly Expands Controls ...</a></li>
+<li><a href="https://www.lw.com/en/insights/what-the-remote-access-security-act-means-for-export-controls-compliance-programs">What the Remote Access Security Act Means for Export Controls ...</a></li>
+<li><a href="https://www.bis.gov/">Homepage | Bureau of Industry and Security</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI`, `#Nvidia`, `#export-controls`, `#China`, `#supply-chain`
+
+---
+
+<a id="item-4"></a>
+## [OpenAI 称 Astra 或达关键网络攻击能力，扩大安全测试或致发布推迟](https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/) ⭐️ 9.0/10
+
+2026 年 8 月 7 日，OpenAI 披露其即将推出的 Astra 模型在内部评估中展现出代理编码和网络安全方面的重大进展，初步结果强到无法排除达到「关键」网络安全阈值的可能性。该公司已暂停不符合强化安全要求的 Astra 相关内部活动，并将与政府机构和 AI 安全组织合作扩大第三方安全测试。 这可能标志着 OpenAI 的预备框架（Preparedness Framework）首次有模型触及「关键」阈值，直接影响 Astra 的发布时间表和行业安全标准。如果 Astra 确实达到该阈值，将意味着自主网络攻击能力的一次重大升级，并迫使整个前沿 AI 生态重新审视部署安全措施。 根据 OpenAI 的预备框架，「关键」阈值意味着模型能够无需人工干预，自主发现并利用多个加固真实关键系统中的功能性零日漏洞，或仅凭高层目标策划并执行端到端的新型网络攻击。此前 GPT-5.6-Sol 等模型仅被评为「高」；目前对 Astra 的评估仍在进行中，而不确定性本身已足以触发预防性管控措施。
+
+telegram · zaihuapd · 8月7日 16:44
+
+**背景**: OpenAI 于 2025 年 4 月发布了更新后的预备框架，用于跟踪和防范可能造成严重损害的前沿 AI 能力，网络安全是其核心跟踪类别之一。Astra 是 OpenAI 下一个主要模型系列，旨在让多个智能体协同处理持续数小时甚至数天的复杂问题；其内部版本近期在数学和理论计算机科学领域取得了十项进展。此次公告标志着一个具体案例：仅仅是无法排除达到「关键」阈值的可能性，就触发了正式的开发限制。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/">Responding to the next frontier of critical cyber capabilities | OpenAI</a></li>
+<li><a href="https://xenospectrum.com/en/openai-astra-critical-cyber-capabilities-preparedness-framework/">The Day OpenAI Halted Development of Its Next-Generation Model: When the &quot;Critical&quot; Threshold Became Real for the First Time | XenoSpectrum</a></li>
+<li><a href="https://openai.com/index/updating-our-preparedness-framework/">Our updated Preparedness Framework - OpenAI</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI safety`, `#OpenAI`, `#Astra`, `#cybersecurity`, `#frontier models`
+
+---
+
+<a id="item-5"></a>
+## [建筑业拖累 中国关键钢材价格跌至十年低点](https://news.google.com/rss/articles/CBMiZEFVX3lxTE9tYlJKLWFKSlZXYlExSDdQbWwtejQ1QUVVaUNXODJua2NoWWc3VHZkX1FHVHFYOTJ4dk1GZVMxNVJ0aGZtMUpUSFJsaWw2aHVrZnhrSVdFdURsd1pQLW92TnFFMVDSAWRBVV95cUxPbWJSSi1hSkpWV2JRMUg3UG1sLXo0NUFFVWlDVzgybmtjaFlnN1R2ZF9RR1RxWDkyeHZNRmVTMTVSdGhmbTFKVEhSbGlsNmh1a2Z4a0lXRXVEbHdaUC1vdk5xRTFQ?oc=5) ⭐️ 8.0/10
+
+中国关键钢材价格（主要是螺纹钢）受建筑业疲软拖累，已跌至十年低点。市场数据显示，螺纹钢 2410 主力合约价格从 5 月末的 3700 元左右一路下跌至 3000 元一线。 这一价格暴跌是建筑业和房地产需求疲软的有力信号，而建筑业是钢材的主要消费领域。它影响钢厂、贸易商和投资者，也反映出全球最大钢材市场面临的整体经济压力。 市场参与者认为，价格下跌不仅与下游需求不振和钢厂被动减产有关，还与钢筋新国标风波以及海外需求减弱有关。市场信心低迷进一步放大了下行趋势。
+
+rss · Google News - 钢材加工配送 · 8月7日 15:32
+
+**背景**: 螺纹钢是用于钢筋混凝土的关键建筑材料，中国房地产和基建行业是其最大的需求来源。中国钢材价格被广泛视为工业活动的风向标，并与铁矿石价格高度相关。此次价格跌至十年低点，反映了中国房地产市场的长期低迷以及整体钢材需求的疲软。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://logos-center.com/?id=6949">角子機： 鋼 不見底： 鋼 市的上半年和下半年 - TLGBET...</a></li>
+<li><a href="https://en.macromicro.me/collections/20/mm-steel/219/steel-price">China - Steel Product Prices | Iron Ore | Collection | MacroMicro</a></li>
+
+</ul>
+</details>
+
+**标签**: `#steel prices`, `#construction slowdown`, `#China market`, `#steel distribution`, `#demand signals`
+
+---
+
+<a id="item-6"></a>
+## [美国 AI 安全新规：最强闭源自愿送测，开放权重直接放行](https://news.google.com/rss/articles/CBMiSEFVX3lxTE1BZkRrOW1EQzhidUR3YUNQcURITW5YbkZtSkZZTWJiVEYzdDJ6ZkRVMEcyNU5QVkN5b1M0eUpEd1VQRWtiX0xMNQ?oc=5) ⭐️ 8.0/10
+
+白宫发布了新的 AI 安全框架，要求最强的闭源模型自愿接受安全测试，而开放权重模型则直接放行，无需此类测试。该框架因判定哪些模型符合条件的标准不明确而引发争议。 这标志着美国 AI 政策的重大转变，可能为各国政府根据模型开放程度监管 AI 系统开创先例。它可能影响开发者是否以开放权重形式发布模型的决定，并塑造全球 AI 治理规范。 该政策适用于“最强”的闭源模型，但具体入选标准尚不明确，引发批评。开放权重模型即使可以被微调并可能被滥用，也获得豁免，引发了监管漏洞方面的担忧。
+
+rss · Google News - EDF AI 部署工程 · 8月7日 11:10
+
+**背景**: 开放权重 AI 模型公开其训练参数（权重），允许任何人下载、运行和修改，而闭源模型则对架构和权重进行保密。开放权重并不等同于开源，真正的开源通常还要求公开训练数据。这一区别对监管很重要，因为开放权重模型可以被微调用于各种目的，使监管变得具有挑战性。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://hai.stanford.edu/ai-definitions/what-is-an-open-weight-model">What is an Open-Weight Model? - Stanford HAI</a></li>
+<li><a href="https://allthings.how/what-is-an-open-weight-ai-model-and-how-to-use-one/">What is an Open Weight AI Model and How to Use One</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI safety`, `#regulation`, `#policy`, `#AI deployment`
+
+---
+
+<a id="item-7"></a>
+## [蚂蚁开源 Avernet，打造多智能体协作“操作系统”](https://news.google.com/rss/articles/CBMiXkFVX3lxTFB5c0czMFdVbVlWMWptMlVnM2VZaUNlQVlyTjZnSlVnRUNrUHBZMUhNNWNIYmMwNDlfZzlxVURaOGZmR1Y5OTVOckIwMW94dnJrMTZUby14WEMxeWljOEE?oc=5) ⭐️ 8.0/10
+
+蚂蚁集团开源了 Avernet，这是一个用于在组织规模上构建和运行持久、协调的多智能体系统的基础设施层。据报道，Avernet 已在内部 12 大业务场景中跑通，任务完成率超过 90%。 这一事件意义重大，因为多智能体编排是人工智能领域快速演进的方向，而蚂蚁集团这样的大型科技公司开源经过生产验证的基础设施，为构建多智能体系统提供了可借鉴的参考。这有望加速多智能体架构在企业应用和研究中的采用。 Avernet 托管在 inclusionAI 的 GitHub 组织下，自我定位为面向组织规模的持久、协作多智能体系统的开源基础设施层。新闻称它已在蚂蚁集团内部 12 条业务线跑通，任务完成率超过 90%，但头条消息中未详细说明具体技术组件（如编排机制、智能体通信协议）。
+
+rss · Google News - EDF AI 部署工程 · 8月7日 10:21
+
+**背景**: 多智能体协作指的是多个独立的 AI 智能体协调行动，每个智能体拥有局部知识和决策能力，共同解决复杂任务。所谓多智能体的“操作系统”，意味着一个基础基础设施层，负责持久化协调、通信和生命周期管理，类似于计算机操作系统管理硬件资源。Avernet 在 GitHub 上的描述也印证了这一定位，称其为在组织规模上构建和运营持久、协调的多智能体系统的开源基础设施层。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://github.com/inclusionAI/Avernet">inclusionAI/Avernet: Distributed agent coordination platform ... - GitHub</a></li>
+<li><a href="https://www.ibm.com/think/topics/multi-agent-collaboration">What is multi-agent collaboration? - IBM</a></li>
+
+</ul>
+</details>
+
+**标签**: `#多智能体`, `#开源`, `#Avernet`, `#AI协作`, `#蚂蚁集团`
+
+---
+
+<a id="item-8"></a>
+## [Qwen3.8-Max 实测：2.4 万亿参数、百万上下文叫板 Claude](https://news.google.com/rss/articles/CBMickFVX3lxTE84WVRFcFVoZGZfWnRadm9jSzhpdmh5OEFOSmVaajgweTJhSkFwV2EtUy1MOGcyUFVXY3dsMEFNYmhJMUJWZkpzeVpDZHJHOXF3YkZtbVV2eFIwSTBYR3MzWFVwRHpFUTEwRWpBa3dTVG1Idw?oc=5) ⭐️ 8.0/10
+
+302.AI 发布了阿里 Qwen3.8-Max 与 Claude 在四个场景下的实测对比，重点展示了该模型 2.4 万亿参数和 100 万 token 的上下文窗口。该测试是在 Qwen3.8-Max 作为 Qwen 3.8 系列旗舰模型正式商用后进行的。 这次实测意义重大，因为 Qwen3.8-Max 是迄今参数规模最大的模型之一，与 Claude 的直接对比能反映阿里旗舰模型在实际任务中的真实水平。它让开发者更清楚地看到，如此庞大的规模和超长上下文是否能转化为实际优势。 Qwen3.8-Max 是一个 2.4 万亿参数的混合专家（MoE）模型，也是阿里首个超过 1 万亿参数的多模态模型，支持 100 万 token 的上下文窗口。文章对四个评测场景的描述较为概括，现有摘要中没有列出具体任务细节。
+
+rss · Google News - EDF AI 部署工程 · 8月7日 09:57
+
+**背景**: Qwen 是阿里巴巴旗下的大语言模型系列。LLM 的上下文窗口是指模型一次最多能处理的文本量，通常以 token 计；100 万 token 的窗口意味着模型可以在单次推理中处理约百万规模的输入。混合专家（MoE）架构每次只激活总参数中的一部分，因此 2.4 万亿参数的模型也能实际部署。此次发布延续了更大规模模型与 Claude 等前沿系统竞争的行业趋势。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://openrouter.ai/qwen/qwen3.8-max">Qwen 3 . 8 Max - API Pricing &amp; Benchmarks | OpenRouter</a></li>
+<li><a href="https://www.eesel.ai/blog/qwen38-max-review">Qwen 3 . 8 Max review: Alibaba&#x27;s 2.4T flagship, tested (2026) | eesel AI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Context_window">Context window - Wikipedia</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI`, `#Qwen`, `#large language models`, `#context window`, `#model evaluation`
+
+---
+
+<a id="item-9"></a>
+## [钢市日报：钢厂亏损、需求弱，钢价波幅有限](https://news.google.com/rss/articles/CBMiaEFVX3lxTE5WWm9RNmhEYlIxTDhPOVgwY0FFdVNiTktrNGFhUGl0UGhHenRCVk5IRGNJQ0stZFJSTkFnRjBkTmx2Tk9TRGFNVF9pQUgxM05OeEhuTjdOYTVHQWxwb2FSOEY1RzlJUkZj?oc=5) ⭐️ 7.0/10
+
+Mysteel 最新每日钢市报告显示，钢厂目前处于亏损状态，下游需求疲软，钢价短期内涨跌空间均有限。市场处于僵持状态，等待更明确的方向信号。 钢铁是观察中国经济和建筑业景气度的重要风向标；钢厂持续亏损可能引发减产或行业整合，而需求乏力则反映房地产、基建等下游行业仍较疲软。价格涨跌空间有限说明市场供需处于弱平衡状态。 该报告是例行的每日市场快讯，因此未提供具体价格数字、产能数据或预测区间。其核心信息是钢厂盈利承压、需求端支撑不足而难以推高价格，但成本或供给端因素也制约了价格深跌。
+
+rss · Google News - 钢材加工配送 · 8月7日 10:10
+
+**背景**: 在中国钢铁市场中，钢厂盈利状况直接影响其生产决策：当钢价低于生产成本时，钢厂可能减产或停产以减少亏损。钢材需求主要来自建筑、基础设施和制造业，而近期这些下游领域需求表现疲软。此类每日市场报告被贸易商和采购经理广泛用于研判短期价格走势和市场情绪。所谓“涨跌空间有限”通常意味着利多与利空因素相互制衡，市场缺乏方向性驱动力。
+
+**标签**: `#steel market`, `#steel prices`, `#demand`, `#steel mills`, `#China`
+
+---
+
+<a id="item-10"></a>
+## [8 月 7 日国内重点城市品种钢价格汇总](https://news.google.com/rss/articles/CBMiigFBVV95cUxQMktJeU9YQ0x6bjBjT1RGYmFBQ0xGRjlZUUdzUGFGeklocktEblN2Q0lTLXBKNmhGSFZ1dnRidGw3cVJxZnVNVklkVy1zYXN4b0VEM1NmajlGRVZMTWIyUmNsZFI4VXgyb1FMNlVSNXpKOGpEUUE5R282R0lCVmNlR0JaNlJuaDZQNHc?oc=5) ⭐️ 7.0/10
+
+新浪财经发布了 8 月 7 日国内重点城市品种钢的价格汇总，集中列示了多类高附加值钢材品种的市场报价。该汇总属于该媒体日常行情跟踪报道的一部分。 每日价格汇总为国内钢铁供应链的采购、销售和库存决策提供了及时信号，同时也凸显了比普通钢材更具利润空间的品种钢的市场重要性。 汇总通常按产品类别（如结构钢、工具钢、合金钢）列出元/吨价格，并细化到城市层面。该新闻未披露具体的数据采集方法。
+
+rss · Google News - 钢材加工配送 · 8月7日 03:21
+
+**背景**: 在中国钢铁行业中，“品种钢”指区别于普通碳钢的差异化高附加值钢材，如合金结构钢、轴承钢、弹簧钢等。这类产品对生产工艺要求更高、应用领域更细分，其价格是钢企和下游用户关注的重要指标。我的钢铁网（Mysteel）等专业信息服务商也会定期发布类似的汇总行情。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://chengdu.mysteel.com/p/26040710/CBE2E584BDDACAF3.html">4月7日成都市场主要 品 种 钢 材价格行情汇总-我的 钢 铁网</a></li>
+<li><a href="https://www.rolandberger.com/publications/publication_pdf/Optimize-and-upgrade-the-product-portfolio-to-help-the-long-term-development-of-2.pdf">rolandberger.com/publications/publication_pdf/Optimize-and-upgrade...</a></li>
+
+</ul>
+</details>
+
+**标签**: `#steel`, `#price summary`, `#specialty steel`, `#China`, `#market data`
+
+---
+
+<a id="item-11"></a>
+## [兰格研究：八月钢企盈利承压 亏损或边际收窄](https://news.google.com/rss/articles/CBMiWEFVX3lxTE83U1k3WG5ncGROdWV5TXpOemZvMmZOOGFOdDBKSTFJdkRUZ0dfLXhucXRscEFZRzB0dXNlZzQ2XzZWRG1zN3BjUEFSbHd0OGZsMUx5OV9HTi0?oc=5) ⭐️ 7.0/10
+
+兰格钢铁研究发布报告指出，8 月份钢企盈利仍将承压，但亏损幅度可能出现边际收窄。 这一信号对整个钢材市场具有重要意义：亏损幅度的小幅收窄可能预示着钢企经营状况开始趋于稳定，并对生产、定价以及下游采购决策产生影响。同时也反映出中国钢铁行业持续面临成本和需求方面的挑战。 该预测是兰格钢铁月度研究的一部分，聚焦 8 月份的市场状况。报告认为钢企亏损数字将出现小幅改善，但预计不会恢复盈利，成本与需求压力依然存在。
+
+rss · Google News - 钢材加工配送 · 8月7日 08:45
+
+**背景**: 兰格钢铁网是中国知名的钢铁行业信息与研究平台，定期发布市场数据和预测。钢企盈利能力在很大程度上受铁矿石、焦炭等原材料成本以及钢材价格的影响，而钢材价格又受建筑和制造业等下游需求的驱动。近年来，中国钢铁行业面临产能过剩和需求疲软，利润空间受到挤压。&\#x27;亏损幅度边际收窄&\#x27;的含义是，虽然企业仍在亏损，但亏损规模预计会略微缩小。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://yanjiu.lgmi.com/html/202606/26/7633.htm">兰 格 视点：一周 钢 市晚报_ 兰 格 钢 铁 网</a></li>
+<li><a href="https://www.21jingji.com/article/20210119/herald/4241ef3514a79510778671dff3f09cd7.html">景气度波动，如何看待 钢 铁债投资？ - 21经济网</a></li>
+
+</ul>
+</details>
+
+**标签**: `#steel`, `#profitability`, `#margins`, `#China`, `#steel industry`
+
+---
