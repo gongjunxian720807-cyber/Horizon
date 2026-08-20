@@ -1,0 +1,274 @@
+---
+layout: default
+title: "Horizon Summary: 2026-08-21 (ZH)"
+date: 2026-08-21
+lang: zh
+---
+
+> 从 221 条内容中筛选出 12 条重要资讯。
+
+---
+
+1. [GitHub 8 月 17 日宕机：重试缺陷放大流量](#item-1) ⭐️ 8.0/10
+2. [AliExpress 用无声 WebAudio 指纹追踪干扰蓝牙多点连接](#item-2) ⭐️ 8.0/10
+3. [恶意 Rust crate arrayref 发布版在构建时执行载荷](#item-3) ⭐️ 8.0/10
+4. [消息称 OpenAI 洽谈租用俄亥俄州 10 吉瓦数据中心](#item-4) ⭐️ 8.0/10
+5. [Unsloth Dynamic V3 让 Qwen3.8-27B 更小更聪明，1-bit 版 8GB 内存就能跑](#item-5) ⭐️ 8.0/10
+6. [8 月 20 日国内重点城市钢材价格汇总](#item-6) ⭐️ 7.0/10
+7. [兰格发布 8 月 20 日螺纹钢早间价格预警](#item-7) ⭐️ 7.0/10
+8. [兰格钢铁发布 8 月 20 日螺纹钢价格早间预警](#item-8) ⭐️ 7.0/10
+9. [供需格局弱稳 螺纹钢与铁矿石低位震荡](#item-9) ⭐️ 7.0/10
+10. [菏泽装配式建筑配比超 40%，未来将继续提高](#item-10) ⭐️ 7.0/10
+11. [国内首款 AI&quot;安全眼&quot;破解塔吊安拆监管盲区](#item-11) ⭐️ 7.0/10
+12. [OpenAI 推出私密安全处理，零数据保留守护 AI 安全](#item-12) ⭐️ 7.0/10
+
+---
+
+<a id="item-1"></a>
+## [GitHub 8 月 17 日宕机：重试缺陷放大流量](https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/) ⭐️ 8.0/10
+
+GitHub 发布了 8 月 17 日宕机的事后分析，指出 VS Code 中一个潜在的重试缺陷与客户端重试循环将 Copilot Token Service 的流量放大了约 10 倍，从而推迟了恢复。 此次事件表明，重试逻辑虽常被视为小细节，却可能将一个小型内部错误变成重大宕机。对于依赖可观测性、限流和退避策略来防止级联故障的平台工程师与 AI 部署工程师而言，这些教训至关重要。 根本原因是对单个内部端点的回复延迟，触发了 VS Code 中的客户端重试循环，产生了大约 10 倍的额外流量。GitHub 还指出，自 4 月以来，每月提交数已从 14 亿增长到 29 亿，给系统带来了更大压力。
+
+hackernews · 0xedb · 8月20日 19:22 · [社区讨论](https://news.ycombinator.com/item?id=49378957)
+
+**背景**: 重试风暴（retry storm）是指客户端在请求失败后自动重试过于激进，反而压垮服务器，使其无法恢复。指数退避（exponential backoff）和客户端重试限制是避免此类风暴的常见模式。GitHub 的宕机表明，潜在缺陷与正常重试行为叠加会成倍放大流量，因此可靠性工程必须将客户端重试策略视为系统设计的一部分。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://medium.com/@Rajjj/retry-storm-how-a-single-user-crashed-30-ecs-tasks-at-production-98c84c17331c">Retry Storm : How A Single User Crashed 30 ECS Tasks At... | Medium</a></li>
+<li><a href="https://keyholesoftware.com/preventing-retry-storms-with-responsible-client-policies/">How to Prevent Retry Storms with Responsible Client - Side Retry ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Exponential_backoff">Exponential backoff - Wikipedia</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 评论者们就激进客户端重试是否值得冒险展开讨论，有人认为它会掩盖真实故障并造成最坏情况。另一些人将提交量的快速上涨视为整个行业‘生产率焦虑’驱动 AI 工具使用的又一证据。还有人指出，向用户收费以限制 AI 带来的负载，与微软推动开发者采用 AI 的激励相矛盾。
+
+**标签**: `#outage`, `#reliability`, `#retry`, `#GitHub`, `#observability`
+
+---
+
+<a id="item-2"></a>
+## [AliExpress 用无声 WebAudio 指纹追踪干扰蓝牙多点连接](https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html) ⭐️ 8.0/10
+
+Laserphile 发布调查，显示 AliExpress 运行混淆的 WebAudio 指纹追踪代码，播放人耳听不到的音频流。这段无声音频流会干扰蓝牙多点连接，使耳机无法在已配对设备之间正常切换。 此事意义重大，因为它表明一家大型电商网站使用了侵犯隐私的指纹追踪技术，并对用户蓝牙硬件产生了实际可见的副作用。这也凸显出激进的追踪脚本可能损害无关消费设备的体验和可靠性，并可能推动浏览器采取更强的 WebAudio 缓解措施。 无声音频是通过 WebAudio API 生成的，Firefox、Chrome 和 Windows 都不会将其识别为正在播放的音频，因此通常不会触发浏览器的扬声器图标。评论者指出，Firefox 已经实施了相关缓解措施，可以降低但不能完全消除 WebAudio 指纹值的唯一性。
+
+hackernews · emctech · 8月20日 10:08 · [社区讨论](https://news.ycombinator.com/item?id=49372583)
+
+**背景**: WebAudio 指纹追踪是一种浏览器指纹技术，利用音频信号处理中细微的设备差异来生成用户设备的唯一标识。蓝牙多点连接是一种功能，允许一副耳机同时与两个或多个源设备（如笔记本电脑和手机）保持连接，并根据场景在它们之间切换。持续存在的无声音频流可能被误认为是正在播放的媒体，从而占用蓝牙音频链路，干扰多点多连接所依赖的自动切换。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=49372583">AliExpress runs silent WebAudio fingerprinting that... | Hacker News</a></li>
+<li><a href="https://www.soundguys.com/bluetooth-multipoint-explained-28601/">What is Bluetooth multipoint? - SoundGuys</a></li>
+<li><a href="https://web-tracking.allenchou.cc/docs/browser-fingerprinting/techniques/audio-fingerprinting/">WebAudio Fingerprinting | Web Tracking 筆記</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 评论者分享了佐证案例，例如访问某些网站时助听器的环境音放大发生变化，以及 iOS 上 AliExpress 应用退到后台后车载音响被误触发。一位评论者指出 Firefox 已在很大程度上缓解了 WebAudio 指纹追踪，另一位评论者则讽刺地质疑 Apple 是否会因其隐私规则将 AliExpress 从 App Store 下架。
+
+**标签**: `#privacy`, `#fingerprinting`, `#WebAudio`, `#security`, `#browser`
+
+---
+
+<a id="item-3"></a>
+## [恶意 Rust crate arrayref 发布版在构建时执行载荷](https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/) ⭐️ 8.0/10
+
+2026 年 8 月 20 日，Rust 团队确认了针对广受欢迎的 arrayref crate 的供应链攻击：一个被入侵的发布版引入了仿冒的 proc-macro1 依赖，其 build.rs 脚本在编译期间下载并执行远程二进制文件。恶意发布版已从 crates.io 移除，并在 RustSec advisory-db 中提交了安全公告（issue \#3161）。 arrayref 是一个被广泛使用的 crate，因此该事件对许多 Rust 项目都有广泛的潜在影响。此次事件暴露出 crates.io 和 GitHub 在事件响应上的不足，并再次引发了对 Cargo 构建脚本进行沙箱隔离以防构建时执行恶意代码的诉求。 该攻击使用了一个名为 proc-macro1 的仿冒 crate，它看起来与合法的 proc-macro2 非常相似，并通过构建脚本执行其载荷。恶意版本从 crates.io 消失时没有显示 yank 标记，且该 crate 页面未显示安全公告，社区成员认为这暴露了事件响应方面的问题。
+
+hackernews · abhisek · 8月20日 13:23 · [社区讨论](https://news.ycombinator.com/item?id=49374269)
+
+**背景**: Rust 的软件包称为 crate，通过 crates.io 注册表分发。许多 crate 包含构建脚本（build.rs），这些脚本在编译前运行任意代码，而过程宏 crate 则扩展编译器以生成代码。这种设计使得构建时执行代码成为供应链攻击的主要载体。RustSec advisory-db 是一个社区驱动的漏洞数据库，用于跟踪此类安全问题，Rust 项目此前也讨论过通过沙箱化构建脚本进行缓解。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html">Rust Supply Chain Attack Puts Build-Time Malware in Crates ...</a></li>
+<li><a href="https://news.ycombinator.com/item?id=49374269">Malicious Rust Crate Arrayref Runs a Build-Time Payload ...</a></li>
+<li><a href="https://github.com/RustSec/advisory-db">GitHub - rustsec / advisory - db : Security advisory database for Rust ...</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: Hacker News 上的评论者批评 crates.io 对此次事件的处理方式，指出被移除的版本没有 yank 标记，且 crate 页面未链接任何安全公告。有人认为 Cargo 需要对 build.rs 脚本进行沙箱隔离，也有人主张 Rust 生态应减少依赖树规模、实现“开箱即用”的标准库以缩小攻击面。还有人指出，AI 辅助攻击对 crate 维护者的威胁正在增加。
+
+**标签**: `#supply-chain security`, `#Rust`, `#crates.io`, `#security incidents`, `#open-source`
+
+---
+
+<a id="item-4"></a>
+## [消息称 OpenAI 洽谈租用俄亥俄州 10 吉瓦数据中心](https://news.google.com/rss/articles/CBMiSEFVX3lxTFBrdHpIekxCYlpaeVc0Y3pndTJtVFkwaVlDWDdYVnlfR2t5YW4tWnRrQXlpVU5kUWdrc3prSmtwQmJQZ3E3UWgxeA?oc=5) ⭐️ 8.0/10
+
+据财联社报道，OpenAI 正洽谈租赁俄亥俄州一座 10 吉瓦的数据中心。这将成为迄今最大规模的 AI 算力租赁交易之一，远超典型的超大规模数据中心。 这项交易将为 OpenAI 锁定庞大的 AI 算力，凸显 AI 基础设施的爆发式需求以及能源获取的战略重要性。它也可能重塑数据中心行业，因为 10 吉瓦级园区需要相当于约九座核反应堆的巨大发电能力。 一个 10 吉瓦园区将需要庞大的实体基础设施；与之类似的软银在俄亥俄州的计划估计，计算基础设施耗资 300-400 亿美元，另有 330 亿美元用于天然气发电厂，相当于约九座核反应堆。作为规模参考，10 吉瓦等于 10000 兆瓦或 100 亿瓦。
+
+rss · Google News - AI 前沿 · 8月20日 18:14
+
+**背景**: 数据中心容量通常以兆瓦为单位；1 吉瓦等于 1000 兆瓦，而目前大多数超大规模数据中心为几十到几百兆瓦。随着 AI 模型不断增大，OpenAI 等公司需要指数级增长的算力，推动了对整个吉瓦级园区的需求。这类项目需要获取巨量电力，通常还要配套专用天然气发电厂或其他能源设施。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/planned-10-gigawatt-softbank-data-center-in-ohio-might-be-the-largest-in-the-world-will-require-a-usd33-billion-natural-gas-plant-equivalent-to-nine-nuclear-reactors">Planned 10-gigawatt Softbank data center in Ohio might be the largest in the world — will require a $33 billion natural gas plant, equivalent to nine nuclear reactors | Tom&#x27;s Hardware</a></li>
+<li><a href="https://www.datacenterfrontier.com/hyperscale/article/55021675/the-gigawatt-data-center-campus-is-coming">The Gigawatt Data Center Campus is Coming | Data Center Frontier</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI compute`, `#OpenAI`, `#data center`, `#infrastructure`
+
+---
+
+<a id="item-5"></a>
+## [Unsloth Dynamic V3 让 Qwen3.8-27B 更小更聪明，1-bit 版 8GB 内存就能跑](https://news.google.com/rss/articles/CBMiTkFVX3lxTE04bS1fb0JtbUFtMS1XVnEyNWZ3cUZTV1hMdTl4ajRaX2ZYd3k4THV2S0N0b2puUHlEQ0N0RVNYTDhJdEcyMGRiMGxqLTROQQ?oc=5) ⭐️ 8.0/10
+
+Unsloth 发布了针对 Qwen3.8-27B 的 Dynamic V3.0 量化版本，其中包括 1-bit 版本，可在 8GB 内存上运行，并获得了通义千问官方的点赞。新量化方法据称在相同体积下比此前方案准确率提升超过 10%。 这意义重大，因为它大幅降低了运行 27B 大模型的硬件门槛，让消费级 GPU 也能进行本地推理。这也反映出行业正加速向极致低比特量化迈进，以降低部署成本。 Dynamic V3.0 是 Dynamic v2.0 的下一代版本，据称在 Div-300、KLD 等基准上比其他量化方法领先超过 10%。其 1-bit 量化采用三元权重技术，缩小了与全精度模型之间的质量差距。
+
+rss · Google News - EDF AI 部署工程 · 8月20日 07:57
+
+**背景**: 量化通过用更少的比特表示模型权重来压缩模型，从而降低内存和计算开销。早期方法通常难以低于 4-bit，但采用三元权重（−1、0、+1）的 1-bit 方法近来大幅缩小了精度差距，使 Qwen3.8-27B 这类模型只需 8GB 内存即可运行。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://unsloth.ai/docs/basics/dynamic-3.0-ggufs">Unsloth Dynamic 3.0 GGUFs | Unsloth Documentation</a></li>
+<li><a href="https://huggingface.co/unsloth/Qwen3.8-27B-GGUF/discussions/74">unsloth/Qwen3.8-27B-GGUF · Introducing Unsloth Dynamic v3 Qwen3.8</a></li>
+<li><a href="https://link.springer.com/article/10.1007/s00521-025-11529-3">A survey on 1-bit quantized large language models - Springer</a></li>
+
+</ul>
+</details>
+
+**标签**: `#quantization`, `#model compression`, `#local inference`, `#Unsloth`, `#Qwen`
+
+---
+
+<a id="item-6"></a>
+## [8 月 20 日国内重点城市钢材价格汇总](https://news.google.com/rss/articles/CBMiigFBVV95cUxQWThRN1I5UWhIekRJLWNxZXJNbkN2UWZ3MTFHRjRNekNjNzJNMHJiNExKTEtvelhrWTdlekY4VlJON1FKbVVnMklCRWVHUlBEN3hkTVdZT0U3MjR4TFRpeGgzNTM5RW0yaUtCY1k2OFpxUjlway00VjZIbVhlaFEzRngwbkw3UC1RRXc?oc=5) ⭐️ 7.0/10
+
+新浪财经于 8 月 20 日发布了国内重点城市各类钢材品种的价格汇总。该报告汇总了多个城市主要钢材品种的市场价格数据。 钢材价格汇总为中国钢铁供应链中的买卖双方提供了基准参考，有助于判断市场走势和进行交易谈判。这份例行发布的数据为依赖最新价格信息的钢铁分销商、制造企业和建筑公司提供了具有决策参考价值的信号。 所提供的内容中未列出具体覆盖的钢材品种和城市，因此无法提供更详细的细节。该汇总似乎是例行的每日市场报告，而非重大价格事件公告，且未附带额外的分析评论。
+
+rss · Google News - 钢材加工配送 · 8月20日 03:20
+
+**背景**: 在中国钢铁市场，新浪财经等财经媒体发布的每日价格报告主要跟踪主要消费和贸易枢纽城市的重点钢材现货价格。这类报告通常涵盖螺纹钢、热轧卷板、线材等产品，涉及上海、北京、广州等城市。报告在工作日发布，帮助市场参与者监测由供需和政策变化驱动的短期价格波动。
+
+**标签**: `#steel prices`, `#China`, `#steel distribution`, `#market data`
+
+---
+
+<a id="item-7"></a>
+## [兰格发布 8 月 20 日螺纹钢早间价格预警](https://news.google.com/rss/articles/CBMijAFBVV95cUxPM3VXSTUwNEgyaW50cEE0M0haQUwxWW42TW1heExGdTJuTXBQWDZJLXl0cVFweTg0N1JKWm1GVFZyZFpDSnJTU01fRWNOdjRVcW16VTlndi1SOVcwbkpZdnZ0TnVNbXJ1ckpicVhtWk80SURxVDVvb2F6Sk1ldFRFQ2pvYmlEZkUzc3NJaw?oc=5) ⭐️ 7.0/10
+
+兰格钢铁网在 8 月 20 日早间发布了螺纹钢价格预警，提示当日价格可能出现的波动。该预警通过搜狐网渠道发布。 螺纹钢是重要的建筑用钢材，此类及时预警有助于贸易商、钢厂及下游采购方调整采购和定价决策。它也反映了市场对中国钢铁行情的高度关注。 该预警为早间预测，意味着在当日正式现货价格形成前给出先行信号。兰格是国内专业的钢铁信息平台，其螺纹钢日度价格评估在中国现货市场被广泛参考。
+
+rss · Google News - 钢材加工配送 · 8月20日 01:18
+
+**背景**: 螺纹钢是用于混凝土结构加固的热轧带肋钢筋，其价格常被视为中国基建和房地产活动的风向标。兰格是国内知名的钢铁市场数据服务商，为行业参与者提供每日价格、指数及行业资讯。早间价格预警是其常规市场服务的一部分，通常在现货开市前结合隔夜期货走势、库存变动及政策消息给出参考信号。
+
+**标签**: `#steel`, `#rebar`, `#price`, `#market`, `#China`
+
+---
+
+<a id="item-8"></a>
+## [兰格钢铁发布 8 月 20 日螺纹钢价格早间预警](https://news.google.com/rss/articles/CBMiigFBVV95cUxPS0JHRXhSRnVIOHZKOEpMdXRYYjA5dnNHbG9BWU5SNzhFOUlfQmVzS3haVnBPaGlrQUVkMmRRUXYwWGs1TmxxbmFkY2tCVDQwMm9nR0lFdllyUTdBcUhKenFUcWNxdlZ3QUtDYXFvUDh4WDRkcUNWMTVsMEUxbktwSXFPQ3NFTTJuNVE?oc=5) ⭐️ 7.0/10
+
+8 月 20 日，中国钢铁信息机构兰格钢铁通过新浪财经发布了螺纹钢价格早间预警，提示当日螺纹钢价格可能出现的波动。 这一预警为钢材交易商、经销商和建筑采购方提供了早间价格信号，帮助他们及时做出采购或销售决策。作为日常发布的信息，它反映了中国钢铁市场对价格走势的高度关注。 该预警针对螺纹钢这一重要建筑钢材品种，并通过新浪财经这一大型财经资讯平台发布。它属于前瞻性提示而非最终成交价，实际交易价格当天可能有所变化。
+
+rss · Google News - 钢材加工配送 · 8月20日 00:57
+
+**背景**: 兰格钢铁是中国钢铁行业的资讯和咨询机构，提供市场数据、研究和价格预测。螺纹钢是建筑中广泛使用的变形钢筋，其价格对供需和政策变化较为敏感。此类早间价格预警在中国钢铁市场较为常见，买卖双方会将其作为当日议价的参考。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://covid-19.chinadaily.com.cn/bizchina/2014-05/27/content_17542669.htm">Banks call in loans to troubled steel sector... - Chinadaily.com.cn</a></li>
+
+</ul>
+</details>
+
+**标签**: `#steel`, `#rebar`, `#price warning`, `#China`, `#steel distribution`
+
+---
+
+<a id="item-9"></a>
+## [供需格局弱稳 螺纹钢与铁矿石低位震荡](https://news.google.com/rss/articles/CBMisAFBVV95cUxQem55VWJsQlh4WGJ5M0dYMGU3cTlfdklBSVpwVlJFYlE3MGpneHhDbUVYRWxRN2FZR0NQR0lNYksyZ3EzZmR1S0ZhNzV4YkVJSkhJLXQ0MW9jbG9HUnFEQjR1MnB4X1BzbTlYY3J3alM2RTlIMXV2Y0FKaEMzS0ZLaWhRdTUwXzNrT1Z3blFDNTFacUtVakJqekIwdGlyQ0ZOYnZVUlNxRGVVNUUtMmJyLQ?oc=5) ⭐️ 7.0/10
+
+新浪财经的一份市场报告指出，钢铁供需格局呈现弱稳状态，螺纹钢与铁矿石价格在低位震荡。当前行情尚未出现决定性的价格突破。 钢价直接影响建筑成本和下游制造业，因此弱稳的供需格局反映出市场情绪较为谨慎。对钢铁供应链中的采购方和贸易商而言，这意味着近期规划应更多考虑价格区间震荡，而非大幅单边波动。 该报告由新浪财经发布，是一则简短的市场快讯，未给出具体价格点位。内容聚焦螺纹钢和铁矿石，这两个品种是中国建筑与钢铁行业的重要风向标。
+
+rss · Google News - 钢材加工配送 · 8月20日 16:26
+
+**背景**: 螺纹钢是用于混凝土中增强抗拉强度的钢筋，广泛用于建筑工程项目。铁矿石是炼钢的关键原材料，中国是全球这两种商品的最大消费国。所谓“弱稳”的供需格局，通常意味着库存和消耗大体平衡，但缺乏强劲增长来推动价格上行。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.jkcement.com/blog/material-guide/rebar-in-construction/">What Is Rebar ? Types, Uses &amp; Benefits in RCC Construction</a></li>
+<li><a href="https://www.linkedin.com/pulse/rebar-what-does-do-why-so-important-your-construction-">Rebar - what does IT do and why is IT so important for your...</a></li>
+<li><a href="https://www.machinesl.com/what-is-rebar/">What is Rebar ? Key to Solid Structures | Shuanglong Machinery</a></li>
+
+</ul>
+</details>
+
+**标签**: `#steel`, `#iron ore`, `#rebar`, `#supply-demand`, `#market analysis`
+
+---
+
+<a id="item-10"></a>
+## [菏泽装配式建筑配比超 40%，未来将继续提高](https://news.google.com/rss/articles/CBMiaEFVX3lxTFB0TFRrdFJreHEzWHk4RWVla0lsQnZGOHFTdGN0TDZiY1dJVTBTRTFKcXhHNXJpWm9jTV9VMWg5OU55V25TaTEyd191MlRNek5WLXNpdWdPS0dVMHJCTkVhRXdCSDJYbHc5?oc=5) ⭐️ 7.0/10
+
+菏泽市报告称，装配式建筑在新建筑中的占比已超过 40%，当地计划在住宅等各类建筑中进一步提高这一比例。 这体现了中国城市对工业化建造方式的持续政策支持，预示着对预制构件和系统的需求将持续增长。对于建筑供应链和关注中国绿色建筑转型的相关方具有重要意义。 据报道，目前装配式建筑配比已超过 40%，并明确提出将重点在住宅建筑中继续提高比例。可用内容中未提供具体时间表或数字目标。
+
+rss · Google News - 工业化建造与智能空间 · 8月20日 10:29
+
+**背景**: 装配式建筑是将楼板、墙板、楼梯等建筑构件在工厂预制，再运到施工现场进行组装的一种建筑方式。作为建筑工业化的核心内容，它通过标准化设计、工厂化生产等方式提高效率，减少现场作业和资源浪费。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://zh.wikipedia.org/zh-hans/%E8%A3%85%E9%85%8D%E5%BC%8F%E5%BB%BA%E7%AD%91">装配式建筑 - 维基百科，自由的百科全书</a></li>
+<li><a href="https://baike.baidu.com/item/%E8%A3%85%E9%85%8D%E5%BC%8F%E5%BB%BA%E7%AD%91/873132">装配式建筑（由预制部品部件在工地装配而成的建筑）</a></li>
+<li><a href="https://baike.baidu.com/item/%E5%BB%BA%E7%AD%91%E5%B7%A5%E4%B8%9A%E5%8C%96/5502180">建筑工业化_百度百科</a></li>
+
+</ul>
+</details>
+
+**标签**: `#industrialized construction`, `#prefabricated building`, `#policy`, `#China`, `#demand`
+
+---
+
+<a id="item-11"></a>
+## [国内首款 AI&quot;安全眼&quot;破解塔吊安拆监管盲区](https://news.google.com/rss/articles/CBMisgFBVV95cUxQTWdtZXE5dDNJSTUtRjRGcklfZjVVWUthTVZhV1NXc0syMXJBZHBEQnVXMzluUzI1Vy1HTlFzUWFIMG5BVTMzWDBsNTBJZGttczBYTzI3WElNd3kwdktOb0o5UWdmVTdnYmJSODNDejl6OVhkYWRGM0pQTkoxU0ZNanRpZndUVndVcmFodGt5VEtCTTRWWXNYejgybzlobzNiQXpTWmdJN0hYRTZaeDh5REZn?oc=5) ⭐️ 7.0/10
+
+国内首款 AI&quot;安全眼&quot;监控系统已应用于塔吊安装与拆卸环节。该系统安装在塔吊顶部，配备 13 组智能传感器，能够自动识别不规范或不到位的操作流程，并及时提醒潜在的安全隐患点位。 塔吊安拆是建筑施工中风险最高的环节之一，而监管盲区长期困扰着安全管理。这款 AI 系统直接弥补了这一空白，有望提升我国建筑施工的安全水平，降低事故发生率。 该系统名为&quot;安拆宝&quot;，安装在塔吊顶部，通过 13 组智能传感器收集数据。一旦工人操作流程不规范或不到位，系统便会自动报警，并适时提醒具体的安全隐患点位。
+
+rss · Google News - EDF AI 部署工程 · 8月20日 17:08
+
+**背景**: 塔吊是高层建筑施工的关键设备，但其安装和拆卸需要工人在极高处作业，视野受限严重。传统塔吊监控主要依赖载荷、倾斜和限位传感器覆盖吊装作业，而安拆环节本身仍是监管盲区。这款 AI&quot;安全眼&quot;将智能传感与人工智能结合，通过校验操作流程的合规性，专门针对这一此前无法有效监控的领域。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.163.com/dy/article/L4P1R7CR0514R9OJ.html">国内首款AI“安全眼”破解塔吊安拆监管盲区|火灾|武汉_网易订阅</a></li>
+<li><a href="https://www.global-good.cn/index/article/index/aid/1477.html">6月7日重庆沙坪坝 区 一工地 吊 运钢 管 发生坠落， 安 全 管 理必须做好</a></li>
+<li><a href="https://www.djtsoft.com/product/zhgd.html">djtsoft.com/product/zhgd.html</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI`, `#construction safety`, `#smart monitoring`, `#industrialized construction`, `#tower crane`
+
+---
+
+<a id="item-12"></a>
+## [OpenAI 推出私密安全处理，零数据保留守护 AI 安全](https://news.google.com/rss/articles/CBMiTkFVX3lxTFB6S2JXY2FJU0NvcVo0U1FWWnhrNmJ5cVp0ajVoQVpkNjVOZXZBYlNBU1htMk40aG9CVVpSOXB4M25NcEtvMTMzc09aUWxMUQ?oc=5) ⭐️ 7.0/10
+
+2026 年 8 月 19 日，OpenAI 预览了 Private Safety Processing（私密安全处理）系统，旨在检测跨会话滥用行为，同时为符合条件的 API 客户保留零数据保留（ZDR）承诺。该功能目前正在与早期客户测试，预计 9 月正式推出，并同步发布技术白皮书。 此举直面 AI 安全监控与企业数据隐私之间长期存在的矛盾，让处理敏感信息的组织能够在不牺牲隐私承诺的前提下发现滥用行为。同时，这使 OpenAI 与 Anthropic 形成对比——后者为类似安全检测要求 30 天数据保留——并可能影响整个行业在安全与保密之间的平衡方式。 Private Safety Processing 依赖范围狭窄的安全信号，而不是向 OpenAI 人员暴露客户的提示词或模型回复。该系统专门针对多轮对话使用带来的风险，例如跨多个会话的协调网络攻击，而传统的单轮安全检查无法发现这些风险。
+
+rss · Google News - EDF AI 部署工程 · 8月20日 01:05
+
+**背景**: 零数据保留（Zero Data Retention, ZDR）是 OpenAI 向符合条件的 API 客户做出的承诺：请求处理完毕后，不会保留其提示词和模型回复。然而，安全监控通常需要检查使用数据，这与严格的隐私政策产生了矛盾。Private Safety Processing 旨在通过使用隐私保护技术来识别滥用模式，同时不保留或暴露底层内容，从而化解这一矛盾。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://openai.com/index/offering-zero-data-retention-for-frontier-models/">Offering Zero Data Retention for frontier models | OpenAI</a></li>
+<li><a href="https://runtimewire.com/article/openai-private-safety-processing-zero-data-retention">OpenAI previews cross-session safety checks designed to preserve...</a></li>
+<li><a href="https://securityboulevard.com/2026/08/openai-unveils-private-safety-processing-to-detect-ai-misuse-without-storing-enterprise-data/">OpenAI Unveils Private Safety Processing to Detect AI Misuse ...</a></li>
+
+</ul>
+</details>
+
+**标签**: `#OpenAI`, `#AI Safety`, `#Privacy`, `#Data Retention`, `#AI Deployment`
+
+---
