@@ -1,0 +1,187 @@
+---
+layout: default
+title: "Horizon Summary: 2026-08-23 (ZH)"
+date: 2026-08-23
+lang: zh
+---
+
+> 从 184 条内容中筛选出 9 条重要资讯。
+
+---
+
+1. [芝商所将推算力期货，AI 算力变身可交易大宗商品](#item-1) ⭐️ 9.0/10
+2. [SGLang v0.5.18 发布：710 个 PR、新模型支持与更快启动](#item-2) ⭐️ 8.0/10
+3. [Munder Difflin：用本地智能体框架运行你的克隆人办公室](#item-3) ⭐️ 8.0/10
+4. [加拿大对美关税等额报复，贸易谈判破裂](#item-4) ⭐️ 8.0/10
+5. [钢价大涨近 100，下周走势已定](#item-5) ⭐️ 7.0/10
+6. [成本托底与库存去化推动钢价中枢温和抬升](#item-6) ⭐️ 7.0/10
+7. [全国建筑钢材价格低位回升，下周预计震荡偏强](#item-7) ⭐️ 7.0/10
+8. [AI 在病历中编造吸毒史，澳洲患者崩溃，医疗 AI 安全再受质疑](#item-8) ⭐️ 7.0/10
+9. [绕过 AI 护栏：越狱、提示注入与 2026 年防御](#item-9) ⭐️ 7.0/10
+
+---
+
+<a id="item-1"></a>
+## [芝商所将推算力期货，AI 算力变身可交易大宗商品](https://news.google.com/rss/articles/CBMiSEFVX3lxTFB1NXZMVWl6N1JYV2xKd0V1ajlGdk1Dem10ajR5RUx6WXJpc1FoV3N4OFJvdHZfdXFjUFJDSi1zR0gxeWhTZWM5Nw?oc=5) ⭐️ 9.0/10
+
+芝商所（CME Group）官方宣布，将与 Silicon Data 合作推出算力期货（Compute futures），这是首个受监管的算力容量期货市场。新合约将允许交易者、金融机构、AI 开发者和云服务提供商对冲算力成本、管理价格波动。 通过将 AI 算力转变为可交易的大宗商品类别，这一举措可能从根本上改变 AI 基础设施的定价与融资方式。它为价值数万亿美元的算力市场提供了类似原油期货的价格发现和风险管理工具，影响从 AI 初创公司到超大規模云服务商的各类参与者。 该合约被描述为首个受监管的算力市场，旨在将计算容量转化为稳定的资产类别。这一计划结合了芝商所的交易基础设施与 Silicon Data 在算力市场的数据和专业能力。
+
+rss · Google News - AI 前沿 · 8月22日 17:18
+
+**背景**: AI 算力（AI compute）是指训练和运行人工智能模型所需的原始处理能力。随着 AI 工作负载快速增长，算力成为昂贵且波动剧烈的资源，基础设施成本可能大幅波动。期货合约允许买卖双方提前锁定未来价格，类似原油期货对冲能源成本，为云服务商、企业和交易机构带来更多确定性。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.cmegroup.com/markets/energy/power/compute-futures.html">Compute Futures - CME Group</a></li>
+<li><a href="https://www.cmegroup.com/media-room/press-releases/2026/5/12/cme_group_and_silicondatapartnertolaunchfirstcomputefutures.html">CME Group and Silicon Data Partner to Launch First Compute ...</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI compute`, `#CME`, `#futures market`, `#compute pricing`, `#AI infrastructure`
+
+---
+
+<a id="item-2"></a>
+## [SGLang v0.5.18 发布：710 个 PR、新模型支持与更快启动](https://github.com/sgl-project/sglang/releases/tag/v0.5.18) ⭐️ 8.0/10
+
+SGLang v0.5.18 已正式发布，包含来自 212 位贡献者的 710 个 PR。该版本新增了对 Muse Glimmer、Intern-S2-Mobius、SANA-Video、LingBot-Video-MoE、LTX-2.5 和 Cosmos3 Edge 等模型的支持，并引入了重叠检查点暂存和 TP LMHead 全对全通信等性能优化。 此版本大幅扩展了 SGLang 对新兴模型架构的支持，涵盖多模态自回归模型和扩散视频模型，并在 H100 和 Blackwell 等高端硬件上带来显著的推理加速。对追求最新开源模型低延迟部署的 AI 部署工程师而言意义重大。 重点新增模型包括 Meta 的 Muse Glimmer（30B 参数的多模态智能体模型）、Intern-S2-Mobius（高效推理模型）、NVIDIA 的 SANA-Video（扩散模型）、LingBot-Video-MoE、LTX-2.5 和 Cosmos3 Edge。重叠检查点暂存可将启动时间最多缩短 2.38 倍，FlashInfer 纯全归约在 Blackwell GPU 上可使解码吞吐量提升高达 6.9%。
+
+github · Fridge003 · 8月22日 00:09
+
+**背景**: SGLang 是一个面向大语言模型和扩散模型的开源服务框架，专注于优化吞吐量和延迟。本次发布同时支持自回归和扩散模型家族，体现了行业向多模态和视频生成方向发展的趋势。同时，关键依赖也升级到了 torch 2.13.0 和 flashinfer 0.6.17 等新版本。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model">Introducing Muse Glimmer: An Open Agentic Model That Runs on ...</a></li>
+<li><a href="https://huggingface.co/internlm/Intern-S2-Mobius">internlm/Intern-S2-Mobius · Hugging Face</a></li>
+<li><a href="https://nvlabs.github.io/Sana/Video/">SANA Video - nvlabs.github.io</a></li>
+
+</ul>
+</details>
+
+**标签**: `#SGLang`, `#LLM inference`, `#AI serving`, `#model support`, `#release`
+
+---
+
+<a id="item-3"></a>
+## [Munder Difflin：用本地智能体框架运行你的克隆人办公室](https://munderdiffl.in/) ⭐️ 8.0/10
+
+Munder Difflin 是一个新发布的本地多智能体框架，它包装了现有的编码智能体订阅服务（如 Claude Code 和 Codex）。它支持确定性的、节省 token 的智能体团队模拟，作者称上线一周内已有超过 2 万用户。 该工具解决了多智能体编排中的实际痛点——token 浪费、行为不确定以及协调困难。它还引入了“克隆人办公室”这一有趣的隐喻，与正在尝试 AI 编码智能体的开发者产生了共鸣。 该框架支持几乎所有主流编码智能体及其订阅服务，其模拟过程具有确定性，并且本身不消耗 token。社区反馈表明，用户更希望看到基于角色的流水线，而不是固定的具名智能体。
+
+hackernews · simonpure · 8月22日 09:49 · [社区讨论](https://news.ycombinator.com/item?id=49398152)
+
+**背景**: 多智能体框架将任务工作流划分为一组有限的智能体角色，每个角色都有明确的职责、上下文和工具访问权限。Claude Code 和 Codex 是代理式编码工具，能够理解代码库、编辑文件并运行命令；Munder Difflin 在本地模拟中协调这些工具，而不是取代它们。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.emergentmind.com/topics/multi-agent-harness">Multi - Agent Harness Design</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Claude_Code">Claude Code</a></li>
+<li><a href="https://brat.neullabs.com/">brat — multi - agent harness for AI coding tools</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 评论既有幽默也有实质性的反馈。一些用户喜欢“办公室”主题如何真实反映智能体群体的混乱状态，而另一些人（如 joshstrange）则对流水线/角色与智能体之间的区别提出批评。作者积极参与问答，澄清模拟过程是确定性的且不消耗 token。
+
+**标签**: `#AI agents`, `#LLM tooling`, `#multi-agent harness`, `#local development`, `#coding agents`
+
+---
+
+<a id="item-4"></a>
+## [加拿大对美关税等额报复，贸易谈判破裂](https://www.bbc.com/news/articles/cvgvyy4x2mvo) ⭐️ 8.0/10
+
+加拿大宣布，在贸易谈判破裂后，将对美国关税进行“一对一”的对等报复。总理马克·卡尼于 2026 年 8 月 21 日发表声明确认了这一举措。 这一升级标志着加美贸易关系的重大恶化，并将对钢铁和工业供应链产生直接影响。关注关税和供应链转移的高管需要为额外成本和潜在的贸易路线调整进行规划。 “一对一”的报复意味着加拿大将对美国商品征收与美国对加拿大商品征收的关税等值的关税。该声明是在谈判破裂后发布的，官方声明中预计将详细说明报复措施的具体清单和时间安排。
+
+hackernews · tartoran · 8月22日 06:16 · [社区讨论](https://news.ycombinator.com/item?id=49397074)
+
+**背景**: 关税是对进口商品征收的税款，常被用来保护国内产业或在贸易谈判中作为筹码。加拿大和美国经济高度一体化，在钢铁、汽车等商品上贸易量巨大，因此关税升级会迅速扰乱跨境供应链。两国此前一直在重新谈判贸易条款，但如今谈判破裂，导致加拿大宣布报复措施。
+
+**社区讨论**: 社区评论大多批评美国政府，许多人支持加拿大进行报复的决定。一些评论者认为，其他国家本应协调一致作出回应，另一些人则警告称，加拿大可能被推向中国。总体而言，舆论认为美国关税政策具有破坏性，加拿大的强硬立场是合理的。
+
+**标签**: `#trade policy`, `#tariffs`, `#Canada`, `#supply chain`, `#steel`
+
+---
+
+<a id="item-5"></a>
+## [钢价大涨近 100，下周走势已定](https://news.google.com/rss/articles/CBMieEFVX3lxTE9NWk5LUHQ4cDF2VVFIQ2xkcWRtUUxPeUI4UmRwcUI3RWQ1dENLVXNaWkdJVjR6Q0xOWkxUbHhjd3ZGTTByYno1dURNX0trZTNMVEJSeXZlTTdTZmo2UVNiZzhYVGxxUS1vQzFPY3ZpbHFOUzhzSmQzaw?oc=5) ⭐️ 7.0/10
+
+新浪财经报道称，钢材价格出现突破性上涨，每吨涨幅接近 100 元，并称下周钢价走势已经确定。该报道为钢材贸易商和加工企业提供了具体的短期市场预测。 此次价格波动直接影响中国钢材加工和流通企业的采购成本与库存决策。确认的上涨趋势也可能反映出建筑和制造业领域需求的变化。 文章未披露预测背后的具体基准价格或详细数据，仅表明涨幅接近 100 元。该预测基于市场分析，读者应关注实际成交数据以作验证。
+
+rss · Google News - 钢材加工配送 · 8月22日 14:12
+
+**背景**: 中国钢材市场对供需变化、原材料成本以及基建和房地产相关政策高度敏感。财经媒体常发布周度价格预测，以指导采购和销售策略。本报道属于此类预测，在常见的市场波动中提供了短期展望。
+
+**标签**: `#steel`, `#price`, `#market forecast`, `#China`, `#supply chain`
+
+---
+
+<a id="item-6"></a>
+## [成本托底与库存去化推动钢价中枢温和抬升](https://news.google.com/rss/articles/CBMia0FVX3lxTE9lVmhKMVo1d0lwSkhQNmpyY0JGSE1XTGVDNHNWRTY1V0xDamFJa2hKanpCSFhkV3NoOHdnMUtlZnN2U0lQM2VlbGtWb2JKWEN2WGFTUUdtaDdnV3VxTVB1d203SjlxajFyZldF?oc=5) ⭐️ 7.0/10
+
+周末市场分析指出，在成本托底与持续去库存的推动下，钢价中枢有望温和抬升。 这向钢铁贸易商和下游买家释放了温和看涨的预期，对采购计划和库存策略具有参考意义。钢价温和上涨有助于支撑钢材加工利润，同时使制造业的原料成本压力保持在可控范围。 该预测基于两个关键因素：一是成本端的支撑，可能来自原料价格维持高位；二是库存去化，表明供需关系正在再平衡。标题强调价格上涨是温和的而非剧烈拉涨，意味着上行空间相对有限。
+
+rss · Google News - 钢材加工配送 · 8月22日 09:36
+
+**背景**: 钢材价格受生产成本（如铁矿石、焦煤、废钢）以及钢厂与贸易商库存水平共同影响。库存高企时价格趋于走弱，而去库存则表明需求稳健或供给收缩，对价格形成支撑。“成本托底”指成本限制了价格的下行空间。此类周末市场评论常见于中国钢铁行业媒体，旨在帮助市场参与者预判短期价格走势。
+
+**标签**: `#steel prices`, `#steel processing`, `#inventory destocking`, `#cost support`, `#market analysis`
+
+---
+
+<a id="item-7"></a>
+## [全国建筑钢材价格低位回升，下周预计震荡偏强](https://news.google.com/rss/articles/CBMia0FVX3lxTE5ZU04zN1ZvX3VudkZ5NVR0bEZWR3NNT1UzSURIMzI4bWZjYU5fUkRIaGtYbEd5NlNYVE5aVXgwcEpIdEZrMkkwd3gzMVJVREhLaXo0TXFfVU43UDVTRzVxczdOeFM0Mklfa2Jj?oc=5) ⭐️ 7.0/10
+
+8 月 21 日，中国财富号平台发布的报告称，8 月 14 日至 21 日期间全国建筑钢材价格从低位回升。对下周的预测为“震荡偏强”，表明市场持谨慎乐观态度。 作为全球最大的钢铁生产国和消费国，中国的建筑钢材价格直接影响建设项目成本、经销商利润以及建筑供应链的采购决策。价格回升且走势偏强，可能预示着该行业需求改善或市场情绪企稳。 该报告覆盖截至 8 月 21 日的一周，未提供具体价格数据或地区细分。“震荡偏强”通常意味着价格预计将在一个区间内波动，但整体走势有上行倾向。
+
+rss · Google News - 钢材加工配送 · 8月22日 09:36
+
+**背景**: 建筑钢材，通常称为螺纹钢，是中国基础设施和房地产项目中不可或缺的主要材料。其价格波动被视作建筑活动的晴雨表，并受到原材料成本、库存水平、政府政策以及季节性需求变化等因素的影响。
+
+**标签**: `#steel prices`, `#construction steel`, `#China`, `#market forecast`, `#steel distribution`
+
+---
+
+<a id="item-8"></a>
+## [AI 在病历中编造吸毒史，澳洲患者崩溃，医疗 AI 安全再受质疑](https://news.google.com/rss/articles/CBMirAJBVV95cUxQUWdQR1VhWWVsaHRubS15Q3E5Y3pjcmZVTkEyMjhTZUdwQVRZb3pfWWNuLUtLbHpHcEJFWmN5VEVpNWR5Q0pEQy1RZ0JKenNKTGdoeUFVU0Izd3RLOThUbllyRVNsN3YwWlVqMUtMY3NwMFp6S1RmU3dwTmdXTXpLcGM3OXhqOEhmWjczNFVsQWZfUjBTRTNlZHJ3dzFuUk9PRlpfNFVzR2xvYy1FYUdoMFNhMDdjX0ZhYWNDS25YcUlSZ21jZFU1QnFwb3NHeEFtVWxTcGNjUEc3bmhnOVlfZ0tNQkN2R2E3QmtBQmVmWWEwYXhEMS1BMWJ3ZnVpOG1DbzJScEZ1MkczemJfX045NXFOSlV5TEd1LWhYM2JDMWJLT2Zzd0ZCTjlsR3c?oc=5) ⭐️ 7.0/10
+
+澳大利亚医疗系统中部署的 AI 在病历里凭空编造出患者的吸毒史，错误地声称患者有药物滥用记录。患者得知后情绪崩溃落泪，此事再次引发对医疗 AI 安全性与可靠性的公众争论。 这一事件表明 AI 幻觉并非无害的小故障：在临床场景中，关于患者的虚构信息可能导致误诊、不当治疗或严重的情感伤害。它凸显了在高风险医疗决策中信任 AI 之前，必须进行严格监管、核查和人工复核。 幻觉是大语言模型的常见故障模式，即模型以自信、看似合理的表述生成虚假或误导性信息。近期关于医疗 AI 的研究指出，在医疗场景中，这些错误可能表现为虚构的引用、错误的治疗声明或对患者情况的不准确总结。
+
+rss · Google News - EDF AI 部署工程 · 8月22日 04:32
+
+**背景**: AI 幻觉是指生成式 AI 模型（如 ChatGPT）把虚构或无意义的信息当作事实呈现出来。符号式 AI 系统通常不会产生幻觉，但大语言模型基于统计方式生成文本，因此可能输出听起来合理但虚假的内容，例如不存在的引用。在医学诊断等高利害领域，识别和缓解这些错误尤为困难；目前已有 85%的医疗机构在部署或测试生成式 AI。研究者认为，幻觉是大语言模型架构与训练方式固有的结构性弱点，并非仅靠扩大模型规模就能解决的边缘问题。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/AI_hallucination">AI hallucination</a></li>
+<li><a href="https://arxiv.org/html/2409.19492">MedHalu: Hallucinations in Responses to Healthcare Queries by ... Hallucinations of Large Language Models in Medical ... Mitigating hallucinations in healthcare AI: a systematic ... Multi-model assurance analysis showing large language models ... [2409.19492] MedHalu: Hallucinations in Responses to ... Large Language Model Hallucinations in Healthcare ... Multi-model assurance analysis showing large language models ...</a></li>
+<li><a href="https://link.springer.com/article/10.1186/s12913-026-14851-1">Mitigating hallucinations in healthcare AI: a systematic ...</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI safety`, `#healthcare AI`, `#AI hallucination`, `#LLM deployment`, `#reliability`
+
+---
+
+<a id="item-9"></a>
+## [绕过 AI 护栏：越狱、提示注入与 2026 年防御](https://news.google.com/rss/articles/CBMihwFBVV95cUxQS0FKVnVFaEYyMlRNeGZxT1liSjBfMzNaMzFBay1aUFlfUnY2NFFVemdFYjB3dVBfSVB4amVxZUlFRHg5MUxmXzIyTUJUa01XNlF4Um1tQ1hOWm84YUtlY1RIUXZGVWttWnRCN21wRkVTX0JDSmZsY3hOS28zQ2lFakt5am5selE?oc=5) ⭐️ 7.0/10
+
+Pasquale Pillitteri 发表了一篇文章，探讨了如何利用越狱和提示注入绕过 AI 护栏，并展望了 2026 年的防御策略。文章聚焦这两种关键攻击向量及其未来的应对措施。 随着大语言模型的广泛应用，理解越狱和提示注入对 AI 安全工程师至关重要。文中提出的 2026 年防御策略可能为组织保护其 AI 系统、应对不断演变的威胁提供指导。 文章区分了越狱和提示注入：越狱通过精心设计的提示操纵模型行为、绕过安全过滤，而提示注入将恶意指令隐藏在看似无害的输入中。文章还讨论了预计于 2026 年出现的防御措施，可能包括更强健的护栏和改进的模型对齐。
+
+rss · Google News - EDF AI 部署工程 · 8月22日 21:03
+
+**背景**: AI 护栏是围绕大语言模型部署的安全机制，用于防止有害、不道德或意外的输出。越狱是一种利用精心构造的提示来触发模型本应拒绝的行为的技术，而提示注入则是一种将恶意指令嵌入看似正常输入中以操纵模型的漏洞。OWASP 等组织已将提示注入列为 LLM 的主要安全风险。随着 AI 采用加速，这些攻击对数据安全和系统完整性构成了真实威胁。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://netwrix.com/en/cybersecurity-glossary/security-concepts/ai-jailbreaking/">What is AI jailbreaking ? | Netwrix</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Prompt_injection">Prompt injection - Wikipedia</a></li>
+<li><a href="https://aisecurityandsafety.org/en/guides/llm-guardrails/">LLM Guardrails: The Complete Guide to AI Safety Guardrails ...</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI security`, `#prompt injection`, `#jailbreaking`, `#LLM guardrails`, `#AI deployment`
+
+---
