@@ -1,0 +1,281 @@
+---
+layout: default
+title: "Horizon Summary: 2026-08-25 (ZH)"
+date: 2026-08-25
+lang: zh
+---
+
+> 从 201 条内容中筛选出 12 条重要资讯。
+
+---
+
+1. [SpaceX 拟斥资 550 亿美元在得州建设 Terafab 芯片工厂](#item-1) ⭐️ 9.0/10
+2. [微软画图与照片在本地编辑图片中嵌入隐藏 GUID 水印](#item-2) ⭐️ 8.0/10
+3. [seL4 在 AArch64 上完成安全证明：形式化验证里程碑](#item-3) ⭐️ 8.0/10
+4. [SQLite 数据库文件可直接作为可执行程序](#item-4) ⭐️ 8.0/10
+5. [钢坯涨至 3000，焦炭二轮提涨，钢市偏强运行](#item-5) ⭐️ 7.0/10
+6. [Mysteel 例会：本周钢价预计震荡偏强](#item-6) ⭐️ 7.0/10
+7. [8 月 24 日兰格螺纹钢价格早间预警](#item-7) ⭐️ 7.0/10
+8. [8 月 24 日国内重点城市品种钢价格汇总](#item-8) ⭐️ 7.0/10
+9. [深圳地铁 22 号线树立工业化建造标杆](#item-9) ⭐️ 7.0/10
+10. [IDC 重新定义生成式 AI 安全，呼吁升级评估体系](#item-10) ⭐️ 7.0/10
+11. [OpenAI 突然倒戈：从反对到力推加州严格 AI 安全法案](#item-11) ⭐️ 7.0/10
+12. [OpenAI 呼吁加州强化 AI 安全法案保障措施](#item-12) ⭐️ 7.0/10
+
+---
+
+<a id="item-1"></a>
+## [SpaceX 拟斥资 550 亿美元在得州建设 Terafab 芯片工厂](https://news.google.com/rss/articles/CBMiSEFVX3lxTE1ucm1Na1d5WTNrZmtIQkc0Y0hMNXZESVNmbWlIQ2FXZnA1bXJ1OGFyb0phdDJZclRIblktaXJzSUdKeWFrbDc0Zw?oc=5) ⭐️ 9.0/10
+
+据财联社报道，SpaceX 计划投资 550 亿美元在得克萨斯州建设一座名为“Terafab”的芯片工厂。该项目据称由 SpaceX、特斯拉与 xAI 联合推进，旨在打造一座超大规模半导体制造设施。 如果成行，这将是史上最大规模的半导体投资之一，对 AI 算力供给和美国芯片供应链影响重大。这也表明马斯克旗下公司正大举进军芯片制造，以满足 AI 和太空领域的算力需求。 相关数字说法不一：最新报道称 550 亿美元，而此前特斯拉和 SpaceX 宣布的首期投资为 168 亿美元，另有分析提及 250 亿美元的规模。工厂选址得州 Grimes County，仍处于早期阶段，最终投资细节尚未得到官方确认。
+
+rss · Google News - AI 前沿 · 8月24日 19:29
+
+**背景**: Terafab 是埃隆·马斯克力推的超大规模半导体工厂概念，计划将逻辑、存储、封装和测试整合在同一厂区，以支撑太瓦级 AI 算力。马斯克在 2026 年初首次预告该项目，并于 2026 年 3 月 21 日在得州奥斯汀正式宣布，称这是人类走向星际文明的关键一步。外界认为，现有全球芯片产业难以满足 AI、机器人和太空部署对算力的需求。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Terafab">Terafab - Wikipedia</a></li>
+<li><a href="https://techcrunch.com/2026/08/06/tesla-and-spacex-will-invest-16-8b-to-start-building-terafab-chip-factory-in-texas/">Tesla and SpaceX will invest $16.8B to start building &#x27;Terafab&#x27; chip factory in Texas | TechCrunch</a></li>
+<li><a href="https://www.foxbusiness.com/technology/spacex-tesla-choose-texas-ai-chip-manufacturing-plant-worlds-largest-building">SpaceX and Tesla choose Texas for AI chip manufacturing plant that will be world&#x27;s largest building</a></li>
+
+</ul>
+</details>
+
+**标签**: `#SpaceX`, `#semiconductor`, `#AI compute`, `#chip manufacturing`, `#investment`
+
+---
+
+<a id="item-2"></a>
+## [微软画图与照片在本地编辑图片中嵌入隐藏 GUID 水印](https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/) ⭐️ 8.0/10
+
+微软画图和照片应用在使用 AI 编辑图片时，会悄悄嵌入基于 GUID 的不可见水印，即使操作完全在本地模型上运行也不例外。该水印 GUID 实际上由微软的远程提示词审核服务器颁发，因此本地生成路径并非真正离线。 由于每个 GUID 都能唯一标识一张图片并可关联到用户的微软账户，这使每张编辑过的图片都可能变成追踪器。这会削弱用户匿名性，并可能让执法机构或企业通过传票将图片与个人关联，其影响超出 AI 内容溯源范围，进入监控领域。 可见水印可以关闭，但不可见水印无法禁用，且会在后台静默写入，用户毫无感知。C2PA 清单中包含一个用于标识不可见像素水印的 GUID，但官方说明只披露了远程过滤和 C2PA 元数据，并未说明该 GUID 的来源。
+
+hackernews · ComputerGuru · 8月24日 15:28 · [社区讨论](https://news.ycombinator.com/item?id=49421158)
+
+**背景**: C2PA（内容来源与真实性联盟）是一个开放标准，用于在图像和视频中嵌入带签名的来源清单，记录创建或编辑文件的工具以及是否涉及 AI。不可见水印是一种像素级图案，人眼无法察觉但软件可以提取。微软采用了这些技术，而这次逆向工程显示，即使 AI 处理看似在本地完成，不可见水印仍使用服务器颁发的 GUID。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/">Microsoft Paint and Photos Embed Server-Issued GUIDs as Invisible Watermarks in Locally-Generated Images :: Xusheng Li</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Content_Authenticity_Initiative">Content Authenticity Initiative - Wikipedia</a></li>
+<li><a href="https://c2pa.org/">C 2 PA | Verifying Media Content Sources</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 评论者普遍认为 AI 角度是转移视线，真正的问题在于任何图片都会被静默写入唯一标识符，并可能通过微软解除用户匿名。有人指出微软近期在 Azure DevOps 提交上误加 Copilot 水印的事件，认为其实现不严谨，并建议避免使用画图等其他启用 LLM 的应用。还有人惊讶于画图不再是简单的像素编辑工具，认为这种变化更像是产品折腾而非改善软件。
+
+**标签**: `#AI watermarking`, `#privacy`, `#Microsoft`, `#content provenance`, `#security`
+
+---
+
+<a id="item-3"></a>
+## [seL4 在 AArch64 上完成安全证明：形式化验证里程碑](https://proofcraft.systems/news-2026/#2026-08-21) ⭐️ 8.0/10
+
+Proofcraft 于 2026 年 8 月 21 日宣布，seL4 在 AArch64（64 位 ARM）架构上的安全证明现已完成。这将该微内核的形式化验证保证扩展到了主流的 64 位平台。 这是一个重要的形式化验证里程碑，因为 seL4 是少数拥有机器检查证明、确认其实现满足安全规范的操作系统内核之一。这增强了对基于 AArch64 的安全关键型与嵌入式系统的保证，但单核、非 MCS（混合关键性系统）等限制仍需注意。 该公告见于 Proofcraft 2026 年 8 月 21 日的新闻。正如社区评论者所指出的，被验证的配置是单核（unicore）且非 MCS（混合关键性系统）的，因此不涵盖多核或混合关键性调度行为。
+
+hackernews · snvzz · 8月24日 11:32 · [社区讨论](https://news.ycombinator.com/item?id=49418255)
+
+**背景**: seL4 是 NICTA（现为 CSIRO Data61 的一部分）开发的第三代 L4 微内核，旨在为高安全、高可靠系统提供基础。形式化验证通过数学证明来表明系统的实现满足其规范，这比传统测试更强。AArch64 是 ARM 架构的 64 位版本，广泛用于移动、嵌入式以及越来越多的服务器环境。在 AArch64 上完成这些证明，将 seL4 的端到端保证扩展到了主流的 64 位架构。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/SeL4">seL4 - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/L4_microkernel_family">L4 microkernel family - Wikipedia</a></li>
+<li><a href="https://www.galois.com/articles/formal-methods-krack-vulnerability">Galois - Formal Methods and the KRACK Vulnerability</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 评论整体积极但带有保留。有用户调侃称很快会出现侧信道时序攻击使该结果失效；另有用户强调需注意细则：证明仅覆盖“非 MCS、单核”。还有人讨论了 seL4 的实际用户，如 GenodeOS、LionsOS 以及某中国车企的 hypervisor，并认为 seL4 需要原生 seL4/Linux 配合，才能令人信服地改善系统安全，而不只是服务军工和嵌入式利基市场。
+
+**标签**: `#seL4`, `#formal verification`, `#microkernel`, `#AArch64`, `#security`
+
+---
+
+<a id="item-4"></a>
+## [SQLite 数据库文件可直接作为可执行程序](https://simonwillison.net/2026/Aug/24/your-executable-is-a-sqlite-database/) ⭐️ 8.0/10
+
+法里德·扎卡里亚展示了一种将 SQLite 数据库文件同时构造成合法 Linux 可执行二进制文件的技术。该方法把 SQLite 文件格式的 4 字节应用 ID 设置为“SELF”，将 ELF 的各个组成部分分散存储在多个 SQLite 表中，并通过“self-exec”解释器来执行生成的文件。 这一技术意义重大，因为它将数据与代码合并到单个文件中，使软件可以以自包含数据库的形式直接运行。它可能影响未来 Linux 和 NixOS 上的软件分发、打包以及自包含应用的设计。 SQLite 文件格式在第 68 字节处有一个 4 字节的应用 ID，这里被设置为“SELF”（结构化可执行与链接格式）。ELF 的各个组件按 selfdb 仓库中的 schema 排列进 SQLite 表，并由 self-exec 加载器（C 代码）提取和执行；在非 NixOS 系统上，可以通过 binfmt\_misc 注册命令让内核识别 SELF 模式。
+
+rss · Simon Willison · 8月24日 11:38
+
+**背景**: SQLite 是一种广泛使用的嵌入式关系数据库，所有数据都保存在单个文件中。可执行与链接格式（ELF）是 Linux 上可执行文件和共享库的标准二进制格式。binfmt\_misc 是 Linux 内核的一项功能，允许将任意文件格式视为可执行文件并传递给用户空间解释器。该项目将这三个概念结合在一起，创造出既是合法 SQLite 数据库又是可运行可执行文件的单一文件。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database">Your executable is a SQLite database | Farid Zakaria’s Blog</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format">Executable and Linkable Format - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Binfmt_misc">binfmt _ misc - Wikipedia</a></li>
+
+</ul>
+</details>
+
+**标签**: `#SQLite`, `#ELF`, `#Linux`, `#executable`, `#binfmt\_misc`
+
+---
+
+<a id="item-5"></a>
+## [钢坯涨至 3000，焦炭二轮提涨，钢市偏强运行](https://news.google.com/rss/articles/CBMiYkFVX3lxTE1SXzltWW1oZ0xudlpYUURWcS1BTjRHUndwVFItekRVMDRIdzJnZU1mbkRoSWt5ZHl5azVEaGdMMzZWOFQ4ZEU0Zl8zd0diR3dTVFJ3TF9CdUV5X2RPQTc2Yjln?oc=5) ⭐️ 7.0/10
+
+每日钢市报告显示，钢坯价格涨至每吨 3000 元，焦炭迎来第二轮提涨，市场整体偏强运行。 这表明中国钢铁行业上游成本支撑较强、需求有所回暖，将影响钢贸商、钢厂以及下游建筑和制造业。价格走势显示出钢铁供应链短期内偏乐观的前景。 该报告指出钢坯价格触及 3000 元关口，焦炭进入第二轮提涨，显示成本推升压力持续。作为每日汇总快讯，它更多是市场快照，未深入分析供需基本面。
+
+rss · Google News - 钢材加工配送 · 8月24日 11:27
+
+**背景**: 钢坯是钢厂生产的半成品铸造产品，需经过进一步轧制或锻造才能成为成品钢材。焦炭由炼焦煤制成，是高炉炼钢中的关键燃料和反应物，其价格变动与钢铁需求密切相关。焦炭第二轮提涨反映出焦炭供应趋紧或钢铁产量预期增加。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Steel_billet">Steel billet</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Metallurgical_coal">Metallurgical coal</a></li>
+
+</ul>
+</details>
+
+**标签**: `#steel market`, `#price movement`, `#steel billet`, `#coke`, `#supply chain`
+
+---
+
+<a id="item-6"></a>
+## [Mysteel 例会：本周钢价预计震荡偏强](https://news.google.com/rss/articles/CBMiaEFVX3lxTFB0S2NkbEFRc1pqSjJYU0s5X2czNk5yODFKaHhrcnJEcVdXbWFMdVVXUFRSdm9OZGgxU0RsNVItTzR5cldqem9rLW11M3lLWFUtclVwbWgtdmh3UXRCRk5yMXdNTjdoMk5m?oc=5) ⭐️ 7.0/10
+
+Mysteel 召开黑色金属例会，判断本周钢价将呈现震荡偏强走势。 该预测为中国钢贸商、分销商和下游采购商提供了及时的价格方向参考。作为领先的价格报告机构，Mysteel 的市场展望会影响市场预期和短期交易策略。 该例会是 Mysteel 每周对黑色金属（包括铁矿石、钢材及相关产品）的例行分析会。‘震荡偏强’意味着本周价格可能在窄幅区间内波动，但整体上行概率较大。
+
+rss · Google News - 钢材加工配送 · 8月24日 10:31
+
+**背景**: Mysteel 成立于 2000 年，是中国领先的商品价格报告机构（PRA）和数据服务商，为中国大宗商品行业提供市场情报。在钢铁行业中，‘黑色金属’指铁和钢，与铜、铝等有色金属相对。Mysteel 发布的钢材价格指数和周度市场展望被广泛使用，帮助企业进行交易和采购决策。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.mysteel.net/about-us/">About Us | Mysteel</a></li>
+<li><a href="https://www.mysteel.net/commodities/steel/">Prices, Data &amp; News from the China Steel Market | Mysteel</a></li>
+
+</ul>
+</details>
+
+**标签**: `#steel`, `#price forecast`, `#Mysteel`, `#market outlook`
+
+---
+
+<a id="item-7"></a>
+## [8 月 24 日兰格螺纹钢价格早间预警](https://news.google.com/rss/articles/CBMi5AJBVV95cUxOM20xRFd2LXYwQUU3NjlhS0VEeEZCUEdqZ0NtNTE0b19UcjhRMllPZ2N0a0ZlS1JMVWFkTEx6dndvUzl0bl9lS3FCNEstYmU2U0pZdXdrOUk0MmU2Y3pzdElhTlg2ZVFBRi1CWDlvamw1WERYZDJSSFdTeGN4SnAxNVBtZVduR2pFbFd0R2syY1BVODUyZFJ6a0s4UlF5Y2cxV3h2clI4NXRTS2wxaXJKYVBISmxhTnRrb0JOX1EzeW1ILS1YVnlrTzJyN3lSTUhuRHBDRV9heDFobVVfb3lwcTJ6aEdjVUZNVnZDYnBEMkRUanZXRG5LTlVKdDU5VUVON3VkLUx3SjJrbVVRSTdXOEpFWFl0RlJuTTY1My16dTRwMXlyMUZtbUd6dS1YM2NFWkRwYXp5dkdiR3UxWjFjc21BNDVndUkzZC11bnFOVUUzYmNfUHhpVWw4el9YUWhfYkRpZg?oc=5) ⭐️ 7.0/10
+
+8 月 24 日，兰格钢铁发布了螺纹钢价格早间预警，新浪财经对此进行了报道。该预警为当天的钢材市场参与者提供了前瞻性的价格信号。 螺纹钢是建筑领域的关键材料，其价格波动直接影响全国的建筑成本和基础设施投资。每日早间预警有助于贸易商、钢厂和采购方更快地做出定价和采购决策。 该预警标注为“早间”，通常在交易日开始前发布以引导市场预期。所提供的新闻项仅包含标题，未包含具体价格水平或详细分析内容。
+
+rss · Google News - 钢材加工配送 · 8月24日 10:51
+
+**背景**: 兰格钢铁是中国知名的钢材市场信息服务商，提供日常价格监测与分析。螺纹钢是一种热轧带肋钢筋，广泛用于混凝土加固，其价格受到房地产和基建行业的高度关注。由于现货价格会随期货、库存和政策信号在日内波动，早间价格预警是中国钢铁行业常见的市场信息服务形式。
+
+**标签**: `#steel`, `#rebar`, `#price warning`, `#China`, `#steel market`
+
+---
+
+<a id="item-8"></a>
+## [8 月 24 日国内重点城市品种钢价格汇总](https://news.google.com/rss/articles/CBMijAFBVV95cUxOcGJXdGI0S1N3SV91MFVfZWozVGE4b0JwYThSRzFTZzQ5U21jZWRLY2JIcGNpOWdSWDU1dWFNbE9sai1ENk5jODhhUzdWTkRtZWxNbVp4dkNGZ1l1M2Z4bG5ZSm4wSFV6RHdFSXNERTRnR3ltOVZKbC04Y2daUWtQanp3MEJHdjJZUTR2OQ?oc=5) ⭐️ 7.0/10
+
+8 月 24 日，搜狐网发布了一份关于国内重点城市品种钢的价格汇总报告，呈现当前主要特殊钢种的市场价格水平。该报告汇总了多个重点城市关键品种钢的价格数据。 品种钢价格对钢材贸易商、制造商和采购人员而言是重要的市场信号，因为这些钢种广泛用于汽车、机械、能源等高端领域。及时的城市级价格报告有助于市场参与者做出明智的采购和库存决策。 该报告聚焦“品种钢”而非普通建筑钢材，覆盖多个钢种在重点城市的价格。摘要标题中未包含具体价格数字和完整的城市列表，读者需点击搜狐链接查看详细数据。
+
+rss · Google News - 钢材加工配送 · 8月24日 04:25
+
+**背景**: 在中国，钢材按质量等级和性能特性分类，依据 GB/T 13304.2-2008 等标准，可将钢分为普通质量、优质和特殊质量三大类。品种钢是指具有耐腐蚀、耐磨、耐热等特殊性能的钢种，包括合金钢、不锈钢等。这类钢种通常对生产工艺要求更严格，价格也高于普通结构钢。搜狐等媒体定期发布国内品种钢价格汇总，帮助业界跟踪短期价格走势。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="http://www.ecorr.org.cn/news/science/2026-02-03/197547.html">别再混淆了！ “优 特 钢 ”的官方定义与 分 类 ，都在这里</a></li>
+<li><a href="https://m.elecfans.com/article/116515.html">钢 的知识及其 分 类 -电子发烧友网</a></li>
+<li><a href="https://www.gt36.com/news/show-52.html">gt36.com/news/show-52.html</a></li>
+
+</ul>
+</details>
+
+**标签**: `#steel`, `#prices`, `#China`, `#market`, `#steel distribution`
+
+---
+
+<a id="item-9"></a>
+## [深圳地铁 22 号线树立工业化建造标杆](https://news.google.com/rss/articles/CBMijAFBVV95cUxQb2pDa3IycE0wQTNZaWJXZjZkUjg5UDB0aXRnUnNGZkNUdTlBOHB4ODVTbzJmc2dfS0RYZG1IdmJrOE9hR2dpOGJrTTg3MF9SYkJGX2l0VE5oNXNSZ3JsSmxRWnFkUXhxT2RtaW9iVUNZNVRhTVowMF9XOTQ2dEdrRmFwalhaVjRPUGtfVA?oc=5) ⭐️ 7.0/10
+
+深圳地铁 22 号线被列为工业化建造的标杆项目，展示了广东地区地下工程技术的升级。 这标志着地铁建设行业正更广泛地转向工业化、预制装配式方法，可提升质量、效率和安全性，同时减少现场劳动力和环境干扰。 该报道是搜狐新闻的一则简讯，未提供具体技术细节、线路长度或施工方法。它将 22 号线定位为工业化建造应用于地下工程的典范。
+
+rss · Google News - 工业化建造与智能空间 · 8月24日 11:36
+
+**背景**: 工业化建造，也称预制装配式或模块化建造，是在工厂预制建筑构件、在现场进行组装的方式。在地下地铁工程中，这种方法包括预制管片衬砌、预制车站构件以及基于 BIM 的设计协同。深圳是中国推广这类现代建造技术的领先城市之一。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://build-dev.com/index.php/bd/article/download/2816/2776">Building Developments</a></li>
+<li><a href="https://zhongguozhuzhaisheshi.com/index.php?c=show&amp;id=18">BIM 技术在 装 配 式 建 筑设计中的应用_学习园 地 _中国住宅设施</a></li>
+<li><a href="http://slyjzgcxb.paperonce.org/oa/pdfdow.aspx?Sid=202001016">slyjzgcxb.paperonce.org/oa/pdfdow.aspx?Sid=202001016</a></li>
+
+</ul>
+</details>
+
+**标签**: `#industrialized construction`, `#underground engineering`, `#Shenzhen Metro`, `#construction technology`
+
+---
+
+<a id="item-10"></a>
+## [IDC 重新定义生成式 AI 安全，呼吁升级评估体系](https://news.google.com/rss/articles/CBMiwAJBVV95cUxNamZ4d0JyVkRIT2UyTGNMaG5wVVNGdU5fRHFGcEljV3ZVV1BnOGxqNGNzVC1CeW45emFqQ1pxbkZsTzU4TjRVbE1NSi1CQkVyUXFGTjV2NVFtLWZIOGktdVFTNFhzc011cnRhNXZlazlibEpxQXpmRnVzdU1EaVhoLTRLT2pjc2k1d0M2SzhlaHUwUm9KLU9GSzc3NkplbzZBSWFIVEZXV0ZLTFpBejhsMlBQWEx6dGx4V1NSdHQ4bjgtVEN2UkpJdzl6WkhmUnE4TFdyVUZTdlZQTUQxcEJqV2VxTmU0QksyejdxOHBRZlpHR3pzd1A3aHctZHkzLW9nMEJHbEttTE16dnNiRVAxNjRfdUNfY05ISXgzczJXakxhTk5iNi0wWnZfMENTNHFEb0xsTF9Eb2ZKZzBHQUhKUQ?oc=5) ⭐️ 7.0/10
+
+IDC 发布了新指导，重新定义生成式 AI 的安全评估，并敦促企业超越传统的评估框架。该指导认为，现有 AI 安全体系无法充分应对大语言模型带来的独特风险。 随着生成式 AI 深入企业工作流，过时的安全评估可能使组织面临严重风险。IDC 的重新定义提供了基准，可能影响行业最佳实践、采购要求和监管合规。 该指导指出，传统安全指标存在局限，往往无法捕捉生成式 AI 输出的语义和上下文风险。它呼吁建立能跟上不断演变的 AI 威胁的升级评估体系，涵盖模型特有的漏洞。
+
+rss · Google News - EDF AI 部署工程 · 8月24日 09:05
+
+**背景**: 生成式 AI 模型（如大语言模型）能生成全新内容，并容易受到提示注入等攻击，传统安全测试无法涵盖这些风险。LLMOps（大语言模型运维）涵盖在 LLM 整个生命周期中对其进行管理和监控的实践与工具，包括评估环节。LLM-as-a-Judge 等技术利用大语言模型本身来评判输出质量和安全性，为评估生成式系统提供了一种可扩展的方式。理解这些概念有助于把握 IDC 呼吁重新定义生成式 AI 安全评估的背景。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/LLM-as-a-Judge">LLM-as-a-Judge</a></li>
+<li><a href="https://grokipedia.com/page/llmops">LLMOps</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI security`, `#generative AI`, `#LLMOps`, `#IDC`, `#evaluation`
+
+---
+
+<a id="item-11"></a>
+## [OpenAI 突然倒戈：从反对到力推加州严格 AI 安全法案](https://news.google.com/rss/articles/CBMiZkFVX3lxTE5WdkR5b0tEWllGUTdVNUFRQkxlY2ZjYWdPMFJNeTdtdVRIaUJZTHVNekFmSlF3VFdZeWtTZ1JXdlJZTS1mX1BPNTY3a1dpTEhGREZzMGFXbnkxdXlFcERxWFVjYnh4UQ?oc=5) ⭐️ 7.0/10
+
+据报道，OpenAI 已改变其对加州最严格的 AI 安全法案 SB 1047 的立场，从先前反对转为积极支持。这一转变令人意外，因为该公司之前的态度曾招致前员工的批评。 作为领先的 AI 公司，OpenAI 的立场转变可能对加州乃至更广泛地区的 AI 监管格局产生重大影响。这也可能促使其他科技公司重新审视其对 AI 安全立法的立场，为未来的监管树立先例。 该法案 SB 1047 针对“前沿”AI 模型提出了严格的安全协议，包括要求为可能变得危险的系统设置“关闭开关”。OpenAI 此前反对这一法案，前研究员 Daniel Kokotajlo 和 William Saunders 曾对此表示失望。
+
+rss · Google News - EDF AI 部署工程 · 8月24日 11:10
+
+**背景**: SB 1047 是加州的一项立法，旨在为先进 AI 系统（通常称为“前沿模型”）的安全开发和部署建立监管框架。该法案引发了关于如何在快速发展的 AI 行业中平衡创新与安全的辩论。作为主要的 AI 开发者，OpenAI 最初反对该法案，但如今似乎已改变立场，这一举动被视为一项重大的政策转变。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.linkedin.com/pulse/understanding-californias-sb-1047-ai-safety-bill-step-david-coleman-3rmjc">Understanding California &#x27;s SB 1047 AI Safety Bill : A Step Towards...</a></li>
+<li><a href="https://medium.com/@rutanshtrivedi/sb-1047-new-ai-standard-for-a-governance-and-balancing-innovation-and-safety-in-the-age-of-ai-842d30c0e3f2">SB 1047 : New AI standard for a governance and balancing... | Medium</a></li>
+<li><a href="https://www.bitget.com/news/detail/12560604173876">OpenAI former researchers criticize... | Bitget News</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI policy`, `#OpenAI`, `#AI safety`, `#regulation`, `#California`
+
+---
+
+<a id="item-12"></a>
+## [OpenAI 呼吁加州强化 AI 安全法案保障措施](https://news.google.com/rss/articles/CBMiUkFVX3lxTE5jQ3dTcnFaQTFnQ0stSDVYNEhDeTdMU1hOSlhTaU1yRF81NVdPMFpXcnRQSDk1REl1Z0Vpc3o4dEpIbXQ2cHNQeE1QNERSSTVRdFE?oc=5) ⭐️ 7.0/10
+
+OpenAI 公开呼吁加州立法者在该州拟议的 AI 安全法案 SB 1047 中加强保障措施。该公司正直接参与立法进程，以影响法案的最终条款。 这可能对 SB 1047 的最终形态产生重大影响，该法案将是美国首个监管前沿 AI 开发的州级重要法律。OpenAI 的立场可能影响其他科技公司和立法者，进而波及整个 AI 行业。 新闻报道较为简短，未指明 OpenAI 希望增加的具体保障措施。目前版本的 SB 1047 将要求 AI 开发者实施训练前和部署前的措施，以减轻生化核威胁及大规模网络攻击等重大危害。
+
+rss · Google News - EDF AI 部署工程 · 8月24日 02:28
+
+**背景**: 加州参议院第 1047 号法案（即“AI 安全法案”）旨在为该州 AI 系统的安全开发和部署建立监管框架。该法案引发了争议，支持者认为 AI 需要像其他有风险的技术一样受到监管，而批评者则警告这可能会阻碍创新。OpenAI 的参与凸显了主要 AI 实验室日益认识到某种程度的监管不可避免，即使它们试图塑造监管的形式。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.aol.com/controversial-california-bill-prevent-ai-183412737.html">Controversial California bill to prevent AI disasters heads to... - AOL</a></li>
+<li><a href="https://carnegieendowment.org/posts/2024/09/california-sb1047-ai-safety-regulation">All Eyes on Sacramento: SB 1047 and the AI Safety Debate</a></li>
+<li><a href="https://www.linkedin.com/pulse/understanding-californias-sb-1047-ai-safety-bill-step-david-coleman-3rmjc">Understanding California &#x27;s SB 1047 AI Safety Bill : A Step Towards...</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI safety`, `#policy`, `#OpenAI`, `#California`, `#regulation`
+
+---
