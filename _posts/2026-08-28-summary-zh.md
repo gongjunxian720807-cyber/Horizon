@@ -1,0 +1,293 @@
+---
+layout: default
+title: "Horizon Summary: 2026-08-28 (ZH)"
+date: 2026-08-28
+lang: zh
+---
+
+> 从 188 条内容中筛选出 13 条重要资讯。
+
+---
+
+1. [英伟达季度营收 962 亿美元，首次提前一年给出 70%增长指引](#item-1) ⭐️ 9.0/10
+2. [Anthropic 开放模型硬件标准预览，设备集成缩至分钟级](#item-2) ⭐️ 9.0/10
+3. [Cloudflare 优化 1.1.1.1 DNS 缓存，节省 100 TB 内存](#item-3) ⭐️ 8.0/10
+4. [小型模型已到来](#item-4) ⭐️ 8.0/10
+5. [澳大利亚逮捕两名涉嫌 TeamPCP 黑客](#item-5) ⭐️ 8.0/10
+6. [全港最大 MiC 公屋大楼 13 个月平顶](#item-6) ⭐️ 8.0/10
+7. [期钢上涨、螺纹钢减产，钢价或偏强震荡](#item-7) ⭐️ 7.0/10
+8. [8 月 28 日兰格螺纹钢早间价格预警](#item-8) ⭐️ 7.0/10
+9. [华东锅炉容器用钢价格筑底，高端化转型成破局关键](#item-9) ⭐️ 7.0/10
+10. [华泰期货：黑色系市场热度不减，震荡偏强](#item-10) ⭐️ 7.0/10
+11. [派斯林上半年新签订单同比增逾 92%](#item-11) ⭐️ 7.0/10
+12. [AI 安全需求带动业绩超预期 Okta 股价跳涨近 23%](#item-12) ⭐️ 7.0/10
+13. [将 AI Agent 的判断与行动转化为可恢复的软件事实](#item-13) ⭐️ 7.0/10
+
+---
+
+<a id="item-1"></a>
+## [英伟达季度营收 962 亿美元，首次提前一年给出 70%增长指引](https://mp.weixin.qq.com/s/JTZ_ZJ_pn5vgrI_1QUyWNw) ⭐️ 9.0/10
+
+英伟达发布 2027 财年第二季度财报，营收 962.21 亿美元，同比增长 106%；其中数据中心收入 890 亿美元，同比增长 117%。CFO 科莱特·克雷斯首次提前一年给出 2028 财年营收指引，预计同比增长约 70%，并强调受供给限制。 史无前例的提前一年指引表明，英伟达对 AI 算力需求在 2028 财年仍将极为强劲的信心，同时凸显出供给而非需求是主要制约因素。这为整个 AI 基础设施供应链设定了预期，可能影响行业产能和资本开支规划。 英伟达下一代平台 Vera Rubin 已于本月量产出货，预计三季度贡献约 20%的数据中心收入。Vera Rubin 是机架级、POD 级系统，将 Vera CPU、搭载 HBM4 的 Rubin GPU、NVLink 6 等新芯片整合为一个统一的 AI 超级计算机。
+
+telegram · zaihuapd · 8月27日 08:51
+
+**背景**: 英伟达是数据中心 AI 加速器的主导供应商，其财报被广泛视为 AI 基础设施支出的晴雨表。本季业绩延续了此前 Hopper 和 Blackwell GPU 系列的强劲表现；Vera Rubin 是为智能体 AI 和大规模推理工作负载设计的下一代平台。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.nvidia.com/en-us/data-center/technologies/rubin/">NVIDIA Vera Rubin Platform</a></li>
+<li><a href="https://developer.nvidia.com/blog/inside-the-nvidia-rubin-platform-six-new-chips-one-ai-supercomputer/">Inside the NVIDIA Vera Rubin Platform: Six New Chips, One AI ...</a></li>
+
+</ul>
+</details>
+
+**标签**: `#NVIDIA`, `#AI compute`, `#earnings`, `#data center`, `#AI infrastructure`
+
+---
+
+<a id="item-2"></a>
+## [Anthropic 开放模型硬件标准预览，设备集成缩至分钟级](https://www.anthropic.com/news/model-hardware-standard-research-preview) ⭐️ 9.0/10
+
+2026 年 8 月 27 日，Anthropic 开放了模型硬件标准（MHS）的研究预览，这是一项让 AI 智能体安全发现并操控实验室与制造设备的共享规范。该标准将设备集成时间从数周或数月缩短到几小时甚至几分钟，并计划在安全评估后开源。 这标志着 AI 智能体向物理世界行动迈出了重要一步，而不再局限于浏览器或终端。如果被广泛采用，MHS 有望通过让硬件集成对 AI 系统几乎即插即用，加速科学研究、机器人技术和制造业的发展。 首批合作方覆盖生物技术、机器人和量子计算等领域，包括基因泰克、卡内基梅隆大学和 QuEra。Anthropic 表示，QuEra 的 AI 控制器在 99.3% 的情况下无需人工干预即可恢复量子计算机的激光锁定；该标准与模型无关，任何智能体（不仅限于 Claude）都能使用。
+
+telegram · zaihuapd · 8月28日 01:38
+
+**背景**: MHS 是一组标准化驱动，旨在让 AI 智能体轻松对接并控制任意设备，从而减少为实验或制造流程编写定制集成软件的繁琐工作。该项目最初由 Anthropic 与 HHMI Janelia Research Campus 合作发起，目标是让 AI 加速科学研究。来自科学、机器人、电子和制造领域的合作伙伴正在进一步推动标准完善，之后将开源。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.anthropic.com/news/model-hardware-standard-research-preview">Previewing the Model Hardware Standard \ Anthropic</a></li>
+<li><a href="https://arstechnica.com/ai/2026/08/anthropics-new-hardware-standard-lets-ai-agents-control-the-physical-world/">Anthropic&#x27;s new hardware standard lets AI agents control the physical world - Ars Technica</a></li>
+<li><a href="https://www.modelhardwarestandard.com/">Model Hardware Standard</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI`, `#Anthropic`, `#AI agents`, `#hardware control`, `#standards`
+
+---
+
+<a id="item-3"></a>
+## [Cloudflare 优化 1.1.1.1 DNS 缓存，节省 100 TB 内存](https://blog.cloudflare.com/dns-cache-memory-optimization-1111/) ⭐️ 8.0/10
+
+Cloudflare 发布了一篇博客文章，详细介绍了对 1.1.1.1 DNS 缓存的优化，这些优化在其全球基础设施上节省了约 100 TB 的内存。文章描述了具体技术，如调整内存布局和降低每条记录的开销。 这件事很重要，因为 DNS 缓存是互联网速度和可靠性的基础，对大型公共解析器来说，节省 100 TB 内存意味着巨大的运营成本降低。它也表明，即使在高阶语言盛行的时代，底层系统编程仍然至关重要。 根据博客文章和社区评论，这些优化包括更紧密地打包 DNS 记录数据，以及避免为缓存条目单独分配内存。一位评论者指出，将多个独立列表合并为一个 Vec 可能削弱 Rust 的安全保证，但能节省大量内存。
+
+hackernews · TangerineDream · 8月27日 17:17 · [社区讨论](https://news.ycombinator.com/item?id=49468083)
+
+**背景**: Cloudflare 运营着 1.1.1.1，这是一个免费的公共 DNS 解析器，在全球数百个城市每天处理数十亿次查询。DNS 缓存存储最近解析的域名记录，以加快重复查询的速度；缓存越大且越高效，运行速度就越快、成本也越低。优化缓存内存使用可以在相同硬件上存储更多条目，从而降低成本并提高缓存命中率。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/1.1.1.1">1.1.1.1 - Wikipedia</a></li>
+<li><a href="https://www.cloudflare.com/learning/dns/what-is-1.1.1.1/">What is 1.1.1.1? - DNS</a></li>
+<li><a href="https://www.akamai.com/glossary/what-is-dns-caching">What Is DNS Caching? | How Does DNS Caching Work? | Akamai</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: Hacker News 上的评论者称赞这篇文章是先交付可用产品再优化的好例子，其他人则分享了自己的内存优化经验。一些人讨论了手动内存布局与 Rust 安全保证之间的权衡，还有人指出结构体对齐等技术众所周知，但在大规模场景下仍然影响巨大。
+
+**标签**: `#DNS`, `#memory-optimization`, `#systems-programming`, `#cloudflare`, `#performance`
+
+---
+
+<a id="item-4"></a>
+## [小型模型已到来](https://calv.info/small-models-have-arrived) ⭐️ 8.0/10
+
+一篇分析文章指出，小型语言模型已经成熟到足以可靠地处理许多现实任务，标志着 AI 市场正从前沿规模模型转向快速、廉价且够用的解决方案。文章预测，对这类高效模型的需求即将爆发。 其重要性在于，它挑战了只有大规模前沿模型才能提供实用 AI 价值的假设。对企业和开发者而言，这为更低成本、更易获得的 AI 部署打开了大门，可能重塑 AI 行业的经济格局，并使投资从前沿实验室转移。 评论强调，大参数量混合了世界知识、语言技能和推理原语，但许多应用并不需要世界知识，甚至可能受到其负面影响。社区成员援引了 7B 参数本地模型编写并运行测试等实例，并认为&\#x27;底层空间&\#x27;策略可能成为趋势。
+
+hackernews · tosh · 8月27日 15:56 · [社区讨论](https://news.ycombinator.com/item?id=49466917)
+
+**背景**: 小型语言模型\(SLM\)通常指参数少于 400 亿的 AI 模型，旨在智能手机、嵌入式系统等资源受限环境中高效运行。相比之下，前沿 AI 模型是某个时点最具能力的最先进模型——目前包括 GPT-5、Claude Opus 4.7 等——它们需要巨大的算力和基础设施。文章认为，对许多现实应用而言，SLM 在速度与成本上的优势如今已超过前沿模型的原始能力优势。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Small_language_model">Small language model - Wikipedia</a></li>
+<li><a href="https://www.ibm.com/think/topics/small-language-models">What are Small Language Models (SLM)? | IBM</a></li>
+<li><a href="https://www.ainews.tech/glossary/frontier-model">What is Frontier model ? | AINews</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 评论普遍持支持态度，工程师们分享了使用 7B 本地模型进行测试驱动开发流程的一手经验。其他人讨论了消费者 AI 公司为何稀缺，指出前沿实验室占主导地位，并建议以逆向思维打造产品。有评论者观察到&\#x27;底层空间&\#x27;的动态，预测许多应用并不需要庞大的世界知识。
+
+**标签**: `#small models`, `#AI deployment`, `#LLMs`, `#AI economics`, `#consumer AI`
+
+---
+
+<a id="item-5"></a>
+## [澳大利亚逮捕两名涉嫌 TeamPCP 黑客](https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/) ⭐️ 8.0/10
+
+澳大利亚联邦警察逮捕了两名来自西澳大利亚州、年龄分别为 21 岁和 23 岁的男子，指控他们属于 TeamPCP——一个发动了大规模软件供应链攻击的网络犯罪团伙。KrebsOnSecurity 报道称，其在 6 月已确认其中 21 岁嫌疑人的身份，并一直与他保持联系。 这次逮捕凸显了开源软件供应链攻击日益增长的威胁，此类攻击可能同时入侵数千家企业。同时表明，执法机构越来越有能力识别并抓获老练网络犯罪团伙的成员。 澳大利亚联邦警察的声明没有透露被告姓名，但 KrebsOnSecurity 此前已查明其中 21 岁嫌疑人的身份，报道中还包含对一名自称 TeamPCP 发言人的采访。报道还分析了 TeamPCP 头目留下的线索，这些线索很可能导致了他被识别并逮捕。
+
+rss · Krebs on Security · 8月27日 11:04
+
+**背景**: 软件供应链攻击是指网络犯罪分子将恶意代码注入软件依赖项（通常是开源软件包），这些依赖项随后被广泛分发到下游用户手中。近期的报道记录了此类攻击急剧增加，数十起事件影响了拥有数百万下载量的流行软件包。开源软件尤其容易受到攻击，因为攻击者可以向公共仓库发布恶意软件包，而开发人员会无意中将其集成到自己的产品中。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Supply_chain_attack">Supply chain attack - Wikipedia</a></li>
+<li><a href="https://www.cloudflare.com/learning/security/what-is-a-supply-chain-attack/">What is a supply chain attack?</a></li>
+<li><a href="https://www.stepsecurity.io/blog/state-of-open-source-supply-chain-attacks">The State of Open Source Supply Chain Attacks - StepSecurity</a></li>
+
+</ul>
+</details>
+
+**标签**: `#cybercrime`, `#supply chain attack`, `#open-source security`, `#law enforcement`, `#software security`
+
+---
+
+<a id="item-6"></a>
+## [全港最大 MiC 公屋大楼 13 个月平顶](https://news.google.com/rss/articles/CBMi1ANBVV95cUxNS180dy1KOUI4M1J5UFEyRU9OSzN1b2NWcXBhdmlQOS00UUVCdUVxOE03NDVxMW1ReVZ0bF9aMXRIaGhadlI4M0kwZWluZFlqM0h6UTA2TmRjQ3VneGlXRkdmZmd4SnhYTGl3d3VZcV96TF8wQnZzSFNqOTVTQXFHOE9KbzRhQ1lMUkpVT2I2Ull0MTg0N2duY3JKd29HQjRCUlNRMk1sODQwZ1JtMmM1bV91MmZmYjN0Vnp3Vl9NUlFhdmtBYUY3LVhUWldwaVludk1FcHJEQTRjVVZkMmpfQVNELWxMb21GZGk4cEJxNW9MZTRSVzh3WWk5eXc4RlRkY2FrRkl1VTlTd1JBRjVBOUhXTVFhRWV1aktXNERaR25SODZWS1VJbXpuR3NlX3BGZ25OWkdvY0dVWDBkYmhNV1ZBcFFJcjF0UzhLcGoxRmVZZ3ZYYjg1ZHhpQ2lGRHF3WGh3eTVUeHFLdTZma2lqSUpSQ2FXVFpWLW9WTkFJc1ktXzRxUThVc2pYR2xSTXduYk9OU2VURTYyNmFMS29OZ1Z0TnJfZ3hYTmhzcXY1SXZzTl9MSkxCMllxOXZLOHRUSXJ2VVhHeVo1dTNvV2kydmpiUF8?oc=5) ⭐️ 8.0/10
+
+位于北部都会区粉岭凤凰岭邨的全港最大 MiC（组装合成建筑法）公屋大楼，仅用 13 个月便完成平顶。这一里程碑展示了工厂预制模块化建造方式应用于高层公屋的速度。 这一成就表明，MiC 可大幅缩短公屋建造时间，有望帮助缓解香港的住房短缺问题。它可能推动模块化建造方式的更广泛应用，并影响住房政策，尤其是在北部都会区等大型发展项目中。 MiC 是指在工厂预制好带有装修、固定装置和配件的独立集成模块，再运到现场进行安装。13 个月完成平顶比传统施工方式明显更快，该项目也是北部都会区这一大型土地及房屋发展计划的一部分。
+
+rss · Google News - 工业化建造与智能空间 · 8月27日 07:11
+
+**背景**: 组装合成建筑法（MiC）是一种先在工厂内预制好独立集成模块，再运至工地现场进行安装的建造方法。这种方式可减少现场作业、提升质量控制并缩短工期。香港一直积极推广 MiC，以加快房屋供应，尤其是大型公屋项目。粉岭凤凰岭邨项目是 MiC 规模化应用的一个旗舰范例。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://mic.cic.hk/">CIC MiC | Home</a></li>
+<li><a href="https://www.bd.gov.hk/en/resources/codes-and-references/modular-integrated-construction/index.html">Modular Integrated Construction - Buildings Department - b d</a></li>
+
+</ul>
+</details>
+
+**标签**: `#MiC`, `#Industrialized Construction`, `#Hong Kong Public Housing`, `#Modular Construction`, `#Construction Technology`
+
+---
+
+<a id="item-7"></a>
+## [期钢上涨、螺纹钢减产，钢价或偏强震荡](https://news.google.com/rss/articles/CBMisAFBVV95cUxOdF9MOThURExTWFNVcVA5MUdHeW9lUlgzQXVMOUVhYWZKdjctaEtoeDAzLUtzNE5SU1lMdU5ySmdQN21iWWN4akE1VGZzNkpOdHg5bHV5M0hpU2JQUHFDMHhTNHd3XzlzbjU2Z2ZLSXhtYzM4YlRrZ0dDMFZtQjZXZmRfbldHbVAwMVdoSTRJZ2xsams1VnVXbEtoTmpZYXMwTEdhcmNCX2U4U1IxQWJpSQ?oc=5) ⭐️ 7.0/10
+
+据新浪财经报道，期钢价格上涨，同时螺纹钢产量出现削减。市场预期钢价将呈现偏强震荡走势。 这对中国的钢材加工商、经销商和建筑企业意义重大，因为它预示着在需求预期坚挺的情况下供应将减少。价格走向会影响整个钢铁供应链的采购成本和库存策略。 该报道基于市场信号，未提供具体的减产数据或价格水平。‘偏强震荡’意味着价格将在一定区间内波动，但整体趋势偏向上涨。
+
+rss · Google News - 钢材加工配送 · 8月27日 23:41
+
+**背景**: 期钢是钢材商品的期货合约，常用于对冲风险和发现价格。螺纹钢是热轧带肋钢筋的俗称，广泛用于混凝土结构配筋。‘偏强震荡’指市场价格频繁上下波动，但总体呈上升趋势的市场状态。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://wenku.baidu.com/view/ec6d792dc2c708a1284ac850ad02de80d5d80654.html">什么是螺纹钢 - 百度文库</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/512872674">震荡市场两种形态：偏强偏弱 - 知乎专栏</a></li>
+<li><a href="https://zhidao.baidu.com/question/2023428861134532468.html">震荡偏强 什么意思 - 百度知道</a></li>
+
+</ul>
+</details>
+
+**标签**: `#steel`, `#rebar`, `#price`, `#supply`, `#China`
+
+---
+
+<a id="item-8"></a>
+## [8 月 28 日兰格螺纹钢早间价格预警](https://news.google.com/rss/articles/CBMiigFBVV95cUxPeEliV00wLTNfLTRjMEEyUkpLWXBFZEF4ZmdMUlhGenc3Rjd6MXpzNVVyQm9qNTBVN1JBMGdadFllQWJqOVVDRjVXajF0T0VVa1d3Y2ZjWkptdU1FWWhLUExRYjg2S0xmSG5rYU5QcTREVXZPT2F5cTBnN2VBSlNVV3Z6RUFDQ0lkdVE?oc=5) ⭐️ 7.0/10
+
+8 月 28 日，兰格钢铁发布螺纹钢早间价格预警，据新浪财经报道，提示开盘交易时段螺纹钢价格可能出现波动。 这一预警意义重大，因为兰格的螺纹钢价格预警被国内钢材分销商、贸易商和建筑采购方用来制定采购计划和调整报价；早间预警可能在官方价格公布前就引发市场跟进反应。 该标题未提供具体价格水平或方向，仅说明存在预警。完整报告通常可在兰格平台查看，其中包含主要钢厂和区域的基础价格及预计调整幅度。
+
+rss · Google News - 钢材加工配送 · 8月28日 00:55
+
+**背景**: 螺纹钢是建筑工程中广泛使用的钢材产品，其价格是中国建筑活动的重要风向标。兰格钢铁信息网是国内知名的钢铁市场数据机构，每日发布价格评估和预警信息。新浪财经是中国主要财经新闻门户，常转载这类行业预警。早间预警有助于市场参与者在交易前做好准备，因为中国钢铁现货和期货价格可能波动较大。
+
+**标签**: `#rebar price`, `#steel market`, `#price warning`, `#China`, `#steel distribution`
+
+---
+
+<a id="item-9"></a>
+## [华东锅炉容器用钢价格筑底，高端化转型成破局关键](https://news.google.com/rss/articles/CBMiiAFBVV95cUxQa294VDJvRkNwSEN6Q2ltQVBqcFBlaGd0d1lYdElqX0o4Wk45dHpvT3JiMHdabnBEcGFoczFhTkhSYTBUbEp0NVhzWjU2LW1MUnVDbXExaThOOHlCcU15NnRIQl9hdEp4MWotZ1VJdnljM29rdXA3ZTRyWEQ4ZTZ2RXlWbldtU0Zq?oc=5) ⭐️ 7.0/10
+
+华东地区锅炉容器用钢价格在经历一段下行后正趋于筑底，而下游不同领域的需求出现明显分化。市场分析人士强调，向高端产品品种转型是恢复盈利的关键路径。 这标志着该区域关键钢材品种可能接近阶段性底部，将影响加工商和贸易商的采购与定价策略。同时，它凸显了中国钢铁行业从建筑驱动需求向高附加值制造和能源应用结构性转变的大趋势。 锅炉容器用钢指用于制造锅炉和压力容器的钢板，需具备高温强度、耐腐蚀等性能。需求分化主要源于不同下游领域——如电力、石化和集装箱制造——各自具有不同的增长前景和质量要求。
+
+rss · Google News - 钢材加工配送 · 8月27日 13:53
+
+**背景**: 锅炉压力容器用钢是碳素或合金钢板的专业品类，通常由舞钢、武钢、宝钢等钢厂按严格标准生产。自 2022 年以来，中国钢铁行业因产能过剩和建筑需求疲软而持续承压，推动全行业向高端化、绿色化和智能化制造转型。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="http://www.hnhygt.com/chanpinzhanshi/32.html">锅 炉 及压力 容 器 用 钢 板</a></li>
+<li><a href="https://news.mysteel.com/a/26010710/B5016CACE1EF654E.html">Mysteel年报：钢铁需求的韧性基石——产业升级驱动的高端化转型【行业转...</a></li>
+
+</ul>
+</details>
+
+**标签**: `#steel market`, `#boiler steel`, `#container steel`, `#pricing`, `#demand differentiation`
+
+---
+
+<a id="item-10"></a>
+## [华泰期货：黑色系市场热度不减，震荡偏强](https://news.google.com/rss/articles/CBMimAFBVV95cUxNMEU4OHBvbDAzUzRCSEVQdGt2aHJCNlo1TkNXWVNhOFJ2eEtaNWcxVUZfMGtNWEhqWTVrUDNFWkY0RlNBTk1NVnFIUXdtYlZCNl82LTJQaDU4QzJ1c3Bqam5vTXBkbHd4bzRzenkxdjRzYlFRckpRSkdGOURHMnhfRVVfWkVKeGZQZEx2NlZpQ21YY3Q5T1pONw?oc=5) ⭐️ 7.0/10
+
+华泰期货发布报告称，中国黑色系期货市场热度不减，价格预计将维持震荡偏强的走势。该报告指出，钢铁相关商品交易热情持续高涨。 这一观点对中国的商品交易者和钢铁供应链参与者意义重大，因为它预示着铁元素相关主要品种在短期内存在价格支撑。同时，它也反映了市场对基础设施和房地产需求的整体情绪。 黑色系指螺纹钢、热轧卷板、铁矿石、焦煤、焦炭等黑色金属产业链期货品种。该报告对‘震荡偏强’给出定性判断，但标题中未提供具体目标价位或详细基本面数据。
+
+rss · Google News - 钢材加工配送 · 8月28日 02:38
+
+**背景**: “黑色系”是中国市场对黑色金属期货板块的统称，涵盖螺纹钢、热轧卷板等钢材以及铁矿石、焦煤、焦炭等上游原材料。这些品种通过钢铁生产链条紧密关联，价格受宏观经济形势、产业政策、供需关系和国际市场等多重因素影响。华泰期货等期货公司定期发布研究报告，受到国内投资者和交易商的广泛关注。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://baike.baidu.com/item/%E9%BB%91%E8%89%B2%E7%B3%BB/67974251">黑色系（黑色金属产业链相关期货商品的统称）_百度百科</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/406142791">黑色系期货品种有哪些？ - 知乎 - 知乎专栏</a></li>
+
+</ul>
+</details>
+
+**标签**: `#steel futures`, `#black series`, `#price outlook`, `#China`, `#commodities`
+
+---
+
+<a id="item-11"></a>
+## [派斯林上半年新签订单同比增逾 92%](https://news.google.com/rss/articles/CBMiYEFVX3lxTFBCLWxXeHdSUWFIOV9reC0td182Y1N3R3RUTGRtWWlTQnU2Q2J3LVBzUEg1eVJUdmZpUzRpLVh4LUJQZG5XVXh5aTBGSlJnMVNaNEtfUmUyaVB0MUtDc2w2RA?oc=5) ⭐️ 7.0/10
+
+派斯林宣布，上半年新签订单同比增长超过 92%，主要得益于公司积极开拓市场。东方财富网报道了这一消息。 这一强劲的订单增长表明工业自动化和智能制造领域需求旺盛，可能利好派斯林的收入管道及更广泛的产业链。对关注制造业自动化趋势的投资者而言，这是一个具体的需求信号。 该报道为东方财富的简短标题新闻，未披露具体订单金额或分业务板块的明细。92%的增幅是上半年新签订单的同比比较，报道强调积极开拓市场是主要驱动因素。
+
+rss · Google News - 工业化建造与智能空间 · 8月27日 08:46
+
+**背景**: 新签订单是制造和自动化企业的先行指标，反映未来收入潜力。超过 90%的同比增幅通常表明市场需求加速，常与工厂自动化升级和智能制造投资相关。
+
+**标签**: `#industrial automation`, `#orders`, `#demand signal`, `#smart manufacturing`, `#business news`
+
+---
+
+<a id="item-12"></a>
+## [AI 安全需求带动业绩超预期 Okta 股价跳涨近 23%](https://news.google.com/rss/articles/CBMicEFVX3lxTFBPal9Ja1YxeTY0R2tFTFR4bjJaUVJ1aTZDbS1zTDRrUnYzVW5ubkI3eE85S0dPZ2xnZmhxMklpNWpJQm13cHdMNGF4TkFXT09lOHM2SGdiRXN0OFh4NV81RHVRRDFHTnFKaVY1ZXVfWVg?oc=5) ⭐️ 7.0/10
+
+Okta 公布的季度业绩超出市场预期，营收和利润均超预估，增长动力来自于 AI 安全需求的激增。财报公布后，其股价在盘后交易中跳涨近 23%。 这表明企业对 AI 时代身份与访问管理的支出正在加速，印证了 Okta 的战略地位。同时表明 AI 的采用正在催生新一轮安全支出周期，对部署 AI 的组织来说是一个重要的市场风向标。 Okta 是一家身份与访问管理（IAM）公司，提供用于用户认证和单点登录的云软件。此次业绩超预期被明确归因于 AI 安全需求，包括员工身份和客户身份产品的增长，公司可能还上调了业绩指引。
+
+rss · Google News - EDF AI 部署工程 · 8月27日 14:15
+
+**背景**: 身份与访问管理（IAM）是企业用于控制系统和数据访问的一套策略、流程和技术框架。Okta 的平台帮助企业为员工、客户以及非人类身份提供安全认证，随着 AI 代理和工作负载激增，这一需求变得更加关键。AI 安全需求指的是保护 AI 系统、管理对 AI 模型的访问以及防范 AI 驱动攻击的需求，这推动了 Okta 等 IAM 厂商的增长。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Okta,_Inc.">Okta , Inc. - Wikipedia</a></li>
+<li><a href="https://www.okta.com/">Secure Identity for Employees, Customers, and AI | Okta</a></li>
+<li><a href="https://www.anomalix.com/blog/why-identity-and-access-management-is-important">Why Identity and Access Management is Important</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI security`, `#Okta`, `#earnings`, `#market signal`, `#I&amp;AM`
+
+---
+
+<a id="item-13"></a>
+## [将 AI Agent 的判断与行动转化为可恢复的软件事实](https://news.google.com/rss/articles/CBMiXkFVX3lxTFBuc3V4WkFoUzBJUi1IOGhtd1hzbU5hN014SUtDTjdhaWZ4TExSdG5FMWkyX0txNjZObnBxcE5YRFYyTDduN0tzVm1kc1g5Y1ZZTDFPOXZpT2V6NGZNRHc?oc=5) ⭐️ 7.0/10
+
+InfoQ-CN 发表了一篇文章，介绍如何将 AI Agent 的判断与行动转化为持久化、可恢复的软件事实。这种方法旨在提高基于 Agent 的系统的可靠性与可调试性。 随着 AI Agent 越来越多地被部署到生产环境中，其非确定性行为使调试和恢复变得困难。将 Agent 的判断与行动视为可恢复的事实，有助于工程师构建更可靠、可审计且可维护的 AI 系统。 这篇文章是 KDC 工程补篇的一部分，重点是将 LLM 驱动的判断与确定性软件工程实践相结合。文章强调状态持久化和事件记录的重要性，以便在故障后能够重放或审计 Agent 的行为。
+
+rss · Google News - EDF AI 部署工程 · 8月27日 08:03
+
+**背景**: AI Agent 是使用大语言模型做出决策并采取行动的软件系统，但其概率性本质使调试变得困难。行业讨论指出，许多公司过于依赖提示词和 LLM，而不是将其与编排、验证、重试、可观测性和状态管理等确定性工程实践相结合。将 Agent 的行为视为可恢复的软件事实，类似于事件溯源，即记录每一次状态变化，并可通过重放来恢复或分析系统行为。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.m365.fm/the-hidden-problem-with-ai-agents/">The Hidden Problem with AI Agents : Too Much LLM, Not Enough Engi</a></li>
+<li><a href="https://www.dev-matrix.com/2026/07/designing-event-driven-ai-agents-with-nodejs-and-bullmq.html">Designing Event-Driven AI Agents with Node.js and BullMQ</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI agents`, `#reliability`, `#state management`, `#AI deployment`, `#software engineering`
+
+---
