@@ -1,0 +1,247 @@
+---
+layout: default
+title: "Horizon Summary: 2026-09-03 (ZH)"
+date: 2026-09-03
+lang: zh
+---
+
+> 从 155 条内容中筛选出 11 条重要资讯。
+
+---
+
+1. [谷歌发布 Gemini 3.8 Flash，强化软件工程与智能体工作流](#item-1) ⭐️ 9.0/10
+2. [Meta 发布 Muse Spark 1.3 低价登顶 DeepSWE 引发热议](#item-2) ⭐️ 8.0/10
+3. [谷歌发布 Gemini 3.8 Flash 与 Flash Cyber 模型](#item-3) ⭐️ 8.0/10
+4. [范式智能超 10 亿元采购华为昇腾 950，国产算力进入头部 AI 生产环境](#item-4) ⭐️ 8.0/10
+5. [Palo Alto Q4 电话会：AI 安全 ARR 增 63%，智能体流量飙升 9 倍](#item-5) ⭐️ 8.0/10
+6. [Claude 越狱后，Anthropic 停训并调动 150 人](#item-6) ⭐️ 8.0/10
+7. [螺纹钢期货下跌，钢价偏弱震荡](#item-7) ⭐️ 7.0/10
+8. [9 月 2 日国内重点城市品种钢价格汇总 - 新浪财经](#item-8) ⭐️ 7.0/10
+9. [钢价涨跌互现，铁矿石期货跌逾 1%](#item-9) ⭐️ 7.0/10
+10. [Mysteel 午报：钢价涨跌互现，铁矿石期货跌逾 1%](#item-10) ⭐️ 7.0/10
+11. [OpenAI Astra 成首个触及‘关键级’网络安全门槛的模型](#item-11) ⭐️ 7.0/10
+
+---
+
+<a id="item-1"></a>
+## [谷歌发布 Gemini 3.8 Flash，强化软件工程与智能体工作流](https://deepmind.google/models/model-cards/gemini-3-8-flash/) ⭐️ 9.0/10
+
+谷歌 DeepMind 发布了 Gemini 3.8 Flash，相较 Gemini 3.7 Flash，在软件工程和智能体知识工作流上有所提升。该模型支持可调节的努力水平，输入上下文最高达 100 万 token、输出约 64K token，知识截止到 2026 年 3 月。 这很重要，因为 Gemini Flash 系列被大量开发者和企业用于 AI 编程和自主任务，这些升级直接改善了生产环境中的吞吐量与可靠性。新的努力水平控制让团队可以在质量、成本和延迟之间进行实际权衡。 该模型已通过 Gemini 应用、AI Studio 和 Gemini API 等渠道分发。其安全表现与 Gemini 3.7 Flash 大致相当，不过报告指出非英语安全基准的表现略有下滑。
+
+telegram · zaihuapd · 9月2日 15:12
+
+**背景**: 智能体工作流（agentic workflow）是指由 AI 智能体动态执行的一系列任务步骤，智能体会根据新信息调整行为并朝目标优化行动。许多大型语言模型还提供可调节的“努力水平”，用于控制系统在回答问题时投入的推理深度和 token 数量，帮助开发者在质量与速度/成本之间做权衡。Gemini 3.8 Flash 通过将软件工程场景所需的这两种能力整合进模型产品中，延续了这一趋势。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.automationanywhere.com/rpa/agentic-workflows">What are Agentic Workflows ? The 2026 Enterprise Guide</a></li>
+<li><a href="https://www.mhtechin.com/support/the-power-of-effort-levels-fine-tuning-ai-performance-for-speed-cost-and-quality/">The Power of Effort Levels: Fine-Tuning AI Performance for ...</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI models`, `#Gemini`, `#software engineering`, `#agents`, `#Google`
+
+---
+
+<a id="item-2"></a>
+## [Meta 发布 Muse Spark 1.3 低价登顶 DeepSWE 引发热议](https://developer.meta.com/ai/models/muse-spark/) ⭐️ 8.0/10
+
+Meta 发布了 Muse Spark 1.3，据称在 DeepSWE 上取得 75.4 分，为目前最高成绩，同时每次调用成本仅几美分。开发者 Simon Willison 实测一次 API 调用约 4.2266 美分，耗时 38 秒。 这表明顶级编程性能与极低定价可以并存，可能进一步加剧模型竞争并压低市场价格。独立开发者和小团队能够以远低于以往的成本获得接近前沿的编程能力。 该版本加入了面向复杂推理与 agentic 任务的 max reasoning 模式，并根据 Muse Code 和 Meta Model API 的真实使用反馈改进了易用性。社区成员指出，Muse Spark 1.3 当天曾反超 Google 此前数小时占据 DeepSWE 榜首的 Gemini 3.8 Flash。
+
+hackernews · bvaldivielso · 9月2日 19:35 · [社区讨论](https://news.ycombinator.com/item?id=49541256)
+
+**背景**: Muse Spark 是 Meta（经 Meta Superintelligence Labs）开发的大语言模型家族，于 2026 年推出，面向多模态推理、编程和 AI 辅助任务。DeepSWE 是 Datacurve 推出的长周期软件工程基准，使用来自活跃开源仓库的原始任务评测前沿编码 agent，可在其他公开基准趋于饱和时帮助区分模型能力。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://research.meta.ai/blog/introducing-muse-spark-1-3">Introducing Muse Spark 1.3 | Meta AI Research</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Muse_Spark">Muse Spark - Wikipedia</a></li>
+<li><a href="https://deepswe.datacurve.ai/">DeepSWE</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 开发者普遍反响热烈：Simon Willison 用生成 SVG 的提示词实测，认为 1.3 明显优于 1.2；superfrank 表示 Spark 1.2 已经以低成本给他带来惊喜。bertili 强调 75.4 的 DeepSWE 得分与低价，预测竞争会进一步压低价格；Lucasoato 则在肯定之余调侃，这次发布几乎让人忘记 Meta 因儿童社交媒体伤害而面临的那 180 亿美元诉讼。
+
+**标签**: `#AI models`, `#LLM`, `#Meta`, `#pricing`, `#benchmarks`
+
+---
+
+<a id="item-3"></a>
+## [谷歌发布 Gemini 3.8 Flash 与 Flash Cyber 模型](https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/) ⭐️ 8.0/10
+
+谷歌发布了 Gemini 3.8 Flash，这是一款高速、低成本的推理模型，是 3.7 Flash 的后继版本，在软件工程、智能体任务和多步推理能力上有所提升。公司还通过 Fairwind 计划向受信防御方提供 Gemini 3.8 Flash Cyber，称其在漏洞检测和自动修复方面具有前沿水平。 Flash 系列是谷歌面向需要低成本、低延迟 AI 的开发者打造的“工作马”型产品线；此次显著的基准提升，有望让前沿推理和编程能力变得更加触手可及。Cyber 版本将类似能力延伸到网络防御领域，帮助受信组织在攻击者利用漏洞之前发现并修补漏洞。 其模型卡显示它是 Gemini 3 家族的下一个迭代版本，并继续支持可调节的思考强度，以权衡质量、成本和延迟。定价与 3.7 Flash 的初始价格保持一致（每百万输入 token 0.75 美元、每百万输出 token 3.75 美元），而 Flash Cyber 则通过 Fairwind 计划限定向受信防御方提供。
+
+hackernews · bratao · 9月2日 15:12 · [社区讨论](https://news.ycombinator.com/item?id=49537553)
+
+**背景**: Gemini Flash 是谷歌对旗下 Gemini 模型推出的高效低成本版本，主要为高并发和对延迟敏感的工作负载设计。这些模型可以通过调整“思考强度”来在质量、速度和成本之间取舍。谷歌此前曾为防御者推出过 Cyber 版本——Gemini 3.5 Flash Cyber 曾以限定试点形式提供给政府和受信合作伙伴——本次发布则通过 Fairwind 计划延续了这条面向安全的路线。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://deepmind.google/models/model-cards/gemini-3-8-flash/">Gemini 3.8 Flash - Model Card — Google DeepMind</a></li>
+<li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/">Introducing Gemini 3.8 Flash and 3.8 Flash Cyber</a></li>
+<li><a href="https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/">Introducing Gemini 3.5 Flash Cyber — Google DeepMind</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 早期评论者对该模型的速度和成本反响热烈：Simon Willison 表示他仅用 1.8 美分和 13 秒就生成了一段 HTML/JavaScript 演示，并称赞 Gemini 支持音频和视频输入，而 OpenAI 与 Anthropic 的旗舰模型仍不具备。也有人强调其出色的基准表现——3.8 Flash 在 DeepSwe 上排名第一，与 Opus 5 medium 的 59 分智能得分持平。当然也有保留意见：一位测试者观察到低思考强度模式相比 3.7 可能存在回退，另一位评论者认为实际使用体验仍有待观察。
+
+**标签**: `#AI`, `#Gemini`, `#model release`, `#reasoning`, `#benchmarks`
+
+---
+
+<a id="item-4"></a>
+## [范式智能超 10 亿元采购华为昇腾 950，国产算力进入头部 AI 生产环境](https://news.google.com/rss/articles/CBMiXEFVX3lxTFBDcmtWNTJrU1g2Q3UtaEg5VEl6M1Ntd2lpc2R5SDc5Tk5lOThtYlBSTmphNE9qQ3FfMXJBTFVmZEVGd0RMemJSRzVUeG5vYTRkWERSTFFScmJzX2pW?oc=5) ⭐️ 8.0/10
+
+范式智能（曾用名第四范式，英文名 Phancy Group）已承诺超过 10 亿元人民币采购华为昇腾 950 芯片。这标志着国产 AI 芯片首次进入头部 AI 企业的生产环境。 这笔采购表明，国产 AI 算力已具备支撑中国头部 AI 企业生产环境的能力，在美国出口管制背景下减少了对 NVIDIA 的依赖。这可能重塑中国 AI 基础设施供应链，并加剧 AI 芯片市场的竞争。 华为昇腾 950 采用双 Die UMA 架构，配备 144GB HBM 内存，内存访问带宽 4TB/s，单卡互联带宽 2TB/s，并新增支持 FP8、MXFP8、MXFP4 等低精度数据格式。DeepSeek V4 发布后，市场对昇腾 950 的需求大幅飙升。
+
+rss · Google News - AI 前沿 · 9月2日 06:35
+
+**背景**: 国产算力是指由中国本土企业自主研发和生产的计算硬件、芯片与系统所构成的计算基础设施。华为昇腾系列是这一体系的重要支柱。范式智能是中国领先的企业级 AI 公司，专注于决策类人工智能，连续七年在中国机器学习平台市场份额中排名第一。在美国对先进芯片实施出口管制的背景下，越来越多中国企业开始采用昇腾等国产替代方案。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E7%AC%AC%E5%9B%9B%E8%8C%83%E5%BC%8F%E6%99%BA%E8%83%BD%E6%8A%80%E6%9C%AF%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/60162228">北京第四范式智能技术股份有限公司_百度百科</a></li>
+<li><a href="https://m.163.com/dy/article/L1PQ7MN60550WHYR.html">昇 腾 950 超节点真机首秀在即，国产AI...</a></li>
+<li><a href="https://baike.baidu.com/item/%E5%9B%BD%E4%BA%A7%E7%AE%97%E5%8A%9B%E4%BA%A7%E4%B8%9A%E9%93%BE/68315028">国产算力产业链 - 百度百科</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI compute`, `#Huawei Ascend`, `#China AI supply chain`, `#semiconductors`, `#AI infrastructure`
+
+---
+
+<a id="item-5"></a>
+## [Palo Alto Q4 电话会：AI 安全 ARR 增 63%，智能体流量飙升 9 倍](https://news.google.com/rss/articles/CBMicEFVX3lxTE9FQWFIUFhiRTNqTEpNRklfRnBnYU9DSWxjaXdna0JnZm44Z2V3QkUxVFlBQVB1OXQ1TWdtdTFMVklFZGRySnZjZHd6SnFEMkZ4TlY4Sl9ncTgyY0NBaFRmMlE2Nkd2cUYwVnd0SmRHUHo?oc=5) ⭐️ 8.0/10
+
+Palo Alto Networks 在第四季度财报电话会上披露，AI 安全业务的年度经常性收入（ARR）增长 63%，智能体流量在九个月内激增 9 倍。管理层将这轮 AI 浪潮称为万亿美元级机遇。 这组数据提供了具体证据，表明企业对 AI 安全防护和智能体管理的需求正在转化为实际收入，而不仅仅是炒作。作为头部网络安全厂商，Palo Alto 的信号可能影响整个行业对 AI 原生安全产品的投入优先级。 ARR 是衡量订阅业务的核心指标，而智能体流量九个月增长 9 倍，说明企业网络使用方式正发生结构性变化。智能体 AI 流量与人工上网行为不同：它全天候以机器速度运行，通常产生大量上行数据，给网络和安全防护带来新的压力点。
+
+rss · Google News - EDF AI 部署工程 · 9月2日 06:55
+
+**背景**: Palo Alto Networks 是全球主要的网络安全厂商，ARR 即年度经常性收入，是财报电话会上投资者关注订阅业务增长的关键指标。AI 智能体是能够自主扫描、决策和执行任务的软件系统，其概率性行为会带来新的安全盲区。智能体 AI 还会产生持续且以上行数据为主的网络流量，因此安全公司纷纷推出专门的 AI 防护产品，也是“智能体流量激增”受到关注的原因。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.ibm.com/think/topics/ai-agent-security">What is AI Agent Security? | IBM</a></li>
+<li><a href="https://blogs.cisco.com/sp/the-impact-of-ai-on-wide-area-network-traffic-we-need-to-talk">How Agentic AI Is Changing Network Traffic: Cisco Report - Cisco Blogs</a></li>
+<li><a href="https://eye.security/blog/ai-agents-in-cybersecurity-whats-real-whats-hype-and-what-organisations-should-do-next/">AI Agents in Cybersecurity: What’s Real, What’s Hype, and What&#x27;s Next</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI security`, `#Palo Alto Networks`, `#earnings call`, `#AI agents`, `#cybersecurity market`
+
+---
+
+<a id="item-6"></a>
+## [Claude 越狱后，Anthropic 停训并调动 150 人](https://news.google.com/rss/articles/CBMiWkFVX3lxTE1BSDlZdWpzNURrVGtTLV9mTUJkTnczazQ1dEFvMDZSU1AwcGF3YkNKWVpUbDVIeTU3MnFRdVc5R0tHXy1xaHhzdWd6Z3dFdFZJcy1zYWpXLUlXUQ?oc=5) ⭐️ 8.0/10
+
+据 InfoQ-CN 报道，Anthropic 在 Claude 遭越狱后暂停了模型训练，并紧急调动了约 150 名员工。目前可见内容中未透露该越狱事件的具体细节或受影响的模型版本。 这一事件表明，一次越狱就可能对头部 AI 实验室造成重大运营干扰，甚至推迟模型发布或改变人员工作重心。同时也凸显了对于大模型提供商而言，对抗性鲁棒性正带来越来越大的商业与安全影响。 据报道，Anthropic 的应对措施包括暂停正在进行的训练任务，并将约 150 名员工调往其他岗位，这表明其对该安全漏洞非常重视。由于目前尚无官方确认或技术细节，该事件仍有待独立核实。
+
+rss · Google News - EDF AI 部署工程 · 9月2日 01:43
+
+**背景**: AI 越狱（jailbreak）是指试图绕过大型语言模型（如 Claude）内置的安全护栏和内容过滤机制的行为，通常通过精心构造的提示词实现。这些护栏旨在防止模型生成有害或被禁止的内容。研究人员与安全公司已记录多种越狱技术，包括角色扮演场景和编码攻击等。此次报道的事件凸显了在提升大模型能力的同时确保其安全性的持续挑战。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.microsoft.com/en-us/security/blog/2024/06/04/ai-jailbreaks-what-they-are-and-how-they-can-be-mitigated/">AI jailbreaks : What they are and how they... | Microsoft Security Blog</a></li>
+<li><a href="https://www.lakera.ai/blog/jailbreaking-large-language-models-guide">Jailbreaking Large Language Models : Techniques, Examples...</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI Safety`, `#Anthropic`, `#Claude`, `#Jailbreak`, `#Model Training`
+
+---
+
+<a id="item-7"></a>
+## [螺纹钢期货下跌，钢价偏弱震荡](https://news.google.com/rss/articles/CBMiaEFVX3lxTFBTQkd6d0lnZDZsMkc3RVpTR2sybjR0Nm5BRjF3Z3BjRDRpSFd3TXFPd0VwVFNuNFpSNVhIcXJxU1Uya0NtS19md0FPNTk3NmhUSkxjc3NxZGkzSnVpN2NwdURyZWdqTzhB?oc=5) ⭐️ 7.0/10
+
+螺纹钢期货价格出现下跌，钢价短期内预计将维持偏弱震荡格局。我的钢铁的报告指出，中国钢铁市场面临下行压力。 中国是全球最大的钢铁生产国和消费国，螺纹钢是重要的建筑用钢。螺纹钢期货下跌预示着建筑项目成本预期走弱，影响整个钢铁市场情绪，对下游行业和投资者都有影响。 螺纹钢期货在上海期货交易所（SHFE）上市，是中国最早也是交易最活跃的钢铁期货品种之一，常被视为钢铁市场的重要价格发现机制。
+
+rss · Google News - 钢材加工配送 · 9月2日 03:45
+
+**背景**: 螺纹钢（rebar）是加入混凝土中增强抗拉性能的钢材，因为混凝土抗压强度高但抗拉强度低。中国的螺纹钢期货市场是全球最大的，反映中国在钢铁生产和消费中的主导地位。期价被钢厂、贸易商和建筑企业密切关注，作为现货定价和原材料成本预期的参考。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.shfe.com.cn/eng/Market/Futures/Metal/rb_f/">Steel Rebar</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rebar">Rebar - Wikipedia</a></li>
+<li><a href="https://www.linkedin.com/pulse/rebar-futures-real-price-anchor-wire-rod-china-annis-lee-wp93c">Rebar Futures : The Real Price Anchor for Wire Rod in China</a></li>
+
+</ul>
+</details>
+
+**标签**: `#steel`, `#rebar futures`, `#steel prices`, `#market signal`
+
+---
+
+<a id="item-8"></a>
+## [9 月 2 日国内重点城市品种钢价格汇总 - 新浪财经](https://news.google.com/rss/articles/CBMiigFBVV95cUxPcHJ1TkpaVllnTzVxNkIzdnQ1U1dVdFhmM3lxcTByZmdCSlFPUVg5TVBpYnJrbHQ4YTA1QThSZ0VaOVZLWEFna0t4X01OclJYVk91ZHN1WHFKTmxYM0ZFUnlwTXRnVlNod0V4cEpsbVlsMzRsVURjREJpM1Y5Z003dTZtRVF4ZkYtdFE?oc=5) ⭐️ 7.0/10
+
+一份关于 9 月 2 日中国主要城市品种钢价格的每日汇总。
+
+rss · Google News - 钢材加工配送 · 9月2日 03:11
+
+**标签**: `#steel prices`, `#China`, `#steel market`, `#price report`, `#steel distribution`
+
+---
+
+<a id="item-9"></a>
+## [钢价涨跌互现，铁矿石期货跌逾 1%](https://news.google.com/rss/articles/CBMiaEFVX3lxTE1JejNuSUZJclU1bXNpNlJTUnBETUNOQm81RWNwYldnZm1sbFhsS2NNb2VhYlEtQUtKcFJqcUQ2c0tBcmp3REVOZ1k4UGtEcjlkcjhBa3I3dmR5VjVQelgwZDR4Ni1tMTRw?oc=5) ⭐️ 7.0/10
+
+我的钢铁午间报告显示，钢材市场价格涨跌互现，铁矿石期货跌幅超过 1%。 该报告反映午间时段的市场状况，而非收盘价格，属于盘中行情。铁矿石期货跌幅超过 1%，显示市场对这一关键原材料的价格情绪走弱；不同钢材品种则呈现涨跌互现的态势。
+
+rss · Google News - 钢材加工配送 · 9月2日 03:45
+
+**背景**: 我的钢铁是中国主要的钢材和大宗商品市场数据提供商，其报价被业内广泛用作定价参考。钢价与铁矿石期货之所以受到密切关注，是因为铁矿石是高炉炼钢的关键原料，而中国是全球最大的钢铁生产国和消费国。铁矿石期货下跌往往意味着市场预期钢材需求走弱或供给形势发生变化。由于本次报道全文并未提供，价格变动的具体原因暂不明确。
+
+**标签**: `#steel`, `#iron ore`, `#futures`, `#price movement`, `#market report`
+
+---
+
+<a id="item-10"></a>
+## [Mysteel 午报：钢价涨跌互现，铁矿石期货跌逾 1%](https://news.google.com/rss/articles/CBMiiAFBVV95cUxNdzl2RE1mMTZfcUs5amR1bHBWc3k0MC1nYVYzS0JyTF9TVjN3c3FXTXBBV2hLNkF0SU9SaHVacGVyTjNVVXEtbl84NGhSeHJlVHVPMDdMMEEzM2xaMEJaT3pGYmlqRWYxY3lyaVVDZ0xZSEptRVp5aXJFQlczcWp6LXNhV0tGZDRp?oc=5) ⭐️ 7.0/10
+
+Mysteel 的午间市场报告显示，中国各地钢价涨跌互现，铁矿石期货跌幅超过 1%。该报告表明黑色系金属市场交投较为谨慎。 该报告是中国钢铁和铁矿石市场广泛关注的风向标，钢价涨跌互现叠加铁矿石期货走弱，可能反映供需情绪变化。钢厂、贸易商和下游用户依赖此类信号来调整定价和采购决策。 该报道为午间快报，不包含收盘价或详细成交量。铁矿石期货跌逾 1%表明风险偏好偏谨慎，而钢价涨跌互现则暗示区域或品种之间存在分化。
+
+rss · Google News - 钢材加工配送 · 9月2日 03:57
+
+**背景**: Mysteel（上海钢联）是中国领先的大宗商品价格、数据及资讯服务商，覆盖钢铁、金属等市场。铁矿石期货是一种标准化金融衍生品，其价格反映市场对炼钢关键原材料的预期。作为午间快讯，该报告提供了中国钢铁和铁矿石市场交易情绪的最新观察。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.mysteel.net/">China Steel &amp; Commodities Price and Data Service| Mysteel</a></li>
+<li><a href="https://www.cmegroup.com/markets/metals/ferrous/iron-ore-62pct-fe-cfr-china-tsi-swap-futures.html">Iron Ore CFR China (Platts) Overview - CME Group</a></li>
+
+</ul>
+</details>
+
+**标签**: `#steel prices`, `#iron ore futures`, `#steel market`, `#Mysteel`, `#commodities`
+
+---
+
+<a id="item-11"></a>
+## [OpenAI Astra 成首个触及‘关键级’网络安全门槛的模型](https://news.google.com/rss/articles/CBMitgJBVV95cUxOS1F0cFZtS282cnV6elFDbU5Pd3REeW1RNjN2ZXhySDNidjI5Rm5ELXFudngxdUc4WlYzd3F5RklCZ3NkZnVZMnlGcmpYT2E3MGJCcVVaTzdnNjJ4RkNRR0F6RUotMXM3Tlo1Ml95bDFNanpsckhPLVJZa1Fnb1VvWjNGZmpuSUVVSXhwcXRNam5oQ20xUzZBVFYxRmoyMThNdE1nNFp5NG1LNjgzXy1pWlZKaFU4TXFiNzczWVlFNE9OaGItZlRLV1QxbU9qRWdrb003NS1xVV9ndkR5Ql9zTzl2cjNzRkJIRnVuWUgwazVQLXNqbUtxYmdXQlRsWjZkUlV0VmlxR1M0Uk1WS2JWcTdCTjIyaU14WlJ0YlhITF9Zb21zSHN5a2oteDZXUy1xUUhZT0lR?oc=5) ⭐️ 7.0/10
+
+OpenAI 在 2026 年 9 月初发布的报告《Path to Astra: critical capabilities and frontier safeguards》中确认，其尚未发布的模型 Astra 已在公司的 Preparedness Framework 下达到网络安全‘关键级’（Critical）。这使 Astra 成为 OpenAI 历史上首个在网络安全风险分级中被列为关键级的模型。 这一里程碑表明前沿 AI 模型正接近 OpenAI 认为在网络安全领域属于‘关键级’的能力水平，对 AI 安全、部署政策及监管可能产生重大影响。它也说明类似 Preparedness Framework 的安全评估框架正产生有意义的风险分级，进而影响先进模型的管理方式。 根据 OpenAI 的定义，若模型能在无需人工干预的情况下，识别并开发出针对多个加固的真实世界关键系统中所有严重级别的可用零日漏洞，或能针对加固目标设计并端到端执行新颖的网络攻击策略，即达到网络安全关键级门槛。Astra 仍是未发布的内部模型，OpenAI 仅分享其研究贡献供社区评估，例如最近解决十个开放数学问题的成果。
+
+rss · Google News - EDF AI 部署工程 · 9月2日 13:39
+
+**背景**: OpenAI 的 Preparedness Framework（预备框架）是一套内部评估体系，将前沿 AI 模型划分为不同风险级别，并确定部署前必须采取的安全保障措施。该框架将网络安全‘关键级’设定为网络风险中的最高等级。Astra 是 OpenAI 的下一代未发布模型，公司允许研究社区评估其产出，却不直接发布该模型。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/">Responding to the next frontier of critical cyber ... - OpenAI</a></li>
+<li><a href="https://www.explainx.ai/blog/openai-astra-cybersecurity-critical-preparedness-framework-2026">OpenAI Astra: Critical Cyber Tier Confirmed (Sept 2026 ...</a></li>
+<li><a href="https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf">Preparedness Framework - cdn.openai.com</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI`, `#cybersecurity`, `#OpenAI`, `#model evaluation`
+
+---
