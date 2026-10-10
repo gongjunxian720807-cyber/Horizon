@@ -1,0 +1,181 @@
+---
+layout: default
+title: "Horizon Summary: 2026-10-10 (ZH)"
+date: 2026-10-10
+lang: zh
+---
+
+> 从 205 条内容中筛选出 8 条重要资讯。
+
+---
+
+1. [Cloudflare 收购 Deno，一年后将终止 Deno 运行时开发](#item-1) ⭐️ 9.0/10
+2. [OpenAI 据悉洽谈租赁俄亥俄州 10 吉瓦数据中心](#item-2) ⭐️ 8.0/10
+3. [Oxide Computer 完成 4.45 亿美元 D 轮融资，押注机架级私有云](#item-3) ⭐️ 7.0/10
+4. [Matthew Green 警告：AI 的速度远超密码学标准更新进程](#item-4) ⭐️ 7.0/10
+5. [每日钢市：钢坯上调 10 元，焦炭提降 100 元，钢价难涨](#item-5) ⭐️ 7.0/10
+6. [Mysteel 午报：钢价涨跌互现，焦煤期货涨超 4%](#item-6) ⭐️ 7.0/10
+7. [又有 7 家钢厂主动停炉检修，邢钢停产至明年 4 月](#item-7) ⭐️ 7.0/10
+8. [AI 模型评测平台 Arena 完成 2 亿美元 B 轮融资，估值 31 亿美元，ARR 约 1 亿美元](#item-8) ⭐️ 7.0/10
+
+---
+
+<a id="item-1"></a>
+## [Cloudflare 收购 Deno，一年后将终止 Deno 运行时开发](https://deno.com/blog/cloudflare) ⭐️ 9.0/10
+
+Cloudflare 已收购 Deno。根据 deno.com 上的公告，Cloudflare 只会再支持 Deno 运行时一年——期间按月发布包含缺陷修复和安全更新的版本——之后便彻底停止该运行时的开发。Deno 仍将保持开源，Cloudflare 表示欢迎他人接手继续开发，因此该项目的未来如今取决于外部维护者。 Deno 是 JavaScript/TypeScript 生态中少数真正能与 Node.js 抗衡的替代运行时之一，其开发实质停摆意味着运行时领域少了一个重要的创新与竞争来源。这同时延续了开发者工具领域明显的整合并购浪潮，使那些已将生产系统建立在 Deno 之上的团队面临长期支持不确定的处境。 这次收尾意味着未来约一年内不再有新功能，仅有每月的缺陷修复与安全更新，此后若无其他方接手连这些更新也会停止；Deno 依然开源，但并不保证继续得到维护。社区批评者将这一结局与 Deno 早前转向兼容 npm 的战略调整联系起来，并指出 Cloudflare 自家的 Workers 运行时 workerd 可能会吸收 Deno 的一些设计理念，例如基于权限的沙箱机制。
+
+hackernews · ilreb · 10月9日 13:03 · [社区讨论](https://news.ycombinator.com/item?id=50019911)
+
+**背景**: Deno 是由 Node.js 最初作者 Ryan Dahl 创建的 JavaScript 与 TypeScript 运行时，于 2020 年首次发布；它的设计目标是修正他眼中 Node.js 的设计失误，提供默认安全的权限机制、原生 TypeScript 支持以及内置工具链。运行时是在浏览器之外执行 JavaScript 的环境，Node.js 是占据主导地位的例子，而 Bun 和 Deno 是最主要的现代挑战者。Cloudflare 运营着一个边缘计算平台，其 Workers 运行在自家 workerd 运行时之上，因此收购 Deno 让它同时获得了这支团队和一个竞争性运行时背后的技术。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://oneuptime.com/blog/post/2026-01-31-deno-getting-started/view">How to Get Started with Deno Runtime</a></li>
+<li><a href="https://viadreams.cc/en/blog/bun-vs-deno-runtime/">Bun vs Deno : Modern JavaScript Runtime Comparison</a></li>
+<li><a href="https://stateful.com/blog/deno-projects-you-should-try">5 Deno Runtime Projects You Should Try · Stateful</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 社区情绪整体偏向难过与失望，长期用户称 Deno 是他们最喜欢的运行时，并为八年创新就此终结感到惋惜；但也有不少人表示，早在 Deno 把 npm 兼容性列为优先事项、使原本简洁的接口变得臃肿时就已预见到这一天，并将这一退却归因于风险投资带来的压力。还有人直言这实质上是一次 Cloudflare 的人才收购，等于关闭了 Deno，同时希望 workerd 能采纳 Deno 的安全机制以实现更好的沙箱隔离，并指出整个生态中工具类项目被收购已形成一种普遍趋势。
+
+**标签**: `#Cloudflare`, `#Deno`, `#JavaScript Runtime`, `#Acquisition`, `#Open Source`
+
+---
+
+<a id="item-2"></a>
+## [OpenAI 据悉洽谈租赁俄亥俄州 10 吉瓦数据中心](https://news.google.com/rss/articles/CBMiSEFVX3lxTFBrdHpIekxCYlpaeVc0Y3pndTJtVFkwaVlDWDdYVnlfR2t5YW4tWnRrQXlpVU5kUWdrc3prSmtwQmJQZ3E3UWgxeA?oc=5) ⭐️ 8.0/10
+
+据财联社报道，OpenAI 正在洽谈租赁位于美国俄亥俄州的一座 10 吉瓦（10 GW）数据中心，此举将大幅扩张其 AI 算力版图。该报道目前仅有标题级别信息，未披露开发方、具体选址、交易金额及时间表。 若 10 吉瓦的规模属实，这将是迄今报道过的最大单笔 AI 基础设施交易之一，说明前沿模型的训练与推理正从“芯片问题”演变为“电力规模问题”。这也意味着 OpenAI 正在提前数年锁定电力与土地资源，可能挤压其他数据中心运营商的供电与输电容量，并推高相关地区的电价。 最引人注目的是 10 吉瓦这一容量数字——大致相当于数座大型发电厂的持续出力，远超单个超大规模数据中心通常的数十至数百兆瓦量级。由于当前真正的瓶颈正在从土地和服务器转向电力，这类租赁几乎必然需要新增发电、输电升级和长期购电协议；同时该报道并未确认交易已经签署。
+
+rss · Google News - AI 前沿 · 10月9日 06:56
+
+**背景**: 数据中心的规模既用算力（芯片）衡量，也用可获取的电力来衡量，而 AI 热潮已把电力需求推到基础设施规划的核心位置。1 吉瓦等于 10 亿瓦，因此一座 10 吉瓦设施耗电量大致相当于一个大型工业区或数百万户家庭的用电。俄亥俄州凭借土地资源、税收优惠以及接入 PJM 区域电网的便利，已成为美国重要的数据中心聚集地；但该电网本身正面临需求上升和并网排队时间拉长的问题，这正是选址与电力采购成为 AI 建设关键议题的原因。
+
+**标签**: `#AI compute`, `#data centers`, `#OpenAI`, `#infrastructure`, `#energy demand`
+
+---
+
+<a id="item-3"></a>
+## [Oxide Computer 完成 4.45 亿美元 D 轮融资，押注机架级私有云](https://oxide.computer/blog/our-445m-series-d) ⭐️ 7.0/10
+
+Oxide Computer 宣布完成 4.45 亿美元的 D 轮融资，用于扩展其机架级私有云硬件业务。该消息在 Hacker News 上引发热烈讨论（594 分、266 条评论），涉及公司的融资策略、供应链、招聘以及与 AI 工作负载的定位。 这是本地部署（on-prem）与私有云数据中心硬件领域的一个重要资本信号，而该领域如今已与激增的 AI 算力基础设施需求直接相邻。如此规模的融资表明，投资者相信高度集成的机架级系统能够与超大规模公有云及通用服务器厂商竞争。 评论者质疑 Oxide 为何选择股权融资而非可覆盖客户订单的贸易融资或债务，并猜测该公司可能正在向 AMD 等供应商锁定超出当前订单积压的产能。Oxide 的机架级设计旨在把云超大规模厂商的创新引入本地部署计算，同时该公司也因其软件工作在 Rust 社区广为人知。
+
+hackernews · ahlCVA · 10月9日 13:12 · [社区讨论](https://news.ycombinator.com/item?id=50020014)
+
+**背景**: Oxide Computer 打造其所谓的“云计算机”——一套完全集成的机架级系统，将计算、存储与网络与其自有软件栈打包在一起，旨在成为拼装通用服务器搭建私有云的即插即用替代方案。传统本地部署硬件需要客户自行采购并集成组件，而公有云虽便捷但控制力较弱。Oxide 与 Rust 编程语言关系密切，其系统定位为安全、多租户且可完全由客户掌控的基础设施，服务于批处理计算和“主权云”部署等场景。
+
+**社区讨论**: 整体情绪偏正面，评论者称赞 Oxide 是一家令人振奋的公司，产品出色、沟通能力也很强。但也有人提出担忧：一位批评其招聘流程冗长且毫无回应；另一位质疑为何选择股权而非债务融资，并担心可能的供应商订单锁定；还有一位希望公司在营销中少强调 AI，认为这反而稀释了其品牌形象。
+
+**标签**: `#datacenter-hardware`, `#private-cloud`, `#AI-compute`, `#venture-funding`, `#infrastructure`
+
+---
+
+<a id="item-4"></a>
+## [Matthew Green 警告：AI 的速度远超密码学标准更新进程](https://simonwillison.net/2026/Oct/9/matthew-green/) ⭐️ 7.0/10
+
+密码学家 Matthew Green 公开给出了密码学崩溃的最坏情况概率：他认为我们有 1% 的概率生活在“Minicrypt”世界（即公钥加密根本不可能存在的世界），另有 15% 的概率在实际意义上对现有公钥加密算法失去信心。他的核心论点是，AI 产生意外突破的速度比人类更换密码学标准的速度快上好几个数量级，因此只有提前做好准备才可能从这类冲击中恢复。 如果 Green 的判断成立，那么整个互联网的安全基础——TLS、软件更新签名、即时通讯、电子商务——可能在 NIST 式、耗时数年的标准化周期作出反应之前就已被推翻。这将推动各组织转向主动的“密码敏捷性”：今天就设计出能够快速替换算法的系统，而不是等待成熟的替代标准出现后才行动。 Green 强调这些数字是刻意提出的、令人不适的最坏情况估计，而非预测；他指出即使有最好的 AI 辅助，人类更换标准的速度也追不上 AI 带来的意外。Simon Willison 补充了关键出处：“Minicrypt”源自 Russell Impagliazzo 1995 年提出的“五个世界”框架，描述的是一种公钥加密在原理上不可能实现的假想计算宇宙。
+
+rss · Simon Willison · 10月9日 15:02
+
+**背景**: 公钥密码学支撑着互联网上几乎所有安全通信，但它建立在尚未被证明的计算困难性假设之上，例如“大数分解不可行”或“某些格问题难以求解”。1995 年，Russell Impagliazzo 把 P 与 NP 问题的可能答案构想成五个假想世界，其中 Minicrypt 世界里单向函数存在、但公钥加密不存在。由于替换已部署的密码学体系非常缓慢，NIST 组织了长达数年的后量子密码学竞赛，并于 2024 年 8 月发布首批三项标准（FIPS 203、204、205），2025 年 3 月又新增 HQC 算法——这一时间表恰好印证了 Green 所担忧的滞后问题。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Post-Quantum_Cryptography_Standardization">Post-Quantum Cryptography Standardization</a></li>
+<li><a href="https://www.nist.gov/pqc">Post-quantum cryptography | NIST</a></li>
+
+</ul>
+</details>
+
+**标签**: `#cryptography`, `#AI risk`, `#security`, `#standards`, `#post-quantum`
+
+---
+
+<a id="item-5"></a>
+## [每日钢市：钢坯上调 10 元，焦炭提降 100 元，钢价难涨](https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBrbWpsVnBFbENvV25vZmotT3l3R2p2anN4eWdkYkJWcnZkNHU0UDByU2xMUnc2TEUzam8xeHI3VVJSVk5PVjJUVl81MDhjVjFLdmpNWGduMEVrR1RadXFyY3g0a0FaQVU?oc=5) ⭐️ 7.0/10
+
+我的钢铁（Mysteel）每日钢市报告显示，钢坯价格上调 10 元/吨，而焦炭价格则被提降 100 元/吨，但成材钢价仍难以上涨。半成品环节小幅走强、关键原料成本大幅下移，两者相互抵消，使整体钢价缺乏明确的上行动力。 这一分化值得关注，因为它意味着原料成本的下降并没有转化为成材价格的走强，反而压缩了钢厂、加工企业和贸易商赖以获利的价差空间。对于在中国市场管理钢材库存或采购的企业而言，这是判断短期成本走势与定价能力的重要参考。 上述数据以人民币元/吨计价，来自常规的每日市场快照而非深度分析报告，因此仅反映单一交易日的市场情绪，并会因地区和品种不同而有所差异。焦炭 100 元的降幅远大于钢坯 10 元的涨幅，凸显出成本端松动速度快于成材端的企稳速度。
+
+rss · Google News - 钢材加工配送 · 10月9日 09:54
+
+**背景**: 钢坯是一种半成品钢材，通常为方形或圆形截面的长条，后续经轧制或锻造加工成螺纹钢、线材等成品长材。冶金焦炭则是将炼焦煤在低氧环境中高温加热后得到的富碳材料，在高炉炼铁中充当还原剂和燃料，是钢铁生产中成本占比最大的环节之一。由于钢坯处于炼钢产业链的前端、焦炭属于原料端，观察二者相对成材价格的变化，是判断钢厂盈利状况和中国钢价走向的常用方法。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Metallurgical_coal">Metallurgical coal - Wikipedia</a></li>
+<li><a href="https://www.sciencing.com/metallurgical-coke-18741/">What Is Metallurgical Coke? - Sciencing</a></li>
+<li><a href="https://www.sciencedirect.com/topics/engineering/metallurgical-coke">Metallurgical Coke - an overview | ScienceDirect Topics</a></li>
+
+</ul>
+</details>
+
+**标签**: `#steel`, `#steel prices`, `#raw materials`, `#market update`, `#distribution`
+
+---
+
+<a id="item-6"></a>
+## [Mysteel 午报：钢价涨跌互现，焦煤期货涨超 4%](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcDRUQ09zVnhHUFZ6T2FQamZ4MkNRaG12NjFlTFdFX0R1aHhhTWJ0RXA2MkNXbnJYNWp0UjFoMVE4SHgzTVR6d1RRWG5Ucl96SEtLenB6b0hwWHo3XzZEb0NBX2xQZEM5aEhEM1htTEVsYnA4R3JydGRwWTJZbU9VZ25mMkU4MDRI?oc=5) ⭐️ 7.0/10
+
+Mysteel 发布的午间市场简报显示，中国钢材价格涨跌互现，而同期焦煤期货涨幅超过 4%。这种分化表明，钢材成品价格并未与作为高炉炼钢焦炭关键原料的焦煤价格同步上涨。 由于焦煤是高炉炼钢的核心原料，期货价格大幅上涨会带来近期原材料成本压力；若成品钢价保持平稳，钢加工企业和贸易商的利润空间将受到挤压。此外，由于 Mysteel 价格在中国钢材合约结算中被广泛参考，这一波动对更广泛的大宗商品市场也具有意义。 该报告属于例行的每日价格简报，因此没有实质性的分析正文、预测或对价格波动驱动因素的说明。核心数据仅包括钢价涨跌互现的方向以及焦煤期货超过 4%的涨幅，但具体价格水平、合约月份和成交量在现有内容中并未披露。
+
+rss · Google News - 钢材加工配送 · 10月9日 03:47
+
+**背景**: Mysteel 是中国领先的价格报告机构（PRA），提供钢铁及大宗商品的价格、数据和资讯，其价格或指数被中国超过 80%的钢材贸易合约用于结算参考。焦煤又称冶金煤，是一种在隔绝空气加热时会软化并熔融形成焦炭的煤种，而焦炭是高炉炼钢中必不可少的燃料和反应物。将焦煤期货与成品钢材价格一并观察，有助于市场参与者判断整条钢铁供应链所面临的投入成本压力。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.mysteel.net/about-us/">About Us | Mysteel</a></li>
+<li><a href="https://www.mysteel.net/commodities/steel/">Prices, Data &amp; News from the China Steel Market | Mysteel</a></li>
+
+</ul>
+</details>
+
+**标签**: `#steel-processing`, `#steel-prices`, `#raw-materials`, `#commodity-markets`, `#supply-chain`
+
+---
+
+<a id="item-7"></a>
+## [又有 7 家钢厂主动停炉检修，邢钢停产至明年 4 月](https://news.google.com/rss/articles/CBMiVEFVX3lxTFBIRHFSanFXOFc4NWFXSV9HX2xUVW1ZYWc2aDNmbzB2c0V0S2ZOem5udHBjbEFBMmhUQzRBM3FsTnpVNURmaFI4bVM5TEdaOWNRUVpQSg?oc=5) ⭐️ 7.0/10
+
+又有 7 家中国钢厂主动停炉进行检修，其中河北邢钢的停产时间据报道将持续到明年 4 月。这一轮钢厂自发减产能否撑起国内钢价，成为市场关注的焦点。 多家钢厂主动停炉是明确的供给侧信号：若减产力度足够大、时间足够长，可以放缓钢价下跌，并改变下游加工企业、贸易商和分销商的库存与合约计划。但如果相对疲软的需求而言减产规模偏小，钢价仍将继续下行，整条钢铁供应链的利润空间也会持续受压。 该消息仅为标题级报道，除邢钢明年 4 月复产外，并未给出具体减产量、高炉容积或检修排期。高炉检修通常分为临时检修、定期检修、中修和大修，以往案例显示影响量并不小——唐山燕山钢铁自 7 月 5 日起关停一座 2560 立方米高炉，检修周期长达 65 天，日均影响铁水约 0.59 万吨。
+
+rss · Google News - 钢材加工配送 · 10月9日 06:05
+
+**背景**: 邢钢（邢台钢铁）始建于 1958 年，原为河北省属国有独资企业，后改制为非国有企业；在 2020 年底生产经营持续困难后，自当年 7 月起由普阳公司控股。在中国钢铁行业，钢厂在需求疲软、利润微薄时常常以“检修”名义将高炉停产，这实际上兼具产量调控的作用。这与“减量调整”的政策方向一致——行业被要求在压减产能的同时向特钢等高附加值产品升级。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.163.com/dy/article/L35MSTBR0556O2ZY.html">163.com/dy/article/L35MSTBR0556O2ZY.html</a></li>
+<li><a href="http://www.xtsteel.com/Item/3.aspx">公 司 概况- 邢 钢</a></li>
+<li><a href="https://news.qq.com/rain/a/20251111A012BJ00">钢铁2026年投资策略展望：行业喜忧参半，特钢迎来发展机遇</a></li>
+
+</ul>
+</details>
+
+**标签**: `#steel processing`, `#steel prices`, `#supply chain`, `#production cuts`, `#China steel mills`
+
+---
+
+<a id="item-8"></a>
+## [AI 模型评测平台 Arena 完成 2 亿美元 B 轮融资，估值 31 亿美元，ARR 约 1 亿美元](https://news.google.com/rss/articles/CBMijAFBVV95cUxQdkk1M2VnNnpCRXBJUWJCWEp6R1Y4ekY5UmJGNlBNdlJYWThNVHNwRHF0MGVLcUFIa0E4ckNGQ01aMWFOM2RGQ2k4Y3dGdFduQndaazZRRmhldy0xcHpNT1oxU21IUUI0WjlrQjQzcjNqMXpKQTVoTFZrSC1NVE1DWERkOVdTUVNKdkE5Ug?oc=5) ⭐️ 7.0/10
+
+AI 模型评测与基准测试平台 Arena（前身为 LMArena/Chatbot Arena）完成了 2 亿美元 B 轮融资，投后估值达 31 亿美元，年经常性收入（ARR）约为 1 亿美元。这笔交易使一个最初由社区驱动的公开 LLM 排行榜，成长为 AI 评测工具赛道中估值最高的公司之一。 这是一个强烈的市场信号：第三方 AI 模型评测与排行榜已从社区小众项目演变为真正具备营收能力的商业品类。这也说明企业愿意为独立基准测试付费，因为模型选型、回归测试与部署治理正成为一等工程问题——这将同时影响模型厂商、企业 AI 平台团队以及自研评测工具的团队。 Arena 的核心资产是一个基于人类偏好投票、持续更新的公开排行榜：用户可以同时向多个模型提问，对更优回答投票，这些信号汇入排名。据报约 1 亿美元 ARR 对应 31 亿美元估值，隐含约 30 倍市销率，虽然偏高，但与高增长 AI 基础设施交易的整体水平一致；公司也已从文本 LLM 扩展到图像与代码模型的评测。
+
+rss · Google News - EDF AI 部署工程 · 10月9日 02:00
+
+**背景**: 基准测试（benchmarking）指用标准化任务、数据集、提示词和评分规则来比较 AI 模型，而随着厂商针对特定基准进行优化，这一做法的公信力也备受争议。Arena 走的是另一条路线：不依赖静态测试集，而是通过盲测式的模型两两对比来众包人类偏好，本质上类似于面向聊天机器人的公开 Elo 式排名系统。这些排行榜常被开发者与媒体引用，作为模型质量的粗略参考，尽管人类偏好投票本身也存在偏差和可复现性方面的局限。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Arena.ai_%28LLM_platform%29">Arena . ai - Wikipedia</a></li>
+<li><a href="https://arena.ai/">Arena AI : The Official AI Ranking &amp; LLM Leaderboard</a></li>
+<li><a href="https://www.everydev.ai/tools/lm-arena">Arena (LMArena) - AI Model Comparison Leaderboard | EveryDev. ai</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI evaluation`, `#LLM benchmarking`, `#AI startups`, `#funding`, `#AI deployment engineering`
+
+---
