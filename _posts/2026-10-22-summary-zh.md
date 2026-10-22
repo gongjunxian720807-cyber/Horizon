@@ -1,0 +1,196 @@
+---
+layout: default
+title: "Horizon Summary: 2026-10-22 (ZH)"
+date: 2026-10-22
+lang: zh
+---
+
+> 从 185 条内容中筛选出 8 条重要资讯。
+
+---
+
+1. [PyPI 上的 LiteLLM 1.107.0 被污染，植入凭据窃取器与后门](#item-1) ⭐️ 9.0/10
+2. [PHP 8.2.35 修复 AI 发现的 PHP2Shell 严重 RCE 漏洞](#item-2) ⭐️ 9.0/10
+3. [PHP 严重漏洞 CVE-2026-109618/109619 引发全球网站紧急下线](#item-3) ⭐️ 9.0/10
+4. [DuckDB 2.0.0 LTS“Cinnamon Teal”发布：扩展至 192 vCPU 并引入服务器模式](#item-4) ⭐️ 8.0/10
+5. [OpenAI 模型与 Codex 将进驻 Google Cloud 模型花园](#item-5) ⭐️ 8.0/10
+6. [每日钢市：主流钢厂挺价、期钢飘红，钢价或涨跌有限](#item-6) ⭐️ 7.0/10
+7. [期螺飘红，国泰君安减持超 5 千手空单](#item-7) ⭐️ 7.0/10
+8. [MITRE ATT&amp;CK 首次为提示词注入等 AI 攻击分配官方技术编号](#item-8) ⭐️ 7.0/10
+
+---
+
+<a id="item-1"></a>
+## [PyPI 上的 LiteLLM 1.107.0 被污染，植入凭据窃取器与后门](https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/) ⭐️ 9.0/10
+
+根据 SafeDep 的分析，发布到 PyPI 的 LiteLLM 1.107.0 版本已被污染，凡是安装该版本的用户都会被植入凭据窃取器和后门。据报道，攻击者获取了三名不同开发者的 GitHub 凭据，事件处理方在撤销权限后仅保留了一名开发者的访问权。 LiteLLM 是被广泛部署的 LLM 网关，前面挂着的正是各家模型供应商的 API 密钥，因此一旦被污染，攻击者拿到的正是 AI 基础设施最核心的机密。这已经是大约一年内 LiteLLM 第二次重大供应链事件，说明在 LLMOps 实践中，包管理信任与版本锁定必须被当作一等安全控制来对待。 在受影响时间窗口内安装过 1.107.0 的用户，应默认自己的凭据已被窃取，除升级之外还必须轮换 API 密钥、令牌和云凭据。据报道三名开发者的 GitHub 凭据被窃，这暗示入侵源头可能位于软件包本身之外，因此最保守的即时缓解措施是把版本锁定在 1.107.0 之前的已知安全版本。
+
+hackernews · abhisek · 10月21日 14:00 · [社区讨论](https://news.ycombinator.com/item?id=50181114)
+
+**背景**: LiteLLM 是 BerriAI 开发的开源 Python SDK 与 AI 网关，对外提供统一的、兼容 OpenAI 的接口，用于调用 100 多家不同的 LLM 供应商，并负责路由、成本统计、预算和限流，既可作为自托管代理部署，也可作为库嵌入应用。由于它把多家供应商的密钥集中在一处，因此是价值极高的攻击目标。PyPI 是 Python 的标准包索引，除非用户锁定版本并校验哈希，否则常规 pip 工作流会默认安装其中的恶意发布。Canary token（金丝雀令牌）则是诱饵凭据，一旦攻击者将其外泄并加以使用就会触发告警。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/LiteLLM">LiteLLM</a></li>
+<li><a href="https://www.litellm.ai/">LiteLLM — Open-Source AI Gateway &amp; LLM Proxy</a></li>
+<li><a href="https://grokipedia.com/page/LiteLLM">LiteLLM</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 评论者更多是无奈而非惊讶，认为真正的漏洞在于“权限弹窗疲劳”和安装疲劳，并指出金丝雀令牌是一种低成本的检测手段。有人质疑一个三年内约 5.5 万次提交的项目为何仍会中招，也有人回忆起今年早前的同类事件后就已专门排查过依赖中是否使用了 LiteLLM。务实的共识是把 LiteLLM 锁定在 1.107.0 之前的版本，并把三名开发者凭据被窃视为上游存在系统性问题的证据。
+
+**标签**: `#supply-chain-security`, `#AI-deployment`, `#LLMOps`, `#PyPI`, `#security-incident`
+
+---
+
+<a id="item-2"></a>
+## [PHP 8.2.35 修复 AI 发现的 PHP2Shell 严重 RCE 漏洞](https://github.com/php/php-src/releases/tag/php-8.2.35) ⭐️ 9.0/10
+
+PHP 8.2.35 已发布，修复了被称为“PHP2Shell”的远程代码执行漏洞，对应 CVE-2026-109618 和 CVE-2026-109619，此次披露由 Wiz、Calif 与 OpenAI 等多方协调完成。 PHP 广泛支撑 WordPress、Magento 及大量自定义 Web 应用，因此一个不依赖应用层、可不经认证触发的 RCE 会让大量站点立即暴露在风险中，也说明 AI 辅助漏洞发现正进入关键开源基础设施领域。 这两个漏洞的 CVSS v4.0 评分为 9.2，可导致内存泄露和未认证远程代码执行，研究人员已在 Magento 2.4.9 及其他十个 PHP 应用上确认可利用；受影响范围覆盖 PHP 5.4 及以后版本，管理员应尽快升级到已修复版本。
+
+hackernews · tuyuri · 10月21日 13:45 · [社区讨论](https://news.ycombinator.com/item?id=50180873)
+
+**背景**: PHP 是一种广泛用于服务端 Web 开发的脚本语言，WordPress、Magento 等内容管理系统都依赖它。RCE（远程代码执行）指攻击者能在目标服务器上运行任意代码，通常属于最严重的一类漏洞。PHP2Shell 是 PHP 自身（而非某个应用程序）中两个漏洞的合称，相关问题由 AI 辅助分析发现，并通过协调披露流程在补丁发布前后逐步公开。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/PHP2Shell">PHP 2 Shell - Wikipedia</a></li>
+<li><a href="https://sansec.io/research/php2shell">PHP 2 Shell : Critical PHP RCE (CVE-2026-109618...) | Sansec</a></li>
+<li><a href="https://www.wiz.io/blog/php2shell-php-rce">PHP 2Shell: AI uncovers critical RCE vulnerabilities ... | Wiz Blog</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 评论者梳理了 Wiz、Calif、OpenAI 与 PHP 基金会之间的协调披露链接，并指出可能还存在第二个漏洞。一位有 20 年 PHP 运维经验的用户认为这是其经历中最严重的一次，但表示从未需要预先下线服务器，并对处理方式提出质疑；也有人抱怨发布流程拖延、镜像尚未就绪。
+
+**标签**: `#PHP`, `#security`, `#vulnerability disclosure`, `#RCE`, `#AI security research`
+
+---
+
+<a id="item-3"></a>
+## [PHP 严重漏洞 CVE-2026-109618/109619 引发全球网站紧急下线](https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/) ⭐️ 9.0/10
+
+2026 年 10 月 20 日，研究人员公开了编号为 CVE-2026-109618 和 CVE-2026-109619 的两个高危 PHP 漏洞，攻击者可借此实现远程代码执行并完全控制服务器，PHP 官方于次日发布紧急修复补丁。荷兰、丹麦、芬兰和法国等多国政府网站为规避风险预防性下线，维基百科也暂时关停了部分系统以进行修补。 PHP 支撑着约 70% 至 75% 可识别的网站，因此一个已有公开可用利用代码的远程漏洞会瞬间让互联网上极大部分站点面临被入侵或服务中断的风险。包括美国国家安全局（NSA）以及欧洲、澳大利亚、日本和英国的多家网络安全机构都已呼吁立即修补，使其成为近年来影响面最广的网络安全事件之一。 这些漏洞影响 PHP 5.4 至 8.5 的版本，连早已停止支持的旧版本也处于风险之中；由于组合利用后可获得远程 shell 权限，该漏洞组合被命名为“PHP2Shell”。目前已有可用的攻击代码在野利用，cPanel 等主机控制面板厂商已发布修复包；今天出现“404 页面未找到”的网站，很可能并非真的故障，而是运营方主动下线。
+
+rss · Krebs on Security · 10月21日 15:26
+
+**背景**: PHP（PHP: Hypertext Preprocessor）是一种直接运行在 Web 服务器上的服务端脚本语言，可嵌入 HTML 中生成动态页面，是大多数主流内容管理系统和博客平台的基础。远程代码执行（RCE）漏洞意味着攻击者无需登录即可在服务器上运行自己的命令，因此被视为最严重的一类 Web 漏洞。CVE-2026-109618 和 CVE-2026-109619 这两个编号来自“通用漏洞披露”（CVE）目录，这是用于追踪公开披露安全漏洞的标准登记系统。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/PHP2Shell">PHP2Shell - Wikipedia</a></li>
+<li><a href="https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/4630238/nsa-advisory-critical-patches-recommended-for-php-vulnerabilities/">NSA Advisory: Critical Patches Recommended for PHP ...</a></li>
+<li><a href="https://support.cpanel.net/hc/en-us/articles/44397389677335-Critical-PHP-Security-Release-CVE-2026-109618-and-CVE-2026-109619">Critical PHP Security Release - CVE-2026-109618 and CVE-2026 ...</a></li>
+
+</ul>
+</details>
+
+**标签**: `#PHP`, `#security vulnerability`, `#web security`, `#exploits`, `#site reliability`
+
+---
+
+<a id="item-4"></a>
+## [DuckDB 2.0.0 LTS“Cinnamon Teal”发布：扩展至 192 vCPU 并引入服务器模式](https://duckdb.org/2026/10/21/announcing-duckdb-200) ⭐️ 8.0/10
+
+DuckDB 于 2026 年 10 月 21 日发布代号为“Cinnamon Teal”的 2.0.0 LTS 版本，显著提升了高核心数下的可扩展性，并新增客户端-服务器部署能力与触发器支持。生产环境用户反馈，CPU 利用率现在可以跑满约 192 个 vCPU，而 2.0 之前的上限大约只有 64 个 vCPU。 此次发布让 DuckDB 从纯进程内嵌的引擎，向可作为集中式分析服务器运行的自包含数据仓库迈进，小型团队有可能把原本需要多台服务器的数据栈压缩到单机上。由于 DuckDB 在 Python、R 和 Notebook 分析中被广泛使用，这次可扩展性提升直接改变了从业者在不上分布式系统的前提下能跑多大的工作负载。 据反馈，性能在超过约 192 个 vCPU 后基本不再提升，而且 DuckDB 仍是单机系统，并非分布式数据库。新的服务器模式基于 DuckDB 自有的 Quack 远程协议，该协议的客户端支持目前仍很有限，因此与现有工具的兼容性主要依赖 Postgres 线协议和 Arrow Flight/ADBC，后者通过社区开发的扩展实现。
+
+hackernews · nnx · 10月21日 14:01 · [社区讨论](https://news.ycombinator.com/item?id=50181136)
+
+**背景**: DuckDB 是一款面向 OLAP（联机分析处理）工作负载的开源 SQL 数据库，可以理解为事务型数据库的分析型对应物，针对大范围扫描与聚合做了优化，而不是处理大量小写入。它历来以进程内嵌方式运行，嵌入在 Python 脚本、R 会话或应用程序中，无需单独管理服务器。新增的 Quack 远程协议引入了客户端-服务器模式，由一个 DuckDB 进程为远端客户端提供查询服务，这对一个长期以“嵌入式”为标志的项目来说是重大的架构转变。LTS（长期支持）标签意味着该版本将在较长时期内持续获得修复，这对需要统一版本的技术团队很重要。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://duckdb.org/">An analytical SQL database management system – DuckDB</a></li>
+<li><a href="https://duckdb.org/2026/05/12/quack-remote-protocol">Quack: The DuckDB Client - Server Protocol – DuckDB</a></li>
+<li><a href="https://runtimewire.com/article/duckdb-v2-server-mode-embedded-analytics">DuckDB previews v2.0 plan to stabilize Quack server mode</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 评论几乎一致看好，且多来自实践者：有人表示 DuckDB 2.0 让开源记录链接工具 Splink 能在高核心 EC2 实例上以更大规模运行；另一位用户称已在小机构的集中式分析服务器上于生产环境运行 alpha 版本，并称赞其查询 Iceberg 的速度。不少人认为客户端-服务器模式和触发器是“改变游戏规则”的功能，有望取代多服务器数据栈，让 DuckDB 成为“开箱即用的数据仓库”；但也有人指出，相比 Postgres 线协议和 ADBC，Quack 的客户端支持目前仍然薄弱。
+
+**标签**: `#duckdb`, `#databases`, `#analytics`, `#olap`, `#open-source`
+
+---
+
+<a id="item-5"></a>
+## [OpenAI 模型与 Codex 将进驻 Google Cloud 模型花园](https://openai.com/index/openai-models-google-cloud/) ⭐️ 8.0/10
+
+OpenAI 与 Google Cloud 宣布，OpenAI 的前沿模型和 Codex 智能体编程工作流将接入 Google Cloud 的模型花园（Model Garden），企业可通过 Google Cloud Marketplace 购买，并可用已有的 GCP 承诺消费额度抵扣相关支出。这些模型还将进入 Google Antigravity 与 Gemini Agent，预计在未来数周内正式开放。 Google Cloud 由此宣称自己是唯一在同一企业平台上同时提供 Gemini、Claude 和 GPT 的超大规模云厂商，这意味着多云端获取模型正从例外变成常态。对已经承诺 GCP 消费额度的企业而言，无需再单独签署 Azure 或 AWS 合同即可采用 OpenAI 模型，采购与财务记账的门槛大幅降低。 OpenAI 的公告明确强调微软仍是 OpenAI 的主要云合作伙伴，因此这属于分发渠道的扩张而非底层基础设施的迁移。该合作依托企业级（如零数据保留类）合同，而允许用已承诺的 GCP 消费额度抵扣 Marketplace 采购，在超大规模云厂商的财务惯例中相当灵活。
+
+hackernews · armcat · 10月21日 12:53 · [社区讨论](https://news.ycombinator.com/item?id=50180079)
+
+**背景**: Google Cloud 的模型花园（隶属 Vertex AI / Gemini 企业智能体平台体系）是一个模型目录，企业可以在此浏览第一方、第三方和开源模型，并以托管 API 的方式调用。超大规模云厂商还出售承诺用量（CUD）或消费承诺：客户承诺在一定期限内消费到某个额度以换取折扣，这部分收入会提前计入云厂商的账面。Anthropic 的 Claude 早已同时上架 Google Cloud、AWS Bedrock 和 Azure AI Foundry，因此 OpenAI 此举实际上是在对齐这一多云端布局。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://openai.com/index/openai-models-google-cloud/">OpenAI models are coming to Google Cloud</a></li>
+<li><a href="https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers">Google Cloud brings OpenAI models to customers | Google Cloud ...</a></li>
+<li><a href="https://docs.cloud.google.com/docs/cuds">Committed use discounts | Get started | Google Cloud Documentation</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 评论者觉得文末“微软仍是 OpenAI 主要云合作伙伴”这句话颇有意思，不少人认为这笔交易说明 Alphabet 更看重利润丰厚的云业务，而不是全力押注 Gemini 与 DeepMind。最实质的质疑集中在财务层面：允许客户用已经入账的 GCP 承诺额度购买 OpenAI 模型，可能迫使 Google 让出已经向股东报告的收入，这让“财务人员很难受”。也有人认为没那么复杂，OpenAI 只是在补齐 Anthropic 早已在三大云上完成的布局。
+
+**标签**: `#AI infrastructure`, `#cloud computing`, `#OpenAI`, `#Google Cloud`, `#enterprise AI`
+
+---
+
+<a id="item-6"></a>
+## [每日钢市：主流钢厂挺价、期钢飘红，钢价或涨跌有限](https://news.google.com/rss/articles/CBMiigFBVV95cUxNcEhRaGVERUE1OGF3eWgza1Q4VXlreFAwc3JRYmVMOC1vVlVBeXRpeFltWS1QaVRJc1Q5dWZqOGRBSkxGUUhjcUVOTFRHUjFKV2xITWJ1MTlvOUhnQzR1UGVJWjVKNS1XVGdNTDJabmVBNWYtSks2X0dOLU80NjgzTEhoQVRHYkt0c3c?oc=5) ⭐️ 7.0/10
+
+新浪财经发布的一则每日钢市简报显示，主流钢厂维持挺价姿态，同时钢材期货收涨（期钢飘红），该简报据此判断短期内钢价涨跌幅度或较为有限。 主流钢厂是价格风向标，中小贸易商与下游加工企业往往跟随其报价。钢厂在期货飘红时仍选择挺价，意味着短期价格以稳为主而非趋势性上涨，这有利于钢材加工与流通企业按需平稳采购，但也压缩了囤货博取价差的套利空间。 该简报属于常规的每日行情综述，核心依据主要有两点——钢厂报价姿态与期货走势；目前可见的摘要中并未给出具体价格水平、库存数据或分区域明细，因此更适合作为方向性情绪指标参考，而非直接的交易依据。
+
+rss · Google News - 钢材加工配送 · 10月21日 10:05
+
+**背景**: 中国是全球最大的钢铁市场，其每日价格由钢厂出厂报价、区域现货市场成交以及上海期货交易所的螺纹钢、热轧卷板等期货合约共同驱动。“挺价”指钢厂在需求偏弱时仍不愿下调报价，通常是为了守住利润空间、避免引发贸易商竞相降价。“期钢飘红”则指钢材期货上涨，一般会提振现货市场情绪。由于钢铁是中间环节众多的商品，这类每日简报被贸易商、加工企业和流通商广泛关注，用于快速判断短期价格方向。
+
+**标签**: `#steel market`, `#steel prices`, `#steel processing &amp; distribution`, `#futures`, `#China commodity market`
+
+---
+
+<a id="item-7"></a>
+## [期螺飘红，国泰君安减持超 5 千手空单](https://news.google.com/rss/articles/CBMiaEFVX3lxTE9ZemRvNGhsdEhXb1JDSk05OVR5bEdlSXdHSXR3cnZ1cHZjemdmVjhnb2gza3EyRjdMbldXTG9iVEN6RkNHam9ab2xyT3JsbUVXUDMxYkVaaWJJeENSamM5d2RxZi0taXp3?oc=5) ⭐️ 7.0/10
+
+我的钢铁（Mysteel）发布的黑色系持仓日报显示，螺纹钢期货当日收涨飘红，其中国泰君安期货席位在螺纹钢合约上减持空单超过 5000 手。 头部期货公司席位大幅削减空单，说明市场的看跌信心正在减弱，这会较快影响钢材贸易商和钢贸分销商的情绪——他们正是用螺纹钢期货来为现货库存定价并进行套期保值的群体。 该报告只是例行发布的每日持仓快照，并非深度分析；而且单一席位的空单减少也可能来自客户套保调整或跨期、跨品种套利操作，未必代表纯粹看多的方向性判断。
+
+rss · Google News - 钢材加工配送 · 10月21日 07:44
+
+**背景**: 螺纹钢期货在上海期货交易所上市，是中国“黑色系”期货（还包括热轧卷板、铁矿石、焦炭等）中流动性最好的品种。交易所与数据机构每日公布前 20 名会员的持仓报告，把持仓拆分为多单与空单，因此交易者会把大型期货公司席位的变化当作机构情绪的风向标。减持空单意味着买回此前卖出的合约，通常也被称为“空头回补”。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="http://futures.cnfol.com/qihuoketang/20190417/27417214.shtml">futures.cnfol.com/qihuoketang/20190417/27417214.shtml</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/62551748">一文，让你对期货持仓量的理解，达到无惑</a></li>
+<li><a href="https://www.toutiao.com/topic/7528579044733814820/">期货多单和空单都减仓是什么意思 - 今日头条</a></li>
+
+</ul>
+</details>
+
+**标签**: `#steel`, `#rebar futures`, `#market positioning`, `#China commodities`, `#steel distribution`
+
+---
+
+<a id="item-8"></a>
+## [MITRE ATT&amp;CK 首次为提示词注入等 AI 攻击分配官方技术编号](https://news.google.com/rss/articles/CBMiYkFVX3lxTE9BcFdJRmc1S3UyeTBGMlExN0tnZnNWekhWVzM4SnhqRlJXUjNWZWd6SVUwRERZc2w5WThzSGliUVB2LTNyeUZTbFlmSnRkWDc5MllzbUloOTZsdTlQZnAwcl9B?oc=5) ⭐️ 7.0/10
+
+被广泛使用的对手战术与技术知识库 MITRE ATT&amp;CK 首次为针对 AI 系统的攻击分配了官方技术编号，提示词注入（prompt injection）位列其中。这意味着针对 AI 的攻击在安全团队早已用于映射传统入侵的同一框架中，获得了结构化的正式条目。 ATT&amp;CK 是 SOC 检测工程、威胁情报共享、红队作战手册和合规映射背后事实上的标准分类体系，为 AI 攻击赋予技术编号后，大模型安全就从孤立的研究话题变为可运营追踪、可测试、可汇报的对象。对于任何部署大模型应用的组织，这一变化很可能逐步传导到检测规则、采购要求和供应商安全问卷中。 该消息目前仅为标题级报道，尚无公开的技术描述，因此新条目的细粒度尚不明确，例如间接提示词注入或存储型提示词注入是否会获得独立的子技术编号，以及它们如何映射到初始访问、影响等战术。在具体 ATT&amp;CK 条目被审阅之前，团队应将其视为分类学层面的里程碑，而非现成的检测规范。
+
+rss · Google News - EDF AI 部署工程 · 10月21日 03:35
+
+**背景**: MITRE ATT&amp;CK 是一个公开知识库，收录真实世界中的对手战术与技术，并按矩阵组织，安全运营中心用它来规划检测覆盖范围和实施威胁导向的防御。提示词注入是一类攻击手法，攻击者构造的指令（常嵌入在检索到的文档、网页或工具输出中）会让大模型应用偏离原本的指令而去执行攻击者意图，这已成为大模型集成系统最具代表性的漏洞类别。此前，针对 AI 的攻击在 ATT&amp;CK 中没有稳定标识，导致难以编写一致的检测逻辑、跨组织比较事件，也难以用现有安全体系的语言来表达 AI 风险。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.varonis.com/blog/mitre-attck-framework-complete-guide">MITRE ATT &amp; CK Framework : Everything You Need to Know</a></li>
+<li><a href="https://www.ibm.com/think/topics/prompt-injection">What Is a Prompt Injection Attack ? | IBM</a></li>
+<li><a href="https://www.hiddenlayer.com/research/prompt-injection-attacks-on-llms">LLM Security Guide: Preventing Prompt Injection and Jailbreaking</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI security`, `#prompt injection`, `#MITRE ATT&amp;CK`, `#LLM security`, `#threat modeling`
+
+---
