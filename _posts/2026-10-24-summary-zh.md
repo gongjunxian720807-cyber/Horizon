@@ -1,0 +1,97 @@
+---
+layout: default
+title: "Horizon Summary: 2026-10-24 (ZH)"
+date: 2026-10-24
+lang: zh
+---
+
+> 从 175 条内容中筛选出 7 条重要资讯。
+
+---
+
+1. [Kimi K3.1 Pro and K3.1 Pro Highspeed](#item-1) ⭐️ 8.0/10
+2. [Today, we hacked what we&\#x27;d set out to hack: the iPhone](#item-2) ⭐️ 8.0/10
+3. [Dessa: the most authentic full-duplex speech model ever built](#item-3) ⭐️ 8.0/10
+4. [Introducing Kimi K3.1 Pro](#item-4) ⭐️ 8.0/10
+5. [10 月 23 日国内重点城市品种钢价格汇总 - 新浪财经](#item-5) ⭐️ 7.0/10
+6. [Mysteel 午报：钢价局部下跌，焦煤期货涨超 1% - 我的钢铁](#item-6) ⭐️ 7.0/10
+7. [兰格钢绞线日盘点：钢绞线价格持稳 市场需求持续低迷 - 新浪财经](#item-7) ⭐️ 7.0/10
+
+---
+
+<a id="item-1"></a>
+## [Kimi K3.1 Pro and K3.1 Pro Highspeed](https://www.kimi.ai/blog/kimi-k3-1-pro) ⭐️ 8.0/10
+
+Moonshot released Kimi K3.1 Pro and a Highspeed variant, a strong frontier-model update that drew heavy HN discussion on benchmark gains, aggressive tool-calling behavior, and restrictive subscription quotas.
+
+hackernews · Jowsey · 10月23日 16:59 · [社区讨论](https://news.ycombinator.com/item?id=50212065)
+
+**标签**: `#AI frontier`, `#model releases`, `#Kimi/Moonshot`, `#LLM evaluation`, `#agentic tool use`
+
+---
+
+<a id="item-2"></a>
+## [Today, we hacked what we&\#x27;d set out to hack: the iPhone](https://blog.calif.io/p/iphone) ⭐️ 8.0/10
+
+Researchers demonstrate a working iPhone exploitation chain, sparking discussion on jailbreak/root access, Lockdown Mode effectiveness, and the closed &\#x27;trusted cyber access&\#x27; gatekeeping of frontier AI models for security research.
+
+hackernews · pavel\_lishin · 10月23日 16:21 · [社区讨论](https://news.ycombinator.com/item?id=50211474)
+
+**标签**: `#security-research`, `#iOS-exploitation`, `#AI-red-teaming`, `#frontier-model-access`, `#platform-lock-in`
+
+---
+
+<a id="item-3"></a>
+## [Dessa: the most authentic full-duplex speech model ever built](https://block.xyz/dessa) ⭐️ 8.0/10
+
+Block&\#x27;s Dessa is a full-duplex, low-latency speech model that reportedly runs locally on a MacBook Pro M4 Max and was trained on just one NVIDIA GB200 NVL72, prompting HN discussion about technical impressiveness versus marketing hype and the &\#x27;authenticity&\#x27; of its conversational demos.
+
+hackernews · dsr12 · 10月23日 19:09 · [社区讨论](https://news.ycombinator.com/item?id=50213925)
+
+**标签**: `#speech-models`, `#full-duplex`, `#ai-frontier`, `#local-inference`, `#training-efficiency`
+
+---
+
+<a id="item-4"></a>
+## [Introducing Kimi K3.1 Pro](https://simonwillison.net/2026/Oct/23/kimi-k31-pro/) ⭐️ 8.0/10
+
+Moonshot released Kimi K3.1 Pro on its API at $2/$10 per million input/output tokens — matching GPT-6.1 Sol, half of Claude Opus 5.5 — with benchmarks near the frontier and open weights promised by Nov 4, 2026.
+
+rss · Simon Willison · 10月23日 19:40
+
+**标签**: `#AI frontier models`, `#model pricing`, `#benchmarks`, `#Moonshot Kimi`, `#open weights`
+
+---
+
+<a id="item-5"></a>
+## [10 月 23 日国内重点城市品种钢价格汇总 - 新浪财经](https://news.google.com/rss/articles/CBMiigFBVV95cUxNMEtfeU85OUlvMHlDdEN1Y0VPSjlPenVjMk1UQUZCWW5mUWhrN1poaUJydkhCRVllVTVEeGNKTkNLVEExR193MDZNNDhLaUlRSkd6d2l4eUl5LUg4NXRYZEQwMGdQdGlqM3FRSGw4ekxCVUJoVG1SREhKX2tzTDhReE4yTzNZMW94bHc?oc=5) ⭐️ 7.0/10
+
+A Sina Finance roundup of specialty steel prices across major Chinese cities on October 23.
+
+rss · Google News - 钢材加工配送 · 10月23日 03:32
+
+**标签**: `#steel prices`, `#steel distribution`, `#commodity markets`, `#China`, `#price data`
+
+---
+
+<a id="item-6"></a>
+## [Mysteel 午报：钢价局部下跌，焦煤期货涨超 1% - 我的钢铁](https://news.google.com/rss/articles/CBMiaEFVX3lxTE03WHAyc1pNVW9pYm1aeWNDWS1Ca1dpVE5LVDR0RkpuUi0yMVFFYnA4aTRTN3l2VWR5Z2dLUElXX3Zyd3VRQnh0NmlhVTZQN2xPVl92QkxYSXhmX0hjbHhCUGZ0SlRGZEZj?oc=5) ⭐️ 7.0/10
+
+Mysteel&\#x27;s midday report shows localized declines in steel prices while coking coal futures rose more than 1%.
+
+rss · Google News - 钢材加工配送 · 10月23日 03:42
+
+**标签**: `#steel prices`, `#coking coal`, `#steel distribution`, `#commodities`, `#China market`
+
+---
+
+<a id="item-7"></a>
+## [兰格钢绞线日盘点：钢绞线价格持稳 市场需求持续低迷 - 新浪财经](https://news.google.com/rss/articles/CBMiigFBVV95cUxPdVgzRnlDamlVeGt0c01sd29FSkRRX3JRVE1hcmxKbmdhdV92eWNOamhEeXljZndxc0RqWFd3RTUwd091YjYzLWY0b2N2Ul9LV2gyaEgxelNXRjVnQlZ6RmRVNGVZTXllREdycDFnWHNqalFLRkUwUW9od256MUJpLTcwUDVXQl9DYlE?oc=5) ⭐️ 7.0/10
+
+Lange Steel&\#x27;s daily steel strand market recap reports that steel strand prices were flat on the day while end-user demand remains persistently weak.
+
+rss · Google News - 钢材加工配送 · 10月23日 09:38
+
+**标签**: `#steel processing`, `#steel distribution`, `#steel strand prices`, `#market demand`, `#China steel market`
+
+---
